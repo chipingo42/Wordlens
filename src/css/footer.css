@@ -1,6 +1,8 @@
 #footer {
     height: 650px;
     width: 100%;
+    background: #E5E5E5;
+    border-top: 1px solid #E9ECF0;
 }
 
 .footer-top-left {
@@ -28,7 +30,7 @@
 .footer {
     position: absolute;
     top: 1400px;
-    left: 490px;
+    left: 530px;
 }
 
 .footer h2 {
@@ -128,6 +130,92 @@
     color: #000000;
 }
 
+
+@media screen and (max-width: 768px) {
+    #footer {
+        width: 990px;
+        height: 550px;
+    }
+    .footer-top-left,
+    .footer-top-right,
+    .footer-bottom-left,
+    .footer-bottom-right {
+        display: none;
+    }
+    /* footer logo */
+    .footer-logo {
+        margin-left: 300px;
+        margin-top: -200px;
+    }
+    /* footerlinks */
+    .footerlinks {
+        position: relative;
+        left: 280px;
+        top: 280px;
+    }
+    /* .footer-copy*/
+    .footer-copy{
+        position: relative;
+        top: 270px;
+        left: 200px;
+       
+        
+    }
+
+    .footer {
+    position: relative;
+       top: 170px;
+       left: 170px;
+    }
+
+    @media screen and (max-width: 500px) {
+        #footer {
+            height: 340px;
+        }
+        .footer-menu {
+            position: relative;
+            left: -170px;
+        }
+
+        .footer h2 {
+            display: none;
+        }
+
+        .footer p {
+            width: 303px;
+            position: relative;
+            top: -70px;
+            left: 40px;
+        }
+
+        .footer button {
+            position: relative;
+            left: 90px;
+            top: -90px;
+        }
+
+
+        .footer-logo {
+            position: relative;
+            top: 90px;
+            width: 188px;
+            left: -30px;
+            font-size: 40px;
+        }
+
+        .footerlinks {
+            position: relative;
+            top: 200px;
+        }
+
+        .footer-copy {
+            position: relative;
+            top: 180px;
+            left: 220px;
+        }
+       
+    }
+}
 
 
 

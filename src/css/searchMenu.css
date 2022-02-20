@@ -1,6 +1,7 @@
 #SearchWords  {
     height: 1200px;
     width: 100%;
+    
 }
 
 /* search content */
@@ -30,6 +31,7 @@ form input {
     border-radius: 5px;
     cursor: pointer;
     margin-left: -50px;
+    border-radius: 5px;
 }
 
 form input:focus {
@@ -64,6 +66,7 @@ form button {
     height: 53px;
     background: #000000;
     color: #fff;
+    border-radius: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -174,4 +177,115 @@ form button {
 
 .searched-options:hover {
    border: 2px solid #25c6ee;
+}
+
+
+@media screen and (max-width: 768px) {
+    #SearchWords  {
+        height: 1200px;
+        
+    }
+    /* form input */
+    form input {
+        width: 650px;
+        margin-left: 10px;
+        margin-top: -50px;
+    }
+
+    form img {
+        position: relative;
+        top: 128px;
+    }
+
+    /* btn */
+    form button {
+        margin-left: 523px;
+        position: relative;
+        top: -119px;
+    }
+
+    .hello_result {
+        position: relative;
+        left: -70px;
+        top: -90px;
+        border: none;
+    }
+
+    .hello_Searched h4 {
+        margin-top: -10px;
+    }
+
+    /* hello_searched_answer */
+    .hello_searched_answer {
+        width: 600px;
+        margin-top: -40px;
+        background: none;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        .search_header {
+            width: 728px;
+            margin-left: -47px;
+            font-size: 53px;
+        }
+
+        .search_header span {
+            position: relative;
+            top: -50px;
+        }
+
+        form input {
+            width: 650px;
+            margin-left: -50px;
+            width: 340px;
+        }
+        form img {
+            position: relative;
+            left: -20px;
+        }
+
+        /* btn */
+        form {
+            position: relative;
+            top: -220px;
+        }
+        form button {
+            width: 340px;
+            height: 65px;
+            margin-left: -50px;
+            position: relative;
+            top: -40px;
+            
+          
+        }
+
+        .hello_result {
+            position: relative;
+            left: -120px;
+            top: -240px;
+            border: none;
+        }
+
+        .hello_searched_answer {
+            margin-top: 10px;
+        }
+
+        .searched-options {
+            margin: 17px 0px;
+        }
+        .hello_Searched h4,
+        .searched-options p {
+            width: 298px;
+        }
+        .searched-options h5 {
+            padding-top: 25px;
+            width: 196px;
+        }
+
+        .searched-options:hover {
+            border: none;
+        }
+        
+    }
 }
