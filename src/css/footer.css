@@ -174,7 +174,7 @@
         }
         .footer-menu {
             position: relative;
-            left: -170px;
+            left: -190px;
         }
 
         .footer h2 {
@@ -212,6 +212,8 @@
             position: relative;
             top: 180px;
             left: 220px;
+            width: 323px;
+            font-size: 14px;
         }
        
     }
