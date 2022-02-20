@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/app.css">
+    <title>WordLens</title>
+</head>
+<body>
+    <div id="navbar">
+        <div class="container">
+            <div class="navbar">
+                <div class="nav_logo">Wordlens</div>
+                <div class="darkMood">
+                    <img src="./src/public/svg/shadow.svg" alt="darkMoodBtn">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div id="SearchWords">
+            <div class="container">
+                <div class="search_content">
+                    <div class="search_header">Search <br> 
+                        for any word.
+                    </div>
+
+                    <form action="">
+                        <span><img src="./src/public/svg/search.svg" alt=""></span>
+                        <input type="text" placeholder="What would you like to search for?" required>
+                        <button type="submit">Search</button>
+                    </form>
+
+                    <!-- Result Hello -->
+                    <div class="hello_result">
+                        <div class="hello_content">
+                            <h2>Hello</h2>
+                            <div class="hello_Searched">
+                                <p>/həˈləʊ/ <span><img src="./src/public/svg/radio.svg" alt=""></span></p>
+                                <h4>origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                            </div>
+                            <div class="hello_searched_answer">
+                                <div class="searched-options">
+                                    <p>1. (exclamation) used as a greeting or to begin a phone conversation.</p>
+                                    <h5>sentence: “hello there, Katie!"</h5>
+                                    <h6>Synonyms: “”</h6>
+                                </div>
+                                <div class="searched-options">
+                                    <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
+                                    <h5>sentence: “she was getting polite nods and hellos from people"</h5>
+                                </div>
+                                <div class="searched-options">
+                                    <p>3. (verb) say or shout ‘hello’.</p>
+                                    <h5>sentence: “I pressed the phone button and helloed"</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="footer">
+            <!-- svg i -->
+            <img class="footer-top-left" src="./src/public/svg/footer-top-left.svg" alt="">
+            <div class="container">
+                <!-- svg 2 -->
+                <img class="footer-top-right" src="./src/public/svg/footer-top-right.svg" alt="">
+                <img class="footer-bottom-left" src="./src/public/svg/footer-bottom-left.svg" alt="">
+                <img class="footer-bottom-right" src="./src/public/svg/footer-bottom-right.svg" alt="">
+
+                <div class="footer">
+                    <h2>Wordlens</h2>
+                    <p>The API used to serve this data was provided by dictionaryapi.dev, click on the link below to read more</p>
+                    <button type="submit">Visit API documentation</button>
+                </div>
+                <div class="footer-logo">Wordlens</div>
+                <div class="footerlinks">
+                    <img src="./src/public/svg/facebook.svg" alt="facebook">
+                    <img src="./src/public/svg/instagram.svg" alt="facebook">
+                    <img src="./src/public/svg/twitter.svg" alt="facebook">
+                    <img src="./src/public/svg/linkdin.svg" alt="facebook">
+                </div>
+                <div class="footerprivacy">
+                    <a href="#">Terms of use.</a>
+                    <a href="#" class="policy"> Privacy Policy</a>
+                </div>
+                <div class="footer-copy">
+                    copyright &copy; 2022 WorldLens. All rights reserved
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

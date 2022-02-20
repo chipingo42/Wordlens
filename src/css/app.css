@@ -1,0 +1,27 @@
+@import url('./nav.css');
+@import url('./searchMenu.css');
+@import url('./footer.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 116px;
+    background: #ffffff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
