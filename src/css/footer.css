@@ -133,3 +133,96 @@
     margin-left: 280px;
     margin-top: -30px;
 }
+
+@media screen and (max-width: 768px) {
+    #footer {
+        height: 350px;
+    }
+    .footer-top-right,
+    .footer-top-left,
+    .footer-bottom-left,
+    .footer-bottom-right,
+    .footer-menu h2,
+    .footer-privacy {
+        display: none;
+    }
+    .footer-menu{
+        position: relative;
+        top: 180px;
+    }
+
+    .footer-menu p  {
+        position: relative;
+        bottom: 60px;
+        right: 130px;
+    }
+
+    .footer-menu button  {
+        position: relative;
+        bottom: 90px;
+        left: -100px;
+    }
+
+    .footer-logo {
+        position: relative;
+        bottom: 300px;
+        left: 280px;
+        width: 120px;
+        
+    }
+
+    .footer-down {
+        position: relative;
+        top: 170px;
+    }
+    .footer-links {
+        position: relative;
+        bottom: 123px;
+        right: 344px;
+    }
+    .footer-copy {
+        position: relative;
+        top: 160px;
+        left: -90px;
+    }
+
+    @media screen and (max-width: 500px) {
+        #footer {
+            height: 360px;
+        }
+        .footer-content {
+            position: relative;
+            right: 130px;
+        }
+        
+        .footer-logo {
+            position: relative;
+            left: 120px;
+            font-size: 30px;
+            width: 147px;
+            
+        }
+
+        .footer-menu p  {
+           width: 303px;
+           height: 48px;
+        }
+
+        .footer-menu button  {
+            position: relative;
+            bottom: 110px;
+        }
+
+        .footer-links {
+            position: relative;
+            right: 114px;
+            bottom: 140px;
+        }
+
+        .footer-copy {
+            position: relative;
+            top: 150px;
+            left: -240px;
+        }
+    }
+}

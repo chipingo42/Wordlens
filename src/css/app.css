@@ -18,6 +18,7 @@ body {
     background: #ffffff;
     overflow-y: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
