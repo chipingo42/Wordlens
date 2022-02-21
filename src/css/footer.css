@@ -1,39 +1,44 @@
 #footer {
-    height: 650px;
     width: 100%;
-    background: #E5E5E5;
+    height: 550px;
     border-top: 1px solid #E9ECF0;
+    background: #E5E5E5;
 }
 
-.footer-top-left {
-    position: relative;
-    left: 70px;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-top-right {
     position: relative;
-    left: 900px;
-    top: -300px;
+    right: 100px;
+}
+.footer-top-left {
+    position: relative;
+    right: 180px;
+    top: 230px;
 }
 
 .footer-bottom-left {
     position: relative;
-    left: -170px;
+    bottom: 90px;
 }
-
 .footer-bottom-right {
     position: relative;
-    left: 420px;
+    top: 200px;
+    right: 200px;
 }
 
-/* footer */
-.footer {
-    position: absolute;
-    top: 1400px;
-    left: 530px;
+/* footer menu */
+.footer-menu {
+    position: relative;
+    bottom: 100px;
+    left: 310px;
 }
-
-.footer h2 {
+.footer-menu h2 {
+    width: 431px;
+    height: 116px;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
@@ -42,7 +47,7 @@
     color: #000000;
 }
 
-.footer p {
+.footer-menu p {
     width: 419px;
     height: 34px;
     font-family: Inter;
@@ -54,19 +59,25 @@
     padding-left: 20px;
 }
 
-.footer button {
+.footer-menu button {
     position: relative;
-    top: -50px;
+    bottom: 40px;
     left: 20px;
     width: 220px;
     height: 48px;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 30px;
-    outline: none;
 }
 
-/* footer logo */
+/* footer-down */
+.footer-down {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 70px;
+    height: 20px;
+}
 .footer-logo {
     width: 110px;
     font-family: Roboto;
@@ -75,150 +86,50 @@
     font-size: 24px;
     line-height: 28px;
     color: #000000;
+    margin-top: 20px;
     border-top: 5px solid #000000;
 }
 
-
-/* footerlinks */
-.footerlinks {
+.footer-links {
     position: relative;
-    left: 450px;
-    top: -95px;
+    bottom: 53px;
+    right: 100px;
 }
 
-.footerlinks img {
-    cursor: pointer;
-}
-
-/* footer privacy */
-.footerprivacy {
-    position: relative;
-    left: 800px;
-    top: -140px;
-    width: 828px;
+.footer-privacy {
+    width: 228px;
     height: 16px;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 115.6%;
-    
+    position: relative;
+    right: 190px;
+    top: 15px;
 }
 
-.footerprivacy a {
+.footer-privacy a {
+    color: #000000;
     text-decoration: none;
-    color: #000000;
 }
 
-.policy {
-    margin-left: 40px;
-}
-
-
-.footer-copy {
+.term {
     position: relative;
-    left: 370px;
-    top: -100px;
-    width: 353px;
+    right: 30px;
+}
+
+/* footer copy */
+.footer-copy {
+    width: 323px;
     height: 16px;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 115.6%;
-
     color: #000000;
+    text-align: center;
+    margin-left: 280px;
+    margin-top: -30px;
 }
-
-
-@media screen and (max-width: 768px) {
-    #footer {
-        width: 990px;
-        height: 550px;
-    }
-    .footer-top-left,
-    .footer-top-right,
-    .footer-bottom-left,
-    .footer-bottom-right {
-        display: none;
-    }
-    /* footer logo */
-    .footer-logo {
-        margin-left: 300px;
-        margin-top: -200px;
-    }
-    /* footerlinks */
-    .footerlinks {
-        position: relative;
-        left: 280px;
-        top: 280px;
-    }
-    /* .footer-copy*/
-    .footer-copy{
-        position: relative;
-        top: 270px;
-        left: 200px;
-       
-        
-    }
-
-    .footer {
-    position: relative;
-       top: 170px;
-       left: 170px;
-    }
-
-    @media screen and (max-width: 500px) {
-        #footer {
-            height: 340px;
-        }
-        .footer-menu {
-            position: relative;
-            left: -190px;
-        }
-
-        .footer h2 {
-            display: none;
-        }
-
-        .footer p {
-            width: 303px;
-            position: relative;
-            top: -70px;
-            left: 40px;
-        }
-
-        .footer button {
-            position: relative;
-            left: 90px;
-            top: -90px;
-        }
-
-
-        .footer-logo {
-            position: relative;
-            top: 90px;
-            width: 188px;
-            left: -30px;
-            font-size: 40px;
-        }
-
-        .footerlinks {
-            position: relative;
-            top: 200px;
-        }
-
-        .footer-copy {
-            position: relative;
-            top: 180px;
-            left: 220px;
-            width: 323px;
-            font-size: 14px;
-        }
-       
-    }
-}
-
-
-
-
