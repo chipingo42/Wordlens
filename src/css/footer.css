@@ -227,14 +227,14 @@
 
         .footer-links {
             position: relative;
-            right: 154px;
+            right: 132px;
             bottom: 140px;
         }
 
         .footer-copy {
             position: relative;
             top: 150px;
-            left: -290px;
+            left: -298px;
             width: 400px;
         }
     }
