@@ -16,7 +16,7 @@
     font-weight: 600;
     font-size: 96px;
     line-height: 116px;
-    color: #0B0A1B;
+    color: var(--primary--color);
     padding-top: 50px;
 }
 
@@ -25,11 +25,12 @@ form input {
     width: 892px;
     height: 65px;
     padding-left: 87px;
-    border: 1px solid #E9ECF0;
+    border: 1px solid var(--order--color);
     box-sizing: border-box;
     border-radius: 5px;
     border-radius: 5px;
     cursor: pointer;
+    background: var(--secondary--color);
     margin-left: -50px;
     border-radius: 5px;
 }
@@ -54,6 +55,7 @@ form img {
     font-size: 18px;
     line-height: 22px;
     color: #8C98AD;
+    
 
 }
 
@@ -67,7 +69,7 @@ form button {
     background: #000000;
     color: #fff;
     border-radius: 5px;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
 }
 
@@ -78,7 +80,7 @@ form button {
     height: 640px;
     position: relative;
     top: 60px;
-    border: 1px solid #E9ECF0;
+    border: 1px solid var(--order--color);
     box-sizing: border-box;
     border-radius: 5px;
 }
@@ -93,7 +95,7 @@ form button {
     font-weight: 600;
     font-size: 64px;
     line-height: 77px;
-    color: #000000;
+    color: var(--primary--color);
     padding-top: 40px;
 }
 /* hello searched */
@@ -105,7 +107,7 @@ form button {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    color: #8C98AD;
+    color: var(--order--color);
     cursor: pointer;
 }
 
@@ -124,14 +126,14 @@ form button {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #000000;
+    color: var(--primary--color);
     padding-top: 20px;
 }
 
 /* hello_searched_answer */
 .hello_searched_answer {
     width: 700px;
-    background: #FCFCFC;
+    background: var(--inner--color);
     height: 290px;
     position: relative;
     top: 40px;
@@ -150,7 +152,7 @@ form button {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #000000;
+    color: var(--primary--color);
 }
 
 .searched-options h5 {
@@ -162,7 +164,7 @@ form button {
     padding-top: 3px;
     padding-left: 15px;
 
-    color: #8C98AD;
+    color: var(--primary--color);
 }
 .searched-options h6 {
     font-family: Inter;
@@ -170,7 +172,7 @@ form button {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #000000;
+    color: var(--primary--color);
     padding-left: 18px;
     padding-top: 4px;
 }
@@ -227,7 +229,7 @@ form button {
         .search_header {
             width: 304px;
             margin-left: -47px;
-            font-size: 48px;
+            font-size: 45px;
         }
 
         .search_header span {

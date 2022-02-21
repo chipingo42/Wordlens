@@ -1,6 +1,23 @@
 @import url('./nav.css');
 @import url('./searchMenu.css');
 @import url('./footer.css');
+
+:root {
+    --primary--color: #0B0A1B;
+    --secondary--color: #ffff;
+    --order--color: #E5E5E5;
+    --inner--color: #FCFCFC;
+    --footer--color: #E5E5E5;
+}
+
+.darkMode {
+    --primary--color: #91A2CB;
+    --secondary--color: #0D1726; 
+    --order--color: #91A2CB;
+    --inner--color: #161c24;
+    --footer--color: #0D1726;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +32,9 @@ body {
     font-style: normal;
     font-size: 96px;
     line-height: 116px;
-    background: #ffffff;
+    background: var(--secondary--color);
+    /* background: red; */
+    color: var(--primary--color);
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -26,3 +45,4 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
