@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="src/css/app.css">
     <title>WordLens</title>
 </head>
@@ -34,23 +35,25 @@
                         <span>for any word.</span>
                     </div>
 
-                    <form action="">
-                        <span><img src="./src/public/svg/search.svg" alt=""></span>
-                        <input id="Search" type="text" placeholder="What would you like to search for?" required>
-                        <button type="submit">Search</button>
+                    <form id="formSearch" autocomplete="off">
+                        <div class="form-group">
+                            <span><img src="./src/public/svg/search.svg" alt=""></span>
+                            <input id="Search" type="text" placeholder="What would you like to search for?" required>
+                            <button id="searchBtn" type="submit">Search</button>
+                        </div>
                     </form>
 
                     <!-- Result Hello -->
                     <div class="hello_result">
                         <div class="hello_content">
-                            <h2>Hello</h2>
+                            <h2 id="header">Hello</h2>
                             <div class="hello_Searched">
                                 <p>/həˈləʊ/ <span><img src="./src/public/svg/radio.svg" alt=""></span></p>
-                                <h4>origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
                             </div>
-                            <div class="hello_searched_answer">
+                            <ul id="data" class="hello_searched_answer">
                                 <div class="searched-options">
-                                    <p>1. (exclamation) used as a greeting or to begin a phone conversation.</p>
+                                    <p>1. (exclamation) used as a greeting or to begin a hone conversation.</p>
                                     <h5>sentence: “hello there, Katie!"</h5>
                                     <h6>Synonyms: “”</h6>
                                 </div>
@@ -62,7 +65,8 @@
                                     <p>3. (verb) say or shout ‘hello’.</p>
                                     <h5>sentence: “I pressed the phone button and helloed"</h5>
                                 </div>
-                            </div>
+                            </ul>
+                           
                         </div>
                     </div>
                 </div>
@@ -109,5 +113,9 @@
     </section>
 
     <script src="src/js/index.js"></script>
+
+    
+
 </body>
+
 </html>
