@@ -11,11 +11,11 @@ darkMode.onclick = function() {
 
 
 
-document.addEventListener('readystatechange', (e) => {
-   if (e.target.readyState === "complete") {
-       initApp()
-   }
-})
+// document.addEventListener('readystatechange', (e) => {
+//    if (e.target.readyState === "complete") {
+//     //    initApp()
+//    }
+// })
 
 
 
@@ -76,7 +76,8 @@ let searchTimeOut = 0;
 
 window.onload = () => {
     const searchFeildElement = document.getElementById('Search')
-    searchFeildElement.onkeyup = (even) => {
+    searchFeildElement.onkeyup = (e) => {
+        e.preventDefault();
         // console.log(searchFeildElement.value)  
         
         clearTimeout( searchTimeOut);
