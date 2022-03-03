@@ -38,7 +38,7 @@ function  data(result, word) {
         let definitions2 = result[0].meanings[1].definitions[0];
 
         // definition 3
-        let definitions3 = result[0].meanings[0].definitions[1];
+        let definitions3 = result[0].meanings[1].definitions[1];
 
         // let's pass the particular response data to a particular html element
         document.getElementById('header').innerText = result[0].word;
@@ -49,12 +49,12 @@ function  data(result, word) {
 
         // passing meaning two
         document.querySelector('.searched-definition2 p').innerText = definitions2.definition;
-        // document.querySelector('.searched-definition2 h5').innerText = definitions.example;
+        document.querySelector('.searched-definition2 h5').innerText = definitions.example;
 
 
         // passing meaning three
         document.querySelector('.searched-definition3 p').innerText = definitions3.definition;
-        // document.querySelector('.searched-definition2 h5').innerText = definitions.example;
+        document.querySelector('.searched-definition2 h5').innerText = definitions.example;
 
        
 
