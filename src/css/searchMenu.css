@@ -4,6 +4,7 @@
     
 }
 
+
 /* search content */
 .search_content {
     margin: 0 75px;
@@ -85,9 +86,14 @@ form button {
     border-radius: 5px;
 }
 
+
+
 .hello_content {
     margin: 40px 70px;
+
 }
+
+
 
 .hello_content h2 {
     font-family: Inter;
@@ -95,27 +101,29 @@ form button {
     font-weight: 600;
     font-size: 64px;
     line-height: 77px;
+    width: 500px;
     color: var(--primary--color);
     padding-top: 40px;
 }
 /* hello searched */
-.hello_Searched p {
-    width: 189px;
-    height: 29px;
+.hello_Searched  .details span {
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    position: relative;
+    top: -40px;
     color: var(--order--color);
     cursor: pointer;
 }
 
-.hello_Searched span img {
-    position: relative;
-    left: 10px;
-    top: 2px;
+.hello_Searched img {
+    font-size: 10px;
     cursor: pointer;
+    position: absolute;
+    top: 190px;
+    left: 170px;
 }
 
 .hello_Searched h4 {
@@ -127,24 +135,50 @@ form button {
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-    padding-top: 20px;
+    margin-top: -40px;
 }
 
 /* hello_searched_answer */
 .hello_searched_answer {
     width: 700px;
     background: var(--inner--color);
-    height: 290px;
+    height: 299px;
     position: relative;
-    top: 40px;
+    top: 20px;
+    /* overflow: auto;
+    white-space: nowrap; */
 }
 
-.searched-options {
-    margin: 25px 40px;
-    padding-top: 20px;
+.hello_searched_answer::-webkit-input-placeholder{
+    width: 0px;
 }
 
-.searched-options p{
+
+
+.searched-definition1,
+.searched-definition2,
+.searched-definition3,
+.searched-definition4,
+.searched-definition5 {
+    margin: 20px 40px;
+    /* border: 2px solid #25c6ee; */
+    padding-top: 10px;
+}
+
+.searched-definition1,
+.searched-definition2,
+.searched-definition3,
+.searched-definition4,
+.searched-definition5:hover {
+    border: 2px solid #25c6ee;
+
+}
+
+.searched-definition1 p,
+.searched-definition2 p,
+.searched-definition3 p,
+.searched-definition4 p,
+.searched-definition5 p{
     width: 572px;
     height: 19px;
     font-family: Inter;
@@ -155,18 +189,25 @@ form button {
     color: var(--primary--color);
 }
 
-.searched-options h5 {
+.searched-definition1 h5,
+.searched-definition2 h5,
+.searched-definition3 h5,
+.searched-definition4 h5,
+.searched-definition5 h5 {
     font-family: Inter;
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    padding-top: 3px;
+    padding-top: 23px;
     padding-left: 15px;
-
     color: var(--primary--color);
 }
-.searched-options h6 {
+.searched-definition1 h6,
+.searched-definition2 h6,
+.searched-definition3 h6,
+.searched-definition4 h6,
+.searched-definition5 h6 {
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
@@ -177,8 +218,17 @@ form button {
     padding-top: 4px;
 }
 
-.searched-options:hover {
-   border: 2px solid #25c6ee;
+
+
+.info_print {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 19px;
+    color: crimson;
+    padding-left: 270px;
+    display: none;
 }
 
 
@@ -274,19 +324,19 @@ form button {
             margin-top: 10px;
         }
 
-        .searched-options {
+        .searched-definition {
             margin: 17px 0px;
         }
         .hello_Searched h4,
-        .searched-options p {
+        .searched-definition p {
             width: 298px;
         }
-        .searched-options h5 {
+        .searched-definition h5 {
             padding-top: 25px;
             width: 196px;
         }
 
-        .searched-options:hover {
+        .searched-definition:hover {
             border: none;
         }
         
