@@ -11,11 +11,13 @@ darkMode.onclick = function() {
 
 
 const searchResultMenu = document.querySelector('.searchWrapper'),
-searchInput = searchResultMenu.querySelector('input'),
-print = searchResultMenu.querySelector('.info_print'),
-synonyms = searchResultMenu.querySelector('.synonyms'),
+searchInput = searchResultMenu.querySelector('.FORM'),
+// print = searchResultMenu.querySelector('.info_print'),
+// synonyms = searchResultMenu.querySelector('.synonyms'),
 radioVolume = searchResultMenu.querySelector('.hello_Searched img')
-let audio;
+let searchTimeOut = 0;
+var audio;
+
 
 console.log(radioVolume)
 
@@ -42,7 +44,7 @@ function  data(result, word) {
 
         // let's pass the particular response data to a particular html element
         document.getElementById('header').innerText = result[0].word;
-        document.querySelector('.hello_Searched span').innerText = phonetice;
+        document.querySelector('.hello_Searched span').innerText =  phonetice;
         document.querySelector('.searched-definition1 p').innerText = definitions.definition;
         document.querySelector('.searched-definition1 h5').innerText = definitions.example;
  
@@ -54,13 +56,11 @@ function  data(result, word) {
 
         // passing meaning three
         document.querySelector('.searched-definition3 p').innerText = definitions3.definition;
-        document.querySelector('.searched-definition2 h5').innerText = definitions.example;
+        document.querySelector('.searched-definition3 h5').innerText = definitions.example;
 
        
 
-
-        audio = new Audio("https:" + result[0].phonetics[0].audio); // creating new audio obj and passing audio src
-        console.log(audio)
+        audio = new Audio("https:" + result[0].phonetics[1].audio)  // creating new audio obj and passing audio src
 
 
         // if(definitions.synonyms[0] == undefined)  {  // if there is no synonym then hide the synonyms div
@@ -68,13 +68,13 @@ function  data(result, word) {
         // }else{
         //     synonyms.parentElement.style.display = 'block'
         //     synonyms.innerHtml = "";
-        //     for (let i = 5; i < 1; i++) { // get synonyms out of many or none
-        //         let tagSynonyms = `<h6>${definitions.synonyms[i]}</h6>`
-        //         synonyms.insertAdjacentHTML('beforeend', tagSynonyms) // passing all synonyms inside synonyms div 
-        //    }
+        //     let tagSynonyms = `<h6 onclick=search('${definitions.synonyms[0]}')>${definitions.synonyms[0]}</h6>`
+        //     synonyms.insertAdjacentHTML('afterbegin', tagSynonyms)
         // }  
     }
+    
 }
+
 
 // fetch api function
 function fetchApi(word) {
@@ -84,8 +84,7 @@ function fetchApi(word) {
     
     let basaUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
 
-    // fetching api response and returning it with parseing into js obj and in another then
-    // method alling data function with passing api response and searched word as an arument
+    // fetching api response and returning it with parseing into js obj and in another then method alling data function with passing api response and searched word as an arument 
     fetch(basaUrl)
     .then(res => res.json())
     .then((result) => {
@@ -93,15 +92,35 @@ function fetchApi(word) {
     })
 }
 
-// function
-searchInput.addEventListener('keyup', e => {
-    // console.log(e.target.value)
-    fetchApi(e.target.value);
-    if(e.key === "Enter" && e.target.value) {
-        // fetchApi(e.target.value);
-    }
-})
 
+
+// searchInput.addEventListener('keyup', e => {
+    
+//     clearTimeout(e.target.value);
+
+//     // fetchApi(searchInput.value) 
+//     // fetchApi(e.target.value);
+
+//     searchTimeOut = setTimeout(() => {
+//         fetchApi(e.target.value)
+//     }, 250);
+
+
+//     if(e.key === "Enter" && e.target.value) {
+//         fetchApi(e.target.value);
+//     }
+// })
+
+// function
+window.onload = () => {
+    // e.preventDefault();
+    const searchInput = document.getElementById('formSearch');
+    searchInput.onchange = (event) => {
+        event.preventDefault()
+        fetchApi(event.target.value)
+    }
+
+}
 
 
 // autoRadio function
@@ -110,150 +129,4 @@ radioVolume.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
-
-
-/*
-const searchWord = document.getElementById('formSearch'),
-    searchInput = document.getElementById('Search')
-
-;    
-
-
-
-loudListner();
-
-function loudListner() {
-   var searchWord;
-   searchWord = searchInput;
-}
-
-
-
-function fetchApi(word) {
-    searchHeader.style.color = 'red'
-   searchHeader.innerHtml = `searching the meaning of <h2>"${word}"</h2>`
-}
-
-
-searchInput.addEventListener("keyup", e =>{
-    // console.log(e.target.value)
-
-    if(e.key === "Enter" && e.target.value) {
-        fetchApi(e.target.value)
-    }
-    
-   
-})
-
-
-// searchInput.addEventListener("keyup", e =>{
-//     // console.log(e.target.value)
-
-//     if(e.key === "click" && e.target.value) {
-//         console.log(e.target.value)
-//     }
-    
-   
-// })
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-// fetch api function
-// function fetchApi(word) {
-//    searchHeader.innerText = `have already entered <h2>${word}</h2>`
-// }
-
-
-// searchInput.addEventListener("keyup", e =>{
-//     console.log(e.target.value)
-
-    // if(e.key === "Enter" && e.target.value) {
-    //     console.log(e.target.value)
-    // }
-    
-   
-// })
-
-
-
-
-
-
-
-
-// function searchShow(query)  {
-//     const basaUrl  = `https://api.dictionaryapi.dev/api/v2/entries/en/${query}`
-//      fetch(basaUrl)
-//     .then(res => res.json())
-//     .then((data)  =>  {
-//        const result = data.map(element => element?.word)
-//         console.log(data)
-//         // console.log(result)
-//         renderResults(result)
-
-//         // print the header
-//         // const list = document.getElementById('header').innerText = result.value;
-//         // console.log(list)
-//     }) 
-
-// }
-
-
-
-
-
-
-// function renderResults(result) {
-//     const list = document.getElementById('header');
-//     list.innerText = '';
-//     result.forEach(result => {
-
-//         const element = document.createElement('ul')
-
-//         element.innerText = result;
-
-//         list.appendChild(element);
-        
-//     });
-// }
- 
-
-// let searchTimeOut = 0;
-
-// window.onload = () => {
-//     const searchFeildElement = document.getElementById('Search')
-//     searchFeildElement.onkeyup = (e) => {
-//         e.preventDefault();
-//         // console.log(searchFeildElement.value)  
-        
-//         clearTimeout( searchTimeOut);
-        
-//         if(searchFeildElement.value.trim().length === 0) {
-//             return;
-//         }
-
-
-//         searchTimeOut = setTimeout(() => {
-//                searchShow(searchFeildElement.value)
-//         }, 250);
-         
-//     }
-// }
 

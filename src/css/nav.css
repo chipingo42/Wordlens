@@ -22,7 +22,7 @@
     border-top: 5px solid var(--primary--color);
 }
 
-.las::before {
+.fa-solid::before {
     position: relative;
     top: -40px;
    color: var(--primary--color);
