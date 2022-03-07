@@ -15,11 +15,11 @@ searchInput = searchResultMenu.querySelector('.FORM'),
 // print = searchResultMenu.querySelector('.info_print'),
 // synonyms = searchResultMenu.querySelector('.synonyms'),
 radioVolume = searchResultMenu.querySelector('.hello_Searched img')
-let searchTimeOut = 0;
-var audio;
+// let searchTimeOut = 0;
+// var audio;
 
 
-console.log(radioVolume)
+console.log(searchResultMenu)
 
 
 // data function
@@ -30,8 +30,6 @@ function  data(result, word) {
 
     }else {
         console.log(result)
-        searchResultMenu.classList.add("active");
-
         let definitions = result[0].meanings[0].definitions[0],
         phonetice = `${result[0].meanings[0].partOfSpeech} /${result[0].phonetics[0].text}`
         
@@ -60,7 +58,7 @@ function  data(result, word) {
 
        
 
-        audio = new Audio("https:" + result[0].phonetics[1].audio)  // creating new audio obj and passing audio src
+        // audio = new Audio("https:" + result[0].phonetics[1].audio)  // creating new audio obj and passing audio src
 
 
         // if(definitions.synonyms[0] == undefined)  {  // if there is no synonym then hide the synonyms div
@@ -113,9 +111,8 @@ function fetchApi(word) {
 
 // function
 window.onload = () => {
-    // e.preventDefault();
-    const searchInput = document.getElementById('formSearch');
-    searchInput.onchange = (event) => {
+    const searchBtn = document.getElementById('formSearch');
+    searchBtn.onchange = (event) => {
         event.preventDefault()
         fetchApi(event.target.value)
     }
@@ -124,9 +121,9 @@ window.onload = () => {
 
 
 // autoRadio function
-radioVolume.addEventListener('click', () => {
-    audio.play();
-})
+// radioVolume.addEventListener('click', () => {
+//     audio.play();
+// })
 
 
 
