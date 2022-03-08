@@ -30,7 +30,8 @@
     </div>
 
     <section>
-        <div id="SearchWords" class="searchWrapper">
+        <audio id="sound"></audio>
+        <div id="SearchWords">
             <div class="container">
                 <div class="search_content">
                     <div class="search_header">Search <br> 
@@ -40,30 +41,44 @@
                     <form id="formSearch">
                         <div class="form-group">
                             <span><img src="./src/public/svg/search.svg" alt=""></span>
-                            <input id="Search" class="search" type="search" placeholder="What would you like to search for?">
-                            <button id="searchBtn" type="submit">Search</button>
-
+                            <input 
+                            id="Search"
+                            class="search" 
+                            type="text" 
+                            placeholder="What would you like to search for?">
                         </div>
+                        <button id="mySubmitBtn" class="myButton">Search</button>
                     </form>
 
                     <!-- Result Hello -->
-                    <div class="hello_result">
-                        <div class="hello_content">
+                    <div class="hello_result" id="result">
+                        <!-- <div class="hello_content">
                             <h2 id="header">Hello</h2>
                             <div class="hello_Searched">
                                 <div class="details">
-                                    <span>__</span>
-                                    <!-- /həˈləʊ/ -->
+                                    <p>pos</p>
+                                    <span>/həˈləʊ/</span>
                                 </div>
-                                <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
+                                <button onclick="playSound">
+                                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
+                                </button>
+                                
                                 <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
                             </div>
                             <ul class="hello_searched_answer">
                                 <div class="searched-definition1">
                                     <p>1. (exclamation) used as a greeting or to begin a hone conversation.</p>
                                     <h5>sentence: “hello there, Katie!"</h5>
-                                    <h6 class="synonyms">Synonyms: “”</h6>
-                                    <!-- <h3>Exmaples</h3> -->
+                                    <h6 class="synonyms">Synonyms</h6>
+                                    <div class="synomyms">
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                        <span class="pills">shhsh</span>
+                                    </div>
                                 </div>
                                 <div class="searched-definition2">
                                     <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
@@ -73,11 +88,18 @@
                                     <p>3. (verb) say or shout ‘hello’.</p>
                                     <h5>sentence: “I pressed the phone button and helloed"</h5>
                                 </div>
-                            </ul>
-                           
+                            </ul> -->
+                            <!-- <div class="errorPage">
+                                <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
+                                    for the word you were looking for.
+                                </p>
+                                <h1 class="eroorHeader">404 <br> 
+                                    <span>no be juju be that!</span>
+                                </h1>
+                              <button class="errorBtn"><a href="index.html">Take me home</a></button>
+                            </div> -->
                         </div>
                     </div>
-                    <span class="info_print">oppss!</span>
                 </div>
             </div>
         </div>
