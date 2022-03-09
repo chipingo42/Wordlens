@@ -55,15 +55,17 @@ btn.addEventListener("click", (e) => {
                    </div>
                 </div>
                 <div class="searched-definition2">
-                    <p>2. ${data[0].meanings[0].definitions[0].definition}</p>
+                    <p>2. ${data[0].meanings[1].definitions[0].definition }</p>
                     <h5>sentence: “she was getting polite nods and hellos from people"</h5>
                 </div>
                 <div class="searched-definition3">
-                    <p>3. ${data[0].meanings[0].definitions[0].definition}</p>
+                    <p>3. ${data[0].meanings[2].definitions[0].definition}</p>
                     <h5>sentence: “I pressed the phone button and helloed"</h5>
                 </div>
             </ul>
         </div>`
+
+
         
     })
     .catch(() => {
@@ -88,176 +90,4 @@ btn.addEventListener("click", (e) => {
 function playSound() {
     sound.play();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // const searchResultMenu = document.querySelector('.searchWrapper'),
-// // searchInput = searchResultMenu.querySelector('form');
-// // print = searchResultMenu.querySelector('.info_print'),
-// // synonyms = searchResultMenu.querySelector('.synonyms'),
-// // radioVolume = searchResultMenu.querySelector('.hello_Searched img')
-// // let searchTimeOut = 0;
-// // var audio;
-
-
-// const searchResultMenu = document.getElementById('formSearch');
-// const searchBtn = document.getElementById('Search');
-
-
-// loadListener();
-
-
-// // data function
-// function  data(result) {
-//     if(result.title) {  // if api returns message of can't find word
-//     }else {
-//         console.log(result)
-//         let definitions = result[0].meanings[0].definitions[0],
-//         phonetice = `${result[0].meanings[0].partOfSpeech} /${result[0].phonetics[0].text}`
-        
-
-//         // definition 2
-//         let definitions2 = result[0].meanings[1].definitions[0];
-
-//         // definition 3
-//         let definitions3 = result[0].meanings[1].definitions[1];
-
-//         // let's pass the particular response data to a particular html element
-//         document.getElementById('header').innerText = result[0].word;
-//         document.querySelector('.hello_Searched span').innerText =  phonetice;
-//         document.querySelector('.searched-definition1 p').innerText = definitions.definition;
-//         document.querySelector('.searched-definition1 h5').innerText = definitions.example;
- 
-
-//         // passing meaning two
-//         document.querySelector('.searched-definition2 p').innerText = definitions2.definition;
-//         document.querySelector('.searched-definition2 h5').innerText = definitions.example;
-
-
-//         // passing meaning three
-//         document.querySelector('.searched-definition3 p').innerText = definitions3.definition;
-//         document.querySelector('.searched-definition3 h5').innerText = definitions.example;
-
-
-
-//         // audio = new Audio("https:" + result[0].phonetics[1].audio)  // creating new audio obj and passing audio src
-
-//     }
-    
-// }
-
-
-// // fetch api function
-// function fetchApi(word) {
-//     let basaUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-//     // fetching api response and returning it with parseing into js obj and in another then method alling data function with passing api response and searched word as an arument 
-//     fetch(basaUrl)
-//     .then(res => res.json())
-//     .then((result) => {
-//         data(result, word)
-//     })
-// }
-
-
-// function loadListener() {
-//     let  searchResultMenu;
-//     searchResultMenu = searchBtn;
-
-//     searchResultMenu.addEventListener('keyup', e => {
-//         e.preventDefault()
-    
-//         // clearTimeout(e.target.value);
-    
-//         fetchApi(e.target.value) 
-//         // console.log(e.target.value);
-    
-//         // searchTimeOut = setTimeout(() => {
-//         //     fetchApi(e.target.value)
-//         // }, 250);
-    
-    
-//         // if(e.key === "Enter" && e.target.value) {
-//         //     fetchApi(e.target.value);
-//         // }
-//     })
-// }
-
-
-
-
-
-
-// // function
-// // window.onload = () => {
-// //     const searchBtn = document.getElementById('formSearch');
-// //     searchBtn.onchange = (event) => {
-// //         event.preventDefault()
-// //         fetchApi(event.target.value)
-// //     }
-
-// // }
-
-
-// // autoRadio function
-// // radioVolume.addEventListener('click', () => {
-// //     audio.play();
-// // })
-
-
 
