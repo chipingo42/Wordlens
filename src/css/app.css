@@ -1,6 +1,7 @@
 @import url('./nav.css');
 @import url('./searchMenu.css');
 @import url('./footer.css');
+@import url('./skeletonLoading.css');
 
 :root {
     --primary--color: #0B0A1B;
@@ -8,6 +9,8 @@
     --order--color: #E5E5E5;
     --inner--color: #FCFCFC;
     --footer--color: #E5E5E5;
+    --h5--color: #8C98AD;
+ 
 }
 
 .darkMode {

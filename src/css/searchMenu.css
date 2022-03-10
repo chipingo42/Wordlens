@@ -1,5 +1,5 @@
 #SearchWords  {
-    height: 1200px;
+    height: 1400px;
     width: 100%;
     
 }
@@ -36,7 +36,7 @@
     border-radius: 5px;
 }
 
-form input:focus {
+.search:focus {
     outline-color: #25c6ee;
 }
 
@@ -48,7 +48,7 @@ form img {
     cursor: pointer;
 }
 
-.input::placeholder{
+.search::placeholder{
     width: 296px;
     font-family: Inter;
     font-style: normal;
@@ -64,7 +64,7 @@ form img {
 /* btn */
 .myButton {
     position: relative;
-    top: -119px;
+    top: -117px;
     left: 765px;
 
     z-index: 22;
@@ -75,14 +75,15 @@ form img {
     border-radius: 5px;
     border: none;
     cursor: pointer;
- 
+    /* display: none; */
 }
+
 
 
 /* Hello Result */
 .hello_result {
     width: 892px;
-    height: 670px;
+    height: 740px;
     position: relative;
     top: -60px;
     border: 1px solid var(--order--color);
@@ -138,8 +139,8 @@ form img {
 
 .hello_Searched img {
     position: absolute;
-   top: 150px; 
-   left: 250px;
+   top: 144px; 
+   left: 330px;
    cursor: pointer;
 }
 
@@ -153,14 +154,14 @@ form img {
     line-height: 19px;
     color: var(--primary--color);
    position: relative;
-   top: -190px;
+   top: -170px;
 }
 
 /* hello_searched_answer */
 .hello_searched_answer {
     width: 726px;
     background: var(--inner--color);
-    height: 360px;
+    height: 400px;
     position: relative;
     top: -170px;
 }
@@ -228,7 +229,7 @@ form img {
     line-height: 19px;
     padding-top: 20px;
     padding-left: 15px;
-    color: var(--primary--color);
+    color: var(--h5--color);
 }
 .searched-definition1 h6 {
     font-family: Inter;
@@ -309,8 +310,6 @@ form img {
 .errorBtn:hover {
     box-shadow: 0px 0px 5px inset;
 }
-
-
 
 
 
@@ -435,6 +434,21 @@ form img {
         .searched-definition:hover {
             border: none;
         }
+
+        .errorPage {
+            position: relative;
+            left: -78px;
+        }
         
+        .Oops {
+            width: 303px;
+            height: 48px;
+            position: relative;
+            left: 170px;
+        }
+
+        .eroorHeader {
+            margin-top: 40px;
+        }
     }
 }

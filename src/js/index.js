@@ -13,9 +13,11 @@ const basaUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const btn = document.getElementById('mySubmitBtn');
-const synomyoms = document.querySelector('.synomyms')
+const synomyoms = document.querySelector('.synomyms');
 // const resultClose = document.querySelector('.hello_result');
-
+// for (let i = 0; i < 10; i++) {
+//    result.append(btn.contains.cloneNode(true))
+// }
 
 
 btn.addEventListener("click", (e) => {
@@ -55,18 +57,15 @@ btn.addEventListener("click", (e) => {
                    </div>
                 </div>
                 <div class="searched-definition2">
-                    <p>2. ${data[0].meanings[1].definitions[0].definition }</p>
+                    <p>2. ${data[0].meanings[0].definitions[0].definition }</p>
                     <h5>sentence: “she was getting polite nods and hellos from people"</h5>
                 </div>
                 <div class="searched-definition3">
-                    <p>3. ${data[0].meanings[2].definitions[0].definition}</p>
+                    <p>3. ${data[0].meanings[0].definitions[0].definition}</p>
                     <h5>sentence: “I pressed the phone button and helloed"</h5>
                 </div>
             </ul>
         </div>`
-
-
-        
     })
     .catch(() => {
         result.innerHTML = `
@@ -79,9 +78,8 @@ btn.addEventListener("click", (e) => {
                 </h1>
                 <button class="errorBtn"><a href="index.html">Take me home</a></button>
            </div>
-        `;
+        `;  
     })
-
 });
 
 
