@@ -187,12 +187,14 @@ form img {
 }
 
 
+
 /* synomyoms */
 .synomyms {
     position: relative;
     top: -40px;
     /* display: flex; */
     flex-wrap: wrap;
+
 }
 .pills {
     font-family: Inter;
@@ -316,7 +318,7 @@ form img {
 
 @media screen and (max-width: 768px) {
     #SearchWords  {
-        height: 1200px;
+        height: 1300px;
         
     }
     /* form input */
@@ -354,7 +356,19 @@ form img {
         margin-top: -40px;
         background: none;
     }
+    /* last-pills */
+    .last-pills {
+        position: relative;
+        top: -117px;
+        left: 559px;
+    }
 
+    .synomyms {
+        overflow-x: scroll;
+        width: 390px;
+        white-space: nowrap;
+        margin-left: 20px;
+    }
 
     @media screen and (max-width: 500px) {
         .search_header {
@@ -366,6 +380,11 @@ form img {
         .search_header span {
             position: relative;
             top: -50px;
+        }
+        
+        .volumeIcon {
+            position: relative;
+            top: 370px;
         }
 
         .search {
@@ -449,6 +468,17 @@ form img {
 
         .eroorHeader {
             margin-top: 40px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 164px;
+            line-height: 198px;
+            color: #000000;
+        }
+        .synomyms {
+            overflow-x: scroll;
+            width: 290px;
+            white-space: nowrap;
         }
     }
 }

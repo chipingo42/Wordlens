@@ -36,7 +36,6 @@ body {
     font-size: 96px;
     line-height: 116px;
     background: var(--secondary--color);
-    /* background: red; */
     color: var(--primary--color);
     overflow-y: scroll;
     overflow-x: hidden;

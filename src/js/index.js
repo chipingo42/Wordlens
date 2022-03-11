@@ -14,10 +14,7 @@ const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const btn = document.getElementById('mySubmitBtn');
 const synomyoms = document.querySelector('.synomyms');
-// const resultClose = document.querySelector('.hello_result');
-// for (let i = 0; i < 10; i++) {
-//    result.append(btn.contains.cloneNode(true))
-// }
+const loader = document.querySelector('.load')
 
 
 btn.addEventListener("click", (e) => {
@@ -34,7 +31,6 @@ btn.addEventListener("click", (e) => {
                 <div class="details">
                     <p>${data[0].meanings[0].partOfSpeech}</p>
                     <span >/${data[0].phonetic}/</span>
-                    <!-- /həˈləʊ/ -->
                 </div>
                 <button onclick="playSound()">
                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
@@ -88,4 +84,5 @@ btn.addEventListener("click", (e) => {
 function playSound() {
     sound.play();
 }
+
 

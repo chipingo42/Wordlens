@@ -1,25 +1,126 @@
-.skeleton {
-    /* background-image: linear-gradient(to right, #999,
-    #ccc);
-    background-size: 200% 100%;
-    animation: loading 1s linear infinite alternate; 
-    color: #000000;
-    */
+.loading-page {
+   /* display: none; */
+}
 
-    opacity: .7;
-    animation:  skeleton-loading-pages 1s linear infinite alternate;
- 
+.load {
+    position: absolute;
+    z-index: 44;
+    top: 6.5em;
+    left: 380px;
+}
+
+
+.load h2{ 
+    height: 50px;
+   width: 156px;
+   margin-top: -41px;
 
 }
 
-/* @keyframes skeleton-loading-pages {
-    to {
-        background-position: -170% 0;
+.load .details  {
+    height: 27px;
+    width: 300px;
+    margin-top: 41px;
+}
+
+.load h4{
+    height: 30px;
+    width: 510px;
+    margin-top: -90px;
+ 
+}
+
+.load .hello_searched-answer p {
+    height: 20px;
+    margin-top: 38px;
+    width: 600px;
+    margin-left: 40px;
+}
+
+.load .hello_searched-answer h5 {
+    height: 20px;
+    margin-top: 14px;
+    width: 277px;
+    margin-left: 40px;
+}
+
+.load .hello_searched-answer .synonym {
+    height: 20px;
+    margin-top: 19px;
+    width: 140px;
+    margin-left: 40px;
+}
+
+.load .hello_searched-answer .synonyms .lines {
+    height: 31px;
+    margin-top: 15px;
+    width: 673px;
+    margin-left: 39px;
+}
+
+.load .hello_searched-answer .definition1 {
+    height: 31px;
+    margin-top: 13px;
+    width: 365px;
+    margin-left: 40px;
+}
+.load .hello_searched-answer .definition2 {
+    height: 31px;
+    margin-top: 13px;
+    margin-left: 40px;
+    width: 531px;
+}
+
+.load .hello_searched-answer .definition3 .verb {
+    height: 31px;
+    margin-top: 18px;
+    width: 251px;
+    margin-left: 40px;
+}
+
+.load .hello_searched-answer .sentence {
+    height: 31px;
+    margin-top: 18px;
+    width: 444px;
+    margin-left: 40px;
+}
+
+.load h2,
+.load .details ,
+.load h4,
+.load .hello_searched-answer p,
+.load .hello_searched-answer h5 ,
+.load .hello_searched-answer .synonym,
+.load .hello_searched-answer .synonyms .lines,
+.load .hello_searched-answer .definition1,
+.load .hello_searched-answer .definition2,
+.load .hello_searched-answer .definition3 .verb,
+.load .hello_searched-answer .sentence {
+    background-color: #DBE2F4;
+    background: linear-gradient(
+    90deg,
+    #f4f4f4, 
+    rgba(229, 229, 229, 11) 90px,
+    #f4f4f4 150px
+    );
+    background-size: 600px;
+    animation:  loading 1s infinite linear;
+}
+
+
+
+@keyframes loading { 
+    0% {
+        background-position: -100px;
     }
-} */
+
+    100% {
+        background-position: 300px;
+    }
+}
 
 
-@keyframes skeleton-loading-pages {
+/* @keyframes loading {
     0% {
         background-color: hsl(200, 20%, 75%);
     }
@@ -27,26 +128,136 @@
     100% {
         background-color: hsl(200, 20%, 95%);
     }
-}
-
-
-.skeleton-text {
-    width: 30%;
-    height: .5rem;
-    margin-bottom: .25rem;
-}
-
-.skeleton-origin {
-    height: .5rem;
-    margin-bottom: .25rem;
-}
-
-.skeleton-origin:last-child {
-    margin-bottom: 0;
-    width: 80px;
-}
-
-/* .skeleton-img {
-    width: 100px;
-    height: 40px;
 } */
+
+
+@media screen and (max-width: 768px) {
+    .load {
+        position: absolute;
+        left: 70px;
+    }
+    .load h2 {
+        position: relative;
+        top: 87px;
+        width: 161px;
+    }
+    .load .details  {
+        position: relative;
+        top: 90px;
+    }
+    .load h4 {
+        position: relative;
+        top: 80px;
+    }
+    .load .hello_searched-answer p {
+        position: relative;
+        top: 40px;
+    }
+    .load .hello_searched-answer h5 {
+        position: relative;
+        top: 44px;
+    }
+    .load .hello_searched-answer .synonym {
+        position: relative;
+        top: 39px;
+    }
+    .load .hello_searched-answer .synonyms .lines {
+        position: relative;
+        top: 33px;
+        height: 34px;
+        width: 640px;
+    }
+    .load .hello_searched-answer .definition1 {
+        position: relative;
+        top: 44px;
+    }
+    .load .hello_searched-answer .definition2 {
+        position: relative;
+        top: 44px;
+    }
+    .load .hello_searched-answer .definition3 .verb {
+       position: relative;
+       top: 40px;
+    }
+
+    .load .hello_searched-answer .sentence {
+       position: relative;
+       top: 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+        .load {
+            position: absolute;
+            left: 70px;
+        }
+        .load h2 {
+            position: relative;
+            top: -71px;
+            left: -40px;
+            width: 161px;
+        }
+        .load .details  {
+            position: relative;
+            top: -70px;
+            left: -48px;
+        }
+        .load h4 {
+            position: relative;
+            top: -80px;
+            left: -50px;
+            width: 298px;
+            height: 50px;
+        }
+        .load .hello_searched-answer p {
+            position: relative;
+            top: -110px;
+            left: -90px;
+            height: 40px;
+            width: 298px;
+        }
+        .load .hello_searched-answer h5 {
+            position: relative;
+            top: -119px;
+            left: -70px;
+            height: 40px;
+        }
+        .load .hello_searched-answer .synonym {
+            position: relative;
+            top: -128px;
+            left: -69px;
+        }
+        .load .hello_searched-answer .synonyms .lines {
+            position: relative;
+            top: -127px;
+            left: -70px;
+            height: 34px;
+            width: 297px;
+        }
+        .load .hello_searched-answer .definition1 {
+            position: relative;
+            top: -130px;
+            left: -85px;
+            width: 298px;
+        }
+        .load .hello_searched-answer .definition2 {
+            position: relative;
+            top: -127px;
+            left: -77px;
+            height: 56px;
+            width: 298px;
+        }
+        .load .hello_searched-answer .definition3 .verb {
+            position: relative;
+            top: -129px;
+            left: -86px;
+        }
+        .load .hello_searched-answer .sentence {
+            position: relative;
+            top: -130px;
+            left: -80px;
+            height: 40px;
+            width: 298px;
+        }
+    }
+    
+}
