@@ -14,14 +14,14 @@ const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const btn = document.getElementById('mySubmitBtn');
 const synomyoms = document.querySelector('.synomyms');
-const loader = document.querySelector('.load')
+const load = btn.querySelector('.load')
 
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     let inpWord = document.getElementById("Search").value;
     fetch(`${basaUrl}${inpWord}`)
-    .then((response) => response.json())
+    .then((response) =>  response.json())
     .then((data) => {
         console.log(data);
         result.innerHTML = ` 
@@ -78,6 +78,13 @@ btn.addEventListener("click", (e) => {
     })
 });
 
+btn.addEventListener('load', () => {
+    setTimeout(() => {
+    load.classList.add('hide');
+    result.classList.add('show')
+    }, 3400);
+   
+})
 
 
 

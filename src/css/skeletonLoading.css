@@ -1,13 +1,12 @@
-.loading-page {
-   /* display: none; */
-}
-
 .load {
     position: absolute;
     z-index: 44;
     top: 6.5em;
     left: 380px;
+    transition: 0.3s all ease;
+    /* display: none; */
 }
+
 
 
 .load h2{ 
@@ -107,6 +106,15 @@
     animation:  loading 1s infinite linear;
 }
 
+
+.load.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+.result.show {
+    opacity: 1;
+    pointer-events: all;
+}
 
 
 @keyframes loading { 
