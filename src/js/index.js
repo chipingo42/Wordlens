@@ -14,7 +14,7 @@ const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const btn = document.getElementById('mySubmitBtn');
 const synomyoms = document.querySelector('.synomyms');
-const load = btn.querySelector('.load')
+// const load = btn.querySelector('.load')
 
 
 btn.addEventListener("click", (e) => {
@@ -78,13 +78,13 @@ btn.addEventListener("click", (e) => {
     })
 });
 
-btn.addEventListener('load', () => {
-    setTimeout(() => {
-    load.classList.add('hide');
-    result.classList.add('show')
-    }, 3400);
+// btn.addEventListener('load', () => {
+//     setTimeout(() => {
+//     load.classList.add('hide');
+//     result.classList.add('show')
+//     }, 3400);
    
-})
+// })
 
 
 

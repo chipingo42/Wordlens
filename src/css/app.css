@@ -10,6 +10,9 @@
     --inner--color: #FCFCFC;
     --footer--color: #E5E5E5;
     --h5--color: #8C98AD;
+    --input-color: #8C98AD;
+    --errorpage--color: #000000;
+    --pills--color:  #fff;
  
 }
 
@@ -19,6 +22,9 @@
     --order--color: #91A2CB;
     --inner--color: #161c24;
     --footer--color: #0D1726;
+    --errorpage--color: #91A2CB;
+    --pills--color:  #91A2CB;
+
 }
 
 *{
