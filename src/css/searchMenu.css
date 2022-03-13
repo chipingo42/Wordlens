@@ -394,14 +394,11 @@ form img {
             margin-left: -50px;
         }
 
-        /* .search::placeholder {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
+        .search::placeholder {
+            font-size: 12px;
             line-height: 17px;
         }
-        */
+       
 
         form img {
             position: relative;
