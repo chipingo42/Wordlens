@@ -42,15 +42,14 @@ form img {
     background: var(--secondary--color);
     margin-left: -50px;
     border-radius: 5px;
+    color: var(--errorpage--color);
 }
 
 .search:focus {
     outline-color: #25c6ee;
 }
 
-.search:hover {
-    background-color: #fff;
-}
+
 .search::placeholder{
     width: 296px;
     font-family: Inter;
@@ -58,7 +57,7 @@ form img {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: var(--input--color);
+    /* color: var(--input--color); */
 }
 
 
@@ -123,28 +122,16 @@ form img {
     font-size: 24px;
     line-height: 29px;
     position: relative;
-    top: -68px;
-    left: 70px;
+    top: -70px;
+    /* left: 10px; */
     color: var(--order--color);
 }
 
-.hello_Searched  .details p {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    color: var(--order--color);
-    position: relative;
-    left: -1px;
-    top: 30px;
-    
-}
 
 .hello_Searched img {
     position: absolute;
-   top: 152px; 
-   left: 280px;
+   top: 120px; 
+   left: 190px;
    cursor: pointer;
 }
 
@@ -234,7 +221,7 @@ form img {
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 15px;
     color: var(--h5--color);
 }
@@ -352,7 +339,7 @@ form img {
     }
     .hello_Searched img {
         position: absolute;
-        top: 110px;
+        top: 80px;
     }
 
     .hello_Searched h4 {
@@ -380,28 +367,48 @@ form img {
     }
 
     @media screen and (max-width: 500px) {
+        #SearchWords  {
+            height: 1100px;
+        }
         .search_header {
             width: 304px;
             margin-left: -47px;
             font-size: 45px;
+            position: relative;
+            top: -30px;
+            height: 20px;
         }
+        
 
+        .search_header span {
+            position: relative;
+            top: -60px;
+        }
+        .menuSearch {
+            position: relative;
+            top: -20px;
+        }
         .search {
             width: 298px;
             height: 50px;
             margin-left: -50px;
-            padding-left: 69px;
         }
+
+        /* .search::placeholder {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        */
+
         form img {
             position: relative;
             left: -20px;
         }
 
-        /* btn */
-        form {
-            position: relative;
-            top: -220px;
-        }
+       
         .myButton {
             width: 298px;
             height: 50px;
@@ -410,16 +417,18 @@ form img {
             left: -48px;
         }
 
+       
+
         .hello_result {
             position: relative;
             left: -120px;
-            top: -240px;
+            top: -40px;
             border: none;
         }
 
         .hello_Searched img {
            position: absolute;
-           top: 112px;
+           top: 80px;
         }
         .hello_searched_answer {
             margin-top: 10px;
@@ -430,7 +439,7 @@ form img {
         .searched-definition3,
         .searched-definition4,
         .searched-definition5 {
-            margin: 17px 0px;
+            margin: 19px 0px;
         }
         .hello_Searched h4,
         .searched-definition1 p,
@@ -445,7 +454,7 @@ form img {
         .searched-definition3 h5,
         .searched-definition4 h5,
         .searched-definition5 h5 {
-            padding-top: 25px;
+            padding-top: 28px;
             width: 196px;
         }
 

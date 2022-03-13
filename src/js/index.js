@@ -14,7 +14,9 @@ const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const btn = document.getElementById('mySubmitBtn');
 const synomyoms = document.querySelector('.synomyms');
-// const load = btn.querySelector('.load')
+const audio = document.getElementById('audioSpeaker');
+
+// audio = new Audio;
 
 
 btn.addEventListener("click", (e) => {
@@ -29,8 +31,7 @@ btn.addEventListener("click", (e) => {
             <h2 id="header">${inpWord}</h2>
             <div class="hello_Searched">
                 <div class="details">
-                    <p>${data[0].meanings[0].partOfSpeech}</p>
-                    <span >/${data[0].phonetic}/</span>
+                    <span>${data[0].phonetic}</span>
                 </div>
                 <button onclick="playSound()">
                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
@@ -62,6 +63,9 @@ btn.addEventListener("click", (e) => {
                 </div>
             </ul>
         </div>`
+
+        audio.src = data[0].phonetics[0].audio
+        
     })
     .catch(() => {
         result.innerHTML = `
@@ -78,6 +82,10 @@ btn.addEventListener("click", (e) => {
     })
 });
 
+audio.addEventListener('click', () => {
+    audio.play();
+})
+
 // btn.addEventListener('load', () => {
 //     setTimeout(() => {
 //     load.classList.add('hide');
@@ -88,8 +96,8 @@ btn.addEventListener("click", (e) => {
 
 
 
-function playSound() {
-    sound.play();
-}
+// function playSound() {
+//     sound.play();
+// }
 
 
