@@ -13,11 +13,10 @@ const basaUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 const result = document.getElementById('result');
 const sound = document.getElementById('sound');
 const submitBtn = document.getElementById('mySubmitBtn');
-const clearBtn = document.getElementById('clear')
 const synomyoms = document.querySelector('.synomyms');
-const audio = document.getElementById('audioSpeaker');
 
-// audio = new Audio;
+
+audio = new Audio;
 
 
 submitBtn.addEventListener("click", (e) => {
@@ -32,7 +31,7 @@ submitBtn.addEventListener("click", (e) => {
             <h2 id="header">${inpWord}</h2>
             <div class="hello_Searched">
                 <div class="details">
-                    <span>${data[0].phonetic}</span>
+                <span id="audioSpeaker">${data[0].phonetic}</span>
                 </div>
                 <button onclick="playSound()">
                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
@@ -63,10 +62,11 @@ submitBtn.addEventListener("click", (e) => {
                     <h5>sentence: “I pressed the phone button and helloed"</h5>
                 </div>
             </ul>
-        </div>`
+        </div>`  
 
-        audio.src = data[0].phonetics[0].audio
-        
+        audio.src =  data[0].phonetics[0].audio;
+
+
     })
     .catch(() => {
         result.innerHTML = `
@@ -83,22 +83,16 @@ submitBtn.addEventListener("click", (e) => {
     })
 });
 
-audio.addEventListener('click', () => {
-    audio.play();
-})
 
-// btn.addEventListener('load', () => {
-//     setTimeout(() => {
-//     load.classList.add('hide');
-//     result.classList.add('show')
-//     }, 3400);
-   
-// })
+function playSound() {
+  audio.play();
+}
 
 
 
-// function playSound() {
-//     sound.play();
-// }
+
+
+
+
 
 
