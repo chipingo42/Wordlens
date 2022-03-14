@@ -12,14 +12,16 @@ darkMode.onclick = function() {
 const basaUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 const result = document.getElementById('result');
 const sound = document.getElementById('sound');
-const btn = document.getElementById('mySubmitBtn');
+const submitBtn = document.getElementById('mySubmitBtn');
+const clearBtn = document.getElementById('clear')
 const synomyoms = document.querySelector('.synomyms');
 const audio = document.getElementById('audioSpeaker');
 
 // audio = new Audio;
 
 
-btn.addEventListener("click", (e) => {
+submitBtn.addEventListener("click", (e) => {
+    
     e.preventDefault();
     let inpWord = document.getElementById("Search").value;
     fetch(`${basaUrl}${inpWord}`)
@@ -31,7 +33,7 @@ btn.addEventListener("click", (e) => {
             <h2 id="header">${inpWord}</h2>
             <div class="hello_Searched">
                 <div class="details">
-                    <span>${data[0].phonetic}</span>
+                    <span>${data[0].phonetic || ""}</span>
                 </div>
                 <button onclick="playSound()">
                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
