@@ -21,7 +21,6 @@ const audio = document.getElementById('audioSpeaker');
 
 
 submitBtn.addEventListener("click", (e) => {
-    
     e.preventDefault();
     let inpWord = document.getElementById("Search").value;
     fetch(`${basaUrl}${inpWord}`)
@@ -33,7 +32,7 @@ submitBtn.addEventListener("click", (e) => {
             <h2 id="header">${inpWord}</h2>
             <div class="hello_Searched">
                 <div class="details">
-                    <span>${data[0].phonetic || ""}</span>
+                    <span>${data[0].phonetic}</span>
                 </div>
                 <button onclick="playSound()">
                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
