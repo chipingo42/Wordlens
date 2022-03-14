@@ -10,7 +10,7 @@
 
 
 .load h2{ 
-    height: 50px;
+    height: 44px;
    width: 156px;
    margin-top: -41px;
 
@@ -19,60 +19,60 @@
 .load .details  {
     height: 27px;
     width: 300px;
-    margin-top: 41px;
+    margin-top: 18px;
 }
 
 .load h4{
     height: 30px;
     width: 510px;
-    margin-top: -90px;
+    margin-top: 20px;
  
 }
 
 .load .hello_searched-answer p {
     height: 20px;
-    margin-top: 38px;
+    margin-top: 39px;
     width: 600px;
     margin-left: 40px;
 }
 
 .load .hello_searched-answer h5 {
     height: 20px;
-    margin-top: 14px;
+    margin-top: 25px;
     width: 277px;
     margin-left: 40px;
 }
 
 .load .hello_searched-answer .synonym {
-    height: 20px;
+    height: 22px;
     margin-top: 19px;
     width: 140px;
-    margin-left: 40px;
+    margin-left: 42px;
 }
 
 .load .hello_searched-answer .synonyms .lines {
     height: 31px;
-    margin-top: 15px;
+    margin-top: 13px;
     width: 673px;
     margin-left: 39px;
 }
 
 .load .hello_searched-answer .definition1 {
-    height: 31px;
+    height: 30px;
     margin-top: 13px;
     width: 365px;
     margin-left: 40px;
 }
 .load .hello_searched-answer .definition2 {
     height: 31px;
-    margin-top: 13px;
+    margin-top: 19px;
     margin-left: 40px;
     width: 531px;
 }
 
 .load .hello_searched-answer .definition3 .verb {
     height: 31px;
-    margin-top: 18px;
+    margin-top: 24px;
     width: 251px;
     margin-left: 40px;
 }
@@ -200,34 +200,35 @@
         }
         .load h2 {
             position: relative;
-            top: -71px;
-            left: -40px;
+            top: -99px;
+            left: -43px;
             width: 161px;
+            height: 45px;
         }
         .load .details  {
             position: relative;
-            top: -70px;
+            top: -99px;
             left: -48px;
         }
         .load h4 {
             position: relative;
-            top: -80px;
+            top: -94px;
             left: -50px;
             width: 298px;
-            height: 50px;
+            height: 34px;
         }
         .load .hello_searched-answer p {
             position: relative;
-            top: -110px;
+            top: -120px;
             left: -90px;
-            height: 40px;
-            width: 298px;
+            height: 35px;
+            width: 299px;
         }
         .load .hello_searched-answer h5 {
             position: relative;
-            top: -119px;
+            top: -131px;
             left: -70px;
-            height: 40px;
+            height: 32px;
         }
         .load .hello_searched-answer .synonym {
             position: relative;
@@ -236,22 +237,22 @@
         }
         .load .hello_searched-answer .synonyms .lines {
             position: relative;
-            top: -127px;
+            top: -132px;
             left: -70px;
-            height: 34px;
+            /* height: 34px; */
             width: 297px;
         }
         .load .hello_searched-answer .definition1 {
             position: relative;
-            top: -130px;
+            top: -131px;
             left: -85px;
             width: 298px;
         }
         .load .hello_searched-answer .definition2 {
             position: relative;
-            top: -127px;
+            top: -132px;
             left: -77px;
-            height: 56px;
+            height: 52px;
             width: 298px;
         }
         .load .hello_searched-answer .definition3 .verb {
@@ -263,7 +264,7 @@
             position: relative;
             top: -130px;
             left: -80px;
-            height: 40px;
+            height: 35px;
             width: 298px;
         }
     }

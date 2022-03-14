@@ -1,7 +1,6 @@
 #SearchWords  {
     height: 1400px;
     width: 100%;
-    
 }
 
 
@@ -57,7 +56,7 @@ form img {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    /* color: var(--input--color); */
+    color: var(--input--color);
 }
 
 
@@ -67,7 +66,7 @@ form img {
 /* btn */
 .myButton {
     position: relative;
-    top: -119px;
+    top: -116px;
     left: 765px;
 
     z-index: 22;
@@ -462,7 +461,7 @@ form img {
 
         .errorPage {
             position: relative;
-            left: -95px;
+            left: -90px;
         }
         
         .Oops {
@@ -474,13 +473,19 @@ form img {
         }
 
         .eroorHeader {
-            margin-top: 40px;
+            margin-top: 10px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 600;
-            font-size: 164px;
+            font-size: 104px;
             line-height: 198px;
             color: var(--errorpage--color);
+            position: relative;
+            left: 50px;
+        }
+        .eroorHeader span {
+            position: relative;
+            left: -30px;
         }
         .synomyms {
             overflow-x: scroll;

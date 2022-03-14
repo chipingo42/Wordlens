@@ -107,6 +107,9 @@
     right: 100px;
 }
 
+.footer-links img {
+    cursor: pointer;
+}
 .footer-privacy {
     width: 228px;
     height: 16px;
@@ -229,6 +232,7 @@
             position: relative;
             right: 132px;
             bottom: 140px;
+            height: 20px;
         }
 
         .footer-copy {
