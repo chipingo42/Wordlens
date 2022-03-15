@@ -6,7 +6,9 @@
 
 /* search content */
 .search_content {
-    margin: 0 75px;
+    /* margin: 0 75px; */
+    margin-top: 80px;
+    padding: 0  75px;
 }
 
 /* search header */
@@ -493,11 +495,12 @@
             line-height: 198px;
             color: var(--errorpage--color);
             position: relative;
-            left: 50px;
+            left: 30px;
         }
         .eroorHeader span {
             position: relative;
-            left: -30px;
+            left: -29px;
+            font-size: 30px;
         }
         .synomyms {
             overflow-x: scroll;
