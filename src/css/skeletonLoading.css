@@ -1,88 +1,247 @@
-.load {
-    position: absolute;
-    z-index: 44;
-    top: 6.5em;
-    left: 380px;
-    /* transition: 0.3s all ease; */
+.loader {
+    position: relative;
+    left: 40px;
+    z-index: 1;
     /* display: none; */
+    
 }
 
-
-
-.load h2{ 
-    height: 44px;
-   width: 156px;
-   margin-top: -41px;
-
+.loader #result {
+    background: var(--loader--color);
+    margin-left: -36px;
+    height: 552px;
 }
 
-.load .details  {
-    height: 27px;
-    width: 300px;
-    margin-top: 18px;
+.loader h2 {
+    width: 192px;
+    height: 33px;
+    z-index: 66;
+    margin-top: -27px;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: -540px;
+    left: -45px;
 }
 
-.load h4{
-    height: 30px;
+.loader .cover {
+    width: 123px;
+    height: 18px;
+    z-index: 66;
+    margin-top: 40px;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: -550px;
+    left: -45px;
+}
+
+.loader h4 {
     width: 510px;
-    margin-top: 20px;
- 
+    height: 10px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: -490px;
+    left: -45px;
 }
 
-.load .hello_searched-answer p {
-    height: 20px;
-    margin-top: 39px;
-    width: 600px;
-    margin-left: 40px;
+
+
+.loader .innerCenter{
+    width: 726px;
+    height: 259px;
+    background: var(--loader-inner-color);
+    position: relative;
+    top: -470px;
+    left: -45px;
 }
 
-.load .hello_searched-answer h5 {
-    height: 20px;
-    margin-top: 25px;
-    width: 277px;
-    margin-left: 40px;
+.loader .m1 {
+    width: 538px;
+    height: 8px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: 30px;
+    left: 35px;
 }
 
-.load .hello_searched-answer .synonym {
-    height: 22px;
-    margin-top: 19px;
-    width: 140px;
-    margin-left: 42px;
+.loader .se {
+    width: 231px;
+    height: 6px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: 60px;
+    left: 50px;
 }
 
-.load .hello_searched-answer .synonyms .lines {
-    height: 31px;
-    margin-top: 13px;
-    width: 673px;
-    margin-left: 39px;
+
+.loader .Syno {
+    width: 99px;
+    height: 10px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: 80px;
+    left: 50px;
 }
 
-.load .hello_searched-answer .definition1 {
-    height: 30px;
-    margin-top: 13px;
-    width: 365px;
-    margin-left: 40px;
-}
-.load .hello_searched-answer .definition2 {
-    height: 31px;
-    margin-top: 19px;
-    margin-left: 40px;
-    width: 531px;
+.loader .sy2 {
+    width: 328px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    height: 8px;
+    position: relative;
+    top: 150px;
+    left: 32px;
 }
 
-.load .hello_searched-answer .definition3 .verb {
-    height: 31px;
-    margin-top: 24px;
-    width: 251px;
-    margin-left: 40px;
+
+.loader .me2 {
+    width: 467px;
+    height: 6px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: 160px;
+    left: 47px;
 }
 
-.load .hello_searched-answer .sentence {
-    height: 31px;
-    margin-top: 18px;
-    width: 444px;
-    margin-left: 40px;
+.loader .se2 {
+    width: 99px;
+    height: 19px;
+    z-index: 66;
+    background: var(--loader-h2-color);
+    position: relative;
+    top: 170px;
+    left: 47px;
 }
+
+
+.loader h2,
+.loader .cover,
+.loader h4,
+.loader .innerCenter{
+    /* opacity: 13; */
+    animation:  heading  1s infinite linear;
+
+}
+
+
+
+@keyframes heading {
+    0% {
+        background-color: hsl(200, 20%, 75%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .loader {
+        position: absolute;
+        left: 83px;
+        /* display: none; */
+        
+    }
+
+    .loader h2,
+    .loader h4,
+    .loader .cover {
+        position: relative;
+    }
+
+    .loader .innerCenter{
+        width: 606px;
+        position: relative;
+        top: -420px;
+    }
+
+    .loader .m1 {
+        width: 460px;
+    }
+
+
+    @media screen and (max-width: 500px) {
+        .loader {
+            position: absolute;
+            left: 83px;
+            /* display: none; */
+        }
+
+        .loader #result {
+           width: 295px;
+           position: relative;
+           top: -190px;
+           left: -24px;
+        }
+
+        .loader h2,
+        .loader h4,
+        .loader .cover {
+            width: 180px;
+        }
+
+        .loader .innerCenter{
+            width: 260px;
+            position: relative;
+            top: -420px;
+            /* background: none; */
+        }
+
+        .loader .m1,
+        .loader .se {
+            width: 190px;
+            position: relative;
+            left: 10px;
+        }
+
+        .loader .sy2 {
+            width: 190px;
+            position: relative;
+            left: 10px;
+        }
+        .loader .me2 {
+            width: 190px;
+            position: relative;
+            left: 43px;
+        }
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 .load h2,
 .load .details ,
@@ -104,169 +263,10 @@
     );
     background-size: 600px;
     animation:  loading 1s infinite linear;
-}
-
-
-.load.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-.result.show {
-    opacity: 1;
-    pointer-events: all;
-}
-
-
-@keyframes loading { 
-    0% {
-        background-position: -100px;
-    }
-
-    100% {
-        background-position: 300px;
-    }
-}
-
-
-/* @keyframes loading {
-    0% {
-        background-color: hsl(200, 20%, 75%);
-    }
-
-    100% {
-        background-color: hsl(200, 20%, 95%);
-    }
 } */
 
 
-@media screen and (max-width: 768px) {
-    .load {
-        position: absolute;
-        left: 70px;
-    }
-    .load h2 {
-        position: relative;
-        top: 87px;
-        width: 161px;
-    }
-    .load .details  {
-        position: relative;
-        top: 90px;
-    }
-    .load h4 {
-        position: relative;
-        top: 80px;
-    }
-    .load .hello_searched-answer p {
-        position: relative;
-        top: 40px;
-    }
-    .load .hello_searched-answer h5 {
-        position: relative;
-        top: 44px;
-    }
-    .load .hello_searched-answer .synonym {
-        position: relative;
-        top: 39px;
-    }
-    .load .hello_searched-answer .synonyms .lines {
-        position: relative;
-        top: 33px;
-        height: 34px;
-        width: 640px;
-    }
-    .load .hello_searched-answer .definition1 {
-        position: relative;
-        top: 44px;
-    }
-    .load .hello_searched-answer .definition2 {
-        position: relative;
-        top: 44px;
-    }
-    .load .hello_searched-answer .definition3 .verb {
-       position: relative;
-       top: 40px;
-    }
 
-    .load .hello_searched-answer .sentence {
-       position: relative;
-       top: 40px;
-    }
 
-    @media screen and (max-width: 500px) {
-        .load {
-            position: absolute;
-            left: 70px;
-        }
-        .load h2 {
-            position: relative;
-            top: -99px;
-            left: -43px;
-            width: 161px;
-            height: 45px;
-        }
-        .load .details  {
-            position: relative;
-            top: -99px;
-            left: -48px;
-        }
-        .load h4 {
-            position: relative;
-            top: -94px;
-            left: -50px;
-            width: 298px;
-            height: 34px;
-        }
-        .load .hello_searched-answer p {
-            position: relative;
-            top: -120px;
-            left: -90px;
-            height: 35px;
-            width: 299px;
-        }
-        .load .hello_searched-answer h5 {
-            position: relative;
-            top: -131px;
-            left: -70px;
-            height: 32px;
-        }
-        .load .hello_searched-answer .synonym {
-            position: relative;
-            top: -128px;
-            left: -69px;
-        }
-        .load .hello_searched-answer .synonyms .lines {
-            position: relative;
-            top: -132px;
-            left: -70px;
-            /* height: 34px; */
-            width: 297px;
-        }
-        .load .hello_searched-answer .definition1 {
-            position: relative;
-            top: -131px;
-            left: -85px;
-            width: 298px;
-        }
-        .load .hello_searched-answer .definition2 {
-            position: relative;
-            top: -132px;
-            left: -77px;
-            height: 52px;
-            width: 298px;
-        }
-        .load .hello_searched-answer .definition3 .verb {
-            position: relative;
-            top: -129px;
-            left: -86px;
-        }
-        .load .hello_searched-answer .sentence {
-            position: relative;
-            top: -130px;
-            left: -80px;
-            height: 35px;
-            width: 298px;
-        }
-    }
-    
-}
+
+

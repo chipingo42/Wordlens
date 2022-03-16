@@ -64,7 +64,7 @@ submitBtn.addEventListener("click", (e) => {
             </ul>
         </div>`  
 
-        audio.src =  data[0].phonetics[0].audio;
+        // audio.src =  data[0].phonetics[0].audio;
 
 
     })

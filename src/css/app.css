@@ -1,6 +1,9 @@
 @import url('./nav.css');
 @import url('./searchMenu.css');
+@import url('./searchRes.css');
+@import url('./form.css');
 @import url('./footer.css');
+@import url('./error.css');
 @import url('./skeletonLoading.css');
 
 :root {
@@ -9,21 +12,29 @@
     --order--color: #E5E5E5;
     --inner--color: #FCFCFC;
     --footer--color: #E5E5E5;
-    --h5--color: #8C98AD;
-    --input-color: #8C98AD;
+    --input-color: #E9ECF0;
     --errorpage--color: #000000;
-    --pills--color:  #fff;
+    --pills--color:  #000000;
+    --loader--color: #E9ECF0;
+    --loader-h2-color: #DBE2F4;
+    --loader-inner-color: #F6F7FA;
+    
+    
+    
  
 }
 
 .darkMode {
     --primary--color: #91A2CB;
     --secondary--color: #0D1726; 
+    --loader--color: #0D1726;
+    --loader-inner-color: #0D1726;
     --order--color: #91A2CB;
-    --inner--color: #161c24;
+    --inner--color: #0D1726;
     --footer--color: #0D1726;
+    --input-color: #91A2CB;
     --errorpage--color: #91A2CB;
-    --pills--color:  #91A2CB;
+    --pills--color:  #fff;
 
 }
 

@@ -1,0 +1,238 @@
+#result {
+    position: relative;
+    top: -70px;
+    width: 892px;
+    height: 100%;
+    border: 1px solid var(--input-color);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.content {
+    margin: 0 60px;
+}
+
+.content h2 {
+    width: 158px;
+    height: 77px;
+    padding-top: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    color: var(--primary--color);
+}
+
+.content span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #8C98AD;
+    position: relative;
+    top: -40px;
+}
+
+.volumeIcon {
+    position: relative;
+    top: -39px;
+    cursor: pointer;
+}
+
+.content h4 {
+    width: 512px;
+    margin-top: -44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color)
+}
+
+
+/* headerMeaning */
+.headerMeaning {
+    width: 730px;
+    height: 100%;
+    margin:  20px 0;
+    padding: 40px 60px;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    background:  var(--inner--color);
+}
+
+.meaning1 {
+    width: 600px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color);
+}
+
+.sentence {
+    width: 240px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8C98AD;
+}
+
+.Synonyms {
+    width: 101px;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color);
+}
+
+
+.synonymsList {
+    display: flex;
+}
+
+.pills {
+    width: 50px;
+    height: 20px;
+    background: coral;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 5px;
+    color: var(--pills--color);
+    padding-left: 3px;
+}
+
+/* meaning2 */
+.meaning2 {
+    width: 600px;
+    padding-top: 37px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color);
+}
+.sentence2 {
+    width: 540px;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8C98AD;
+}
+
+/* meaning3 */
+.meaning3 {
+    width: 600px;
+    padding-top: 47px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color);
+}
+
+.sentence3 {
+    width: 540px;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8C98AD;
+}
+
+
+@media screen and (max-width: 768px) {
+    #result {
+        width: 650px;
+    }
+
+    .content {
+        margin: 0 30px;
+    }
+
+    .headerMeaning {
+        width: 580px;
+    }
+
+    @media screen and (max-width: 500px) {
+        
+        #result {
+           border: none;
+        }
+
+        .content {
+            position: relative;
+            top: -160px;
+            left: -30px;
+        }
+
+        .headerMeaning {
+            background: none;
+            padding: 40px 3px;
+        }
+
+        .content h4 {
+            width: 298px;
+            height: 34px;
+        }
+
+        .meaning1 {
+            width: 293px;
+            height: 34px;
+        }
+
+        .sentence {
+            padding-top: 10px;
+        }
+
+        .Synonyms {
+            margin-top: 20px;
+        }
+
+        .synonymsList {
+            width: 220px;
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .meaning2,
+        .meaning3 {
+            width: 293px;
+        }
+        .sentence2,
+        .sentence3 {
+            width: 293px;
+        }
+    
+    }
+}

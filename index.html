@@ -22,7 +22,6 @@
             <div class="navbar">
                 <div class="nav_logo">Wordlens</div>
                 <div class="darkMood">
-                     
                    <span class="fa-solid fa-sun"></span>
                 </div>
             </div>
@@ -43,92 +42,86 @@
                             <input 
                             id="Search"
                             class="search" 
-                            type="search" 
+                            type="text" 
                             autocomplete="off"
                             placeholder="What would you like to search for?">
                         </div>
-                        <button id="mySubmitBtn" class="myButton">Search</button>
+                        <button aria-label="search button" id="mySubmitBtn" class="myButton">Search</button>
                     </form>
 
 
-
                     <!-- loading page -->
-                    <!-- <div class="load">
-                        <h2></h2>
-                        <div class="hello_searched">
-                            <div class="details">
-                                <div class="pos">
-                                    <span></span>
-                                </div>
+                    <div class="loader">
+                        <div id="result"></div>
+                        <div class="content">
+                            <h2></h2>
+                            <div class="cover">
+                                <span></span>
+                                <img class="img" src="" alt="">
                             </div>
                             <h4></h4>
-                            <div class="hello_searched-answer">
-                                <p></p>
-                                <h5></h5>
-                                <div class="synonym"></div>
-                                <div class="synonyms">
-                                    <div class="lines"></div>
-                                </div>
-                                <div class="definition1"></div>
-                                <div class="definition2"></div>
-                                <div class="definition3">
-                                    <div class="verb"></div>
-                                    <div class="sentence"></div>
-                                </div>
+                            <div class="innerCenter">
+                                <div class="m1"></div>
+                                <div class="se"></div>
+                                <div class="Syno"></div>
+                                <div class="sy2"></div>
+                                <div class="me2"></div>
+                                <div class="se2"></div>
+                                <div class="me3"></div>
                             </div>
+                            
                         </div>
-                    </div> -->
-            
-                    <!-- Result Hello -->
-                    <div class="hello_result" id="result">
-                        <div class="hello_content">
-                            <h2 id="header" class="head">Hello</h2>
-                            <div class="hello_Searched">
-                                <div class="details">
-                                    <!-- <p class="pos">pos</p> -->
-                                    <span id="audioSpeaker">/həˈləʊ/</span>
-                                </div>
-                                <button onclick="playsound()">
-                                    <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
-                                </button>
-                                
-                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
-                            </div>
-                            <ul class="hello_searched_answer">
-                                <div class="searched-definition1">
-                                    <p>1. (exclamation) used as a greeting or to begin a hone conversation.</p>
-                                    <h5>sentence: “hello there, Katie!"</h5>
-                                    <h6 class="synonym">Synonyms</h6>
-                                    <div class="synomyms">
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills">shhsh</span>
-                                        <span class="pills last-pills">shhsh</span>
-                                    </div>
-                                </div>
-                                <div class="searched-definition2">
-                                    <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
-                                    <h5>sentence: “she was getting polite nods and hellos from people"</h5>
-                                </div>
-                                <div class="searched-definition3">
-                                    <p class="verb">3. (verb) say or shout ‘hello’.</p>
-                                    <h5 class="sentence">sentence: “I pressed the phone button and helloed"</h5>
-                                </div>
-                            </ul> 
+                    </div>
+                    
 
-                            <!-- <div class="errorPage">
-                                <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
-                                    for the word you were looking for.
-                                </p>
-                                <h1 class="eroorHeader">404 <br> 
-                                    <span>no be juju be that!</span>
-                                </h1>
-                              <button class="errorBtn"><a href="index.html">Take me home</a></button>
-                            </div> -->
+                    <!-- Result Hello -->
+                    <div id="result">
+                        <div class="result">
+                            <div class="content">
+                                <h2>Hello</h2>
+                                <span>/həˈləʊ/</span>
+                                <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
+                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+
+                                <ul class="headerMeaning">
+                                    <div class="meaning1">
+                                       1. (exclamation) used as a greeting or to begin a hone conversation.
+                                    </div>
+                                    <div class="sentence">
+                                        sentence: “hello there, Katie!
+                                    </div>
+                                    <div class="Synonyms">Synonyms"</div>
+                                    <div class="synonymsList">
+                                        <p class="pills">smart</p>
+                                        <p class="pills">smart</p>
+                                        <p class="pills">smart</p>
+                                        <p class="pills">smart</p>
+                                        <p class="pills">smart</p>
+                                        <p class="pills">smart</p>
+                                    </div>
+                                    <div class="meaning2">
+                                        <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
+                                    </div>
+                                    <div class="sentence2">
+                                        sentence: “she was getting polite nods and hellos from people"
+                                    </div>
+                                    <div class="meaning3">
+                                        <p>3. (noun) an utterance of ‘hello’; a greeting.</p>
+                                    </div>
+                                    <div class="sentence3">
+                                       sentence: “I pressed the phone button and helloed"
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
+                        <!-- <div class="errorPage">
+                            <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
+                                for the word you were looking for.
+                            </p>
+                            <h1 class="eroorHeader">404</h1> 
+                            <h5>no be juju be that!</h5>
+                            <button><a href="./index.html">Take me home</a></button>
+                        </div> -->
                     </div>
                 </div>
             </div>
