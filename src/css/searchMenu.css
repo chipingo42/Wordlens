@@ -1,6 +1,6 @@
 #SearchWords {
     height: 100%;
-    /* background: red; */
+    background: red;
 }
 
 
@@ -29,7 +29,7 @@
             margin-left: 22px;
         }
         .search_header {
-            font-size: 52px;
+            font-size: 49px;
             position: relative;
             top: -80px;
         }
