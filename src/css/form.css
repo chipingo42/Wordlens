@@ -4,7 +4,7 @@
     margin-top: 40px;
     position: relative;
     left: -50px;
-    padding-right: 130px;
+    /* padding-right: 130px; */
 
     border: 1px solid var(--input-color);
     box-sizing: border-box;
@@ -59,7 +59,9 @@
     @media screen and (max-width: 500px) {
        .search {
            width: 298px;
-           bottom: 200px;
-       }
+           height: 50px;
+           position: relative;
+           top: -200px;
+        }
     }
 }
