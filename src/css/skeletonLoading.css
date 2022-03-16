@@ -1,6 +1,6 @@
 .loader {
-    position: relative;
-    left: 40px;
+    position: absolute;
+    left: 380px;
     z-index: 1;
     /* display: none; */
     
@@ -231,39 +231,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* 
-
-.load h2,
-.load .details ,
-.load h4,
-.load .hello_searched-answer p,
-.load .hello_searched-answer h5 ,
-.load .hello_searched-answer .synonym,
-.load .hello_searched-answer .synonyms .lines,
-.load .hello_searched-answer .definition1,
-.load .hello_searched-answer .definition2,
-.load .hello_searched-answer .definition3 .verb,
-.load .hello_searched-answer .sentence {
-    background-color: #DBE2F4;
-    background: linear-gradient(
-    90deg,
-    #f4f4f4, 
-    rgba(229, 229, 229, 11) 90px,
-    #f4f4f4 150px
-    );
-    background-size: 600px;
-    animation:  loading 1s infinite linear;
-} */
 
 
 
