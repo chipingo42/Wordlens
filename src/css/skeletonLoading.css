@@ -147,7 +147,7 @@
 @media screen and (max-width: 768px) {
     .loader {
         position: absolute;
-        left: 83px;
+        margin-left: 33px;
         /* display: none; */
         
     }
@@ -172,12 +172,13 @@
     @media screen and (max-width: 500px) {
         .loader {
             position: absolute;
-            left: 83px;
+            margin-left: 60px;
             /* display: none; */
         }
 
         .loader #result {
            width: 295px;
+           height: 580px;
            position: relative;
            top: -190px;
            left: -24px;
