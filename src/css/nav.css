@@ -5,6 +5,7 @@
     position: fixed;
     z-index: 99;
     background: var(--secondary--color);
+    /* background: red; */
 }
 
 
@@ -27,11 +28,11 @@
 
 .fa-solid::before {
     position: relative;
-    top: -40px;
+    top: 14px;
    color: var(--primary--color);
    cursor: pointer;
    font-size: 40px;
-   /* transform: rotate(136deg); */
+  
 }
 
 
@@ -53,7 +54,7 @@
         .fa-solid::before {
             font-size: 25px;
             position: relative;
-            top: -44px;
+            /* top: -44px; */
         }
     }
 }

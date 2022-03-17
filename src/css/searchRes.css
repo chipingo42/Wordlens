@@ -1,11 +1,12 @@
 #result {
     position: relative;
-    top: -70px;
+    top: -20px;
     width: 892px;
     height: 100%;
     border: 1px solid var(--input-color);
     box-sizing: border-box;
     border-radius: 5px;
+    margin: 30px 0;
 }
 
 .content {
@@ -15,7 +16,8 @@
 .content h2 {
     width: 158px;
     height: 77px;
-    padding-top: 30px;
+    padding-top: 15px;
+   
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -32,18 +34,18 @@
     line-height: 29px;
     color: #8C98AD;
     position: relative;
-    top: -40px;
+    top: 8px;
 }
 
 .volumeIcon {
     position: relative;
-    top: -39px;
+    top: 8px;
     cursor: pointer;
 }
 
 .content h4 {
     width: 512px;
-    margin-top: -44px;
+    margin-top: 10px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -57,14 +59,8 @@
 .headerMeaning {
     width: 730px;
     height: 100%;
-    margin:  20px 0;
+    margin:  20px 0px 60px 0px;
     padding: 40px 60px;
-
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
     background:  var(--inner--color);
 }
 
@@ -170,6 +166,8 @@
 }
 
 
+
+
 @media screen and (max-width: 768px) {
     #result {
         width: 650px;
@@ -181,17 +179,19 @@
 
     .headerMeaning {
         width: 580px;
-    }
+    } 
 
     @media screen and (max-width: 500px) {
-        
         #result {
            border: none;
-        }
+           position: relative;
+           top: -70px;
+           width: 289px;
+
+        } 
 
         .content {
             position: relative;
-            top: -290px;
             left: -30px;
         }
 
@@ -223,6 +223,7 @@
             overflow-x: scroll;
             white-space: nowrap;
             margin-left: 20px;
+            height: 39px;
         }
 
         .meaning2,
@@ -234,5 +235,5 @@
             width: 293px;
         }
     
-    }
-}
+    } 
+}  

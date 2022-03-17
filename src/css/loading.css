@@ -12,7 +12,7 @@
 .loader #result {
     background: var(--loader--color);
     margin-left: -36px;
-    height: 552px;
+    height: 560px;
 }
 
 .loader h2 {
@@ -123,8 +123,13 @@
 
 .loader h2,
 .loader .cover,
-.loader h4,
-.loader .innerCenter{
+.loader h4, 
+.loader .m1, 
+.loader .se, 
+.loader .Syno, 
+.loader .sy2,
+.loader .me2, 
+.loader .se2 {
     /* opacity: 13; */
     animation:  heading  1s infinite linear;
 
@@ -180,7 +185,7 @@
            width: 295px;
            height: 580px;
            position: relative;
-           top: -190px;
+           top: -60px;
            left: -24px;
         }
 
@@ -188,12 +193,14 @@
         .loader h4,
         .loader .cover {
             width: 180px;
+            position: relative;
+            top: -540px;
         }
 
         .loader .innerCenter{
             width: 260px;
             position: relative;
-            top: -420px;
+            top: -490px;
             /* background: none; */
         }
 

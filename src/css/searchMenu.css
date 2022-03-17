@@ -6,7 +6,8 @@
 
 .search_content {
     padding-top: 120px;
-    margin-left: 110px;
+    /* margin-left: 110px; */
+    margin: 0  110px;
 }
 
 .search_header {
@@ -29,7 +30,8 @@
             margin-left: 22px;
         }
         .search_header {
-            font-size: 49px;
+            font-size: 44px;
+            width: 300px;
             position: relative;
             top: -80px;
         }

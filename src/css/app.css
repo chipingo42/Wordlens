@@ -4,7 +4,7 @@
 @import url('./form.css');
 @import url('./footer.css');
 @import url('./error.css');
-@import url('./skeletonLoading.css');
+@import url('./loading.css');
 
 :root {
     --primary--color: #0B0A1B;
@@ -50,8 +50,6 @@ body {
     font-style: normal;
     font-weight: 600;
     font-style: normal;
-    font-size: 96px;
-    line-height: 116px;
     background: var(--secondary--color);
     color: var(--primary--color);
     overflow-y: scroll;
