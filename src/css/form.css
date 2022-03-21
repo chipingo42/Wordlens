@@ -6,6 +6,7 @@
     left: -30px;
     border: 1px solid var(--input-color);
     box-sizing: border-box;
+    padding-right: 140px;
     border-radius: 5px;
     padding-left: 90px;
     outline: none;

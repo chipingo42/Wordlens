@@ -2,6 +2,7 @@
     position: absolute;
     top: 40px;
     left: 150px;
+    /* display: none; */
 }
 .Oops {
     width: 506px;
@@ -12,6 +13,7 @@
     line-height: 29px;
 
     color: #000000;
+    /* display: none; */
 }
 
 .eroorHeader {
@@ -58,5 +60,77 @@ a {
     font-size: 16px;
     line-height: 19px;
     color: #000000;
+
+}
+
+/* errorLabel */
+.errorLabel {
+    color: #c70909;
+    font-family: 'Inter';
+    font-style: normal;
+    position: relative;
+    top: -46px;
+    left: 4px;
+    font-size: 15px;
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .errorPage {
+       position: absolute;
+       /* right: 70px; */
+       left: 70px;
+    }
+    
+    .eroorHeader {
+        margin-top: -40px;
+    }
+    .errorPage h5  {
+        padding-top: 30px;
+    }
+    .errorPage button {
+        margin-top: 98px;
+    }
+    .errorLabel {
+        position: relative;
+        top: -44px;
+    }
+
+    @media screen and (max-width: 500px) {
+        .errorPage {
+            position: absolute;
+            left: -20px;
+        }
+       
+        .Oops {
+            /* font-size: 15px; */
+            width: 310px;
+            padding-left: 30px;
+        }
+       
+        .eroorHeader {
+            margin-left: -10px;
+            font-size: 90px;
+        } 
+
+        .errorPage h5  {
+            position: relative;
+            top: -38px;
+            left: 30px;
+        }
+
+        .errorPage button {
+            margin-top: 58px;
+            position: relative;
+            left: 50px;
+        }
+
+        .errorLabel {
+            position: relative;
+            top: -80px;
+        }
+    
+    }
 
 }

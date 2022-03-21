@@ -26,13 +26,27 @@
     border-top: 5px solid var(--primary--color);
 }
 
+.darkMood {
+    margin-top: 17px;
+    background: none;
+    /* display: none; */
+    border: none;
+    outline: none;
+ 
+}
+
 .fa-solid::before {
     position: relative;
-    top: 14px;
+    top: 1px;
    color: var(--primary--color);
    cursor: pointer;
    font-size: 40px;
   
+}
+
+.fa-regular::before {
+    cursor: pointer;
+   font-size: 40px;
 }
 
 

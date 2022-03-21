@@ -1,4 +1,4 @@
-.loader {
+#skeleton {
     position: absolute;
     margin: auto;
     align-items: center;
@@ -9,35 +9,38 @@
     
 }
 
-.loader #result {
+#skeleton #loader {
     background: var(--loader--color);
     margin-left: -36px;
-    height: 560px;
+    width: 892px;
+    height: 561px;
+    margin-top: 11px;
+    
 }
 
-.loader h2 {
+#skeleton h2 {
     width: 192px;
     height: 33px;
     z-index: 66;
     margin-top: -27px;
     background: var(--loader-h2-color);
     position: relative;
-    top: -540px;
+    top: -510px;
     left: -45px;
 }
 
-.loader .cover {
+#skeleton .cover {
     width: 123px;
     height: 18px;
     z-index: 66;
     margin-top: 40px;
     background: var(--loader-h2-color);
     position: relative;
-    top: -550px;
+    top: -530px;
     left: -45px;
 }
 
-.loader h4 {
+#skeleton h4 {
     width: 510px;
     height: 10px;
     z-index: 66;
@@ -49,16 +52,16 @@
 
 
 
-.loader .innerCenter{
+#skeleton .innerCenter{
     width: 726px;
     height: 259px;
     background: var(--loader-inner-color);
     position: relative;
-    top: -470px;
+    top: -450px;
     left: -45px;
 }
 
-.loader .m1 {
+#skeleton .m1 {
     width: 538px;
     height: 8px;
     z-index: 66;
@@ -68,7 +71,7 @@
     left: 35px;
 }
 
-.loader .se {
+#skeleton .se {
     width: 231px;
     height: 6px;
     z-index: 66;
@@ -79,7 +82,7 @@
 }
 
 
-.loader .Syno {
+#skeleton .Syno {
     width: 99px;
     height: 10px;
     z-index: 66;
@@ -89,7 +92,7 @@
     left: 50px;
 }
 
-.loader .sy2 {
+#skeleton .sy2 {
     width: 328px;
     z-index: 66;
     background: var(--loader-h2-color);
@@ -100,7 +103,7 @@
 }
 
 
-.loader .me2 {
+#skeleton .me2 {
     width: 467px;
     height: 6px;
     z-index: 66;
@@ -110,7 +113,7 @@
     left: 47px;
 }
 
-.loader .se2 {
+#skeleton .se2 {
     width: 99px;
     height: 19px;
     z-index: 66;
@@ -121,15 +124,15 @@
 }
 
 
-.loader h2,
-.loader .cover,
-.loader h4, 
-.loader .m1, 
-.loader .se, 
-.loader .Syno, 
-.loader .sy2,
-.loader .me2, 
-.loader .se2 {
+#skeleton h2,
+#skeleton .cover,
+#skeleton h4, 
+#skeleton .m1, 
+#skeleton .se, 
+#skeleton .Syno, 
+#skeleton .sy2,
+#skeleton .me2, 
+#skeleton .se2 {
     /* opacity: 13; */
     animation:  heading  1s infinite linear;
 
@@ -150,38 +153,43 @@
 
 
 @media screen and (max-width: 768px) {
-    .loader {
+    #skeleton {
         position: absolute;
         margin-left: 33px;
         /* display: none; */
         
     }
 
-    .loader h2,
-    .loader h4,
-    .loader .cover {
+    #skeleton #loader {
+        width: 651px;
+        
+    }
+
+    #skeleton h2,
+    #skeleton h4,
+    #skeleton .cover {
         position: relative;
     }
 
-    .loader .innerCenter{
-        width: 606px;
+    #skeleton .innerCenter{
+        width: 570px;
         position: relative;
         top: -420px;
     }
 
-    .loader .m1 {
+    #skeleton .m1 {
         width: 460px;
     }
 
 
     @media screen and (max-width: 500px) {
-        .loader {
+        #skeleton {
             position: absolute;
             margin-left: 60px;
             /* display: none; */
         }
 
-        .loader #result {
+        #skeleton #loader {
            width: 295px;
            height: 580px;
            position: relative;
@@ -189,34 +197,34 @@
            left: -24px;
         }
 
-        .loader h2,
-        .loader h4,
-        .loader .cover {
+        #skeleton h2,
+        #skeleton h4,
+        #skeleton .cover {
             width: 180px;
             position: relative;
             top: -540px;
         }
 
-        .loader .innerCenter{
+        #skeleton .innerCenter{
             width: 260px;
             position: relative;
             top: -490px;
             /* background: none; */
         }
 
-        .loader .m1,
-        .loader .se {
+        #skeleton .m1,
+        #skeleton .se {
             width: 190px;
             position: relative;
             left: 10px;
         }
 
-        .loader .sy2 {
+        #skeleton .sy2 {
             width: 190px;
             position: relative;
             left: 10px;
         }
-        .loader .me2 {
+        #skeleton .me2 {
             width: 190px;
             position: relative;
             left: 43px;

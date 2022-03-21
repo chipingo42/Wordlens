@@ -20,38 +20,38 @@
         <div class="container">
             <div class="navbar">
                 <div class="nav_logo">Wordlens</div>
-                <div class="darkMood">
-                    <i class="fa-solid fa-sun"></i>
-                </div>
+                <button aria-label="toggle theme" class="darkMood" id="toggle" >
+                    <i class="fa-solid fa-sun" id="darkIcon"></i>
+
+                    <!-- <i class="fa-solid fa-sun" id="lightmode"></i> -->
+                </button>
             </div>
         </div>
     </div>
 
     <section>
-        <div id="SearchWords">
+        <div id="SearchWords" class="wrapper">
             <div class="container">
                 <div class="search_content">
                     <div class="search_header">Search <br> 
                         <span>for any word.</span>
                     </div>
 
-                    <form id="formSearch" class="menuSearch">
+                    <form id="formSearch" class="menuSearch" >
                         <div class="form-group">
                             <span><img class="searchIcon" src="./src/public/svg/search.svg" alt=""></span>
-                            <input 
-                            id="Search"
-                            class="search" 
-                            type="text" 
-                            autocomplete="off"
-                            placeholder="What would you like to search for?">
-                        </div>
+                            
+                            <input id="Search" class="search" type="text" autocomplete="off"placeholder="What would you like to search for?">
+                        </div>  
                         <button aria-label="search button" id="mySubmitBtn" class="myButton">Search</button>
+
+                        <p class="errorLabel" id="erroLabel">please type a word</p>
                     </form>
 
 
                     <!-- loading page -->
-                     <div class="loader">
-                        <div id="result"></div>
+                    <div id="skeleton">
+                        <div id="loader"></div>
                         <div class="content">
                             <h2></h2>
                             <div class="cover">
@@ -71,22 +71,22 @@
                             
                         </div>
                     </div>
-                     
 
                     <!-- Result Hello -->
                     <div id="result">
                         <div class="result">
                             <div class="content">
-                                <h2>Hello</h2>
-                                <span>/həˈləʊ/</span>
-                                <img class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
+                                <h2 id="word">Hello</h2>
+                                <span id="phoneticsName">/həˈləʊ/</span>
+                                <audio id="audio"></audio>
+                                <img id="audiobtn" class="volumeIcon" src="./src/public/svg/radio.svg" alt="">
                                 <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
 
                                 <ul class="headerMeaning">
-                                    <div class="meaning1">
+                                    <div class="meaning1" id="meanings">
                                        1. (exclamation) used as a greeting or to begin a hone conversation.
                                     </div>
-                                    <div class="sentence">
+                                    <div class="sentence" id="examples">
                                         sentence: “hello there, Katie!
                                     </div>
                                     <div class="Synonyms">Synonyms"</div>
@@ -98,13 +98,13 @@
                                         <p class="pills">smart</p>
                                         <p class="pills">smart</p>
                                     </div>
-                                    <div class="meaning2">
+                                    <div class="meaning2" id="meanings">
                                         <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
                                     </div>
                                     <div class="sentence2">
                                         sentence: “she was getting polite nods and hellos from people"
                                     </div>
-                                    <div class="meaning3">
+                                    <div class="meaning3" id="meanings">
                                         <p>3. (noun) an utterance of ‘hello’; a greeting.</p>
                                     </div>
                                     <div class="sentence3">
@@ -113,7 +113,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="errorPage">
+                        <!-- <div class="errorPage" id="error">
                             <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
                                 for the word you were looking for.
                             </p>
@@ -122,6 +122,9 @@
                             <button><a href="./index.html">Take me home</a></button>
                         </div> -->
                     </div>
+
+                   
+                     
                 </div>
             </div>
         </div>

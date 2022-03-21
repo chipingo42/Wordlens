@@ -152,6 +152,7 @@
 @media screen and (max-width: 768px) {
     #footer {
         height: 320px;
+        margin-top: 90px;
     }
     .footer-top-right,
     .footer-top-left,
@@ -205,6 +206,7 @@
     @media screen and (max-width: 500px) {
         #footer {
             height: 330px;
+            margin-top: 23px;
         }
         .footer-content {
             position: relative;
