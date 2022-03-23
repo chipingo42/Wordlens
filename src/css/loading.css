@@ -1,5 +1,5 @@
 #skeleton {
-    position: absolute;
+    /* position: absolute; */
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -7,6 +7,10 @@
     z-index: 1;
     display: none;
     
+}
+
+#skeleton .content {
+    height: 70px;
 }
 
 #skeleton #loader {
@@ -154,7 +158,7 @@
 
 @media screen and (max-width: 768px) {
     #skeleton {
-        position: absolute;
+        /* position: absolute; */
         margin-left: 33px;
         /* display: none; */
         
@@ -184,7 +188,7 @@
 
     @media screen and (max-width: 500px) {
         #skeleton {
-            position: absolute;
+            /* position: absolute; */
             margin-left: 60px;
             /* display: none; */
         }
