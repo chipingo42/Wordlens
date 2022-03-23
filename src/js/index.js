@@ -109,6 +109,9 @@ async function fetchWord(word) {
 }
 
 
+function playAudio() {
+    sound.play()
+}
 
 async function handleSubmit(e) {
     e.preventDefault()
@@ -165,9 +168,7 @@ function  meaningsHtml(meaning) {
     meaning.definition?.map((item) => (others += otherHtm(item)))
     let html = `
     <h4>${meaning.partOfSpeech}</h4>
-    <ul class="headerMeaning">
     ${others}
-    </ul>
     `;
 
     html = html.trim()
@@ -176,23 +177,9 @@ function  meaningsHtml(meaning) {
 
 
 function otherHtm(definition) {
-    definitionHtml = `<div class="meaning1">${definition?.definition}</ul>>`
-    let exampleHtml = ''
-    let synonymsHtml = ''
-    // let antonymsHtml = ''
-        
-    if (definition.example != undefined) {
-        exampleHtml += `<div class="sentence">sentence: “${definition?.example}</div>`
-    }
-    if (definition.synonyms != undefined && definition.synonyms.length > 0) {
-        synonymsHtml += ` <div class="Synonyms">Synonyms" <div class="synonymsList">
-          <p class="pills">smart</p>
-         </div> “${flatArray(
-          definition?.synonyms,
-        )}”</div>`
-    }
-
-    definitionHtml += exampleHtml + synonymsHtml + '</div></p>'
-    return definitionHtml
+    definitionHtml = ` <li class="meaning1" id="meaning"><p>${definition?.definition}<div>`
    
+    
+    definitionHtml +=  '</<div></p>'
+    return definitionHtml
 }
