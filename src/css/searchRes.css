@@ -7,7 +7,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin: 30px 0;
-    /* display: none; */
+    display: none;
 }
 
 .content {
