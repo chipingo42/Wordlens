@@ -38,14 +38,14 @@
                         <span>for any word.</span>
                     </div>
 
-                    <form id="menuSearch" class="menuSearch" onsubmit="return handleSubmit(event)">
+                    <form onsubmit="return handleSubmit(event)">
                         <div class="form-group">
                             <span><img class="searchIcon" src="./src/public/svg/search.svg" alt=""></span>
-                            
                             <input id="Search" class="search" type="text" autocomplete="off"placeholder="What would you like to search for?" >
                         </div>  
                         <button aria-label="search button" id="mySubmitBtn" class="myButton">Search</button>
 
+                        <!-- ErrorLabel -->
                         <p class="errorLabel" id="erroLabel">please type a word</p>
                     </form>
 
@@ -75,6 +75,7 @@
 
                     <!-- Result Hello -->
                     <div id="result">
+                        <!-- Errorpage -->
                         <div class="errorPage" id="error">
                             <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
                                 for the word you were looking for.
@@ -83,17 +84,19 @@
                             <h5>no be juju be that!</h5>
                             <button><a href="./index.html">Take me home</a></button>
                         </div>
+                        
                         <div class="result">
                             <div class="content">
                                 <h2 id="word">Hello</h2>
                                 <span id="phoneticsName">/həˈləʊ/</span>
                                 <audio id="sound"></audio>
                                 <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
-                               
-                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                                <div class="originText">
+                                    <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                                </div>
 
                                 <ul class="headerMeaning">
-                                    <div class="meaning" id="meaning">1. (noun) an utterance of ‘hello’; a greeting.</div>
+                                    <div class="meaning">1. (noun) an utterance of ‘hello’; a greeting.</div>
                                     <div class="sentence"></div>
                                     <div class="Synonyms"></div>
                                     <div class="synonymsList"></div>
@@ -114,9 +117,6 @@
                         </div>
                         
                     </div>
-
-                   
-                     
                 </div>
             </div>
         </div>

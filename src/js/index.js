@@ -16,7 +16,7 @@ darkMode.onclick = function() {
 const searchBox = document.getElementById('Search')
 const searchResult = document.getElementById('result');
 const phoneticText = document.getElementById('phoneticsName');
-const meaningDiv = document.getElementById('meaning');
+const meaningDiv = document.querySelector('.meaning');
 const meaningsDv = document.querySelector('.content')
 const examples = document.querySelector('.sentence');
 const synonyms = document.querySelector('.pills')
@@ -28,6 +28,7 @@ const skeleton = document.getElementById('skeleton')
 const error = document.getElementById('error')
 const errorLabel = document.getElementById('erroLabel');
 
+console.log(meaningDiv)
 
 async function fetchWord(word) {
 
@@ -90,10 +91,9 @@ async function handleSubmit(e) {
 
     if(getPhoneticAudio !=undefined){
         sound.setAttribute('src', getPhoneticAudio?.audio)
-        audiobtn.style.display ="block"
-      }
-      else{
-        audiobtn.style.display ="none"
+        audiobtn.style.display = "visible"
+    } else{  
+     audiobtn.style.display ="none"
     }
 
     word.textContent = searchBox.value
@@ -109,46 +109,52 @@ async function handleSubmit(e) {
     // console.log(data)
 }
 
+// function meaningsHtml(meaning) {
+//    meaning.definitions?.map((item) => {
+//     others += otherHtml(item)
+//    })
+//    let html = ``
+// }
 
-function  meaningsHtml(meaning) {
-    let others = ' '
-    meaning.definition?.map((item) => (others += otherHtm(item)))
-    let html = `
-    <h4>${meaning.partOfSpeech}</h4>
-    <ul>
-     ${others}
-    </ul>
+// function  meaningsHtml(meaning) {
+//     let others = ' '
+//     meaning.definition?.map((item) => (others += otherHtm(item)))
+//     let html = `
+//     <h4>${meaning.partOfSpeech}</h4>
+//     <ul>
+//      ${others}
+//     </ul>
    
-    `;
+//     `;
 
-    html = html.trim()
-    return html
-}
+//     html = html.trim()
+//     return html
+// }
 
 
-function otherHtm(definition) {
-    definitionHthml = `<li  class="headerMeaning"> ${definition?.definition}<ul>`
-    let exampleHtml = ''
-    let synonymsHtml = ''
-    // let antonymsHtml = ''
+// function otherHtm(definition) {
+//     definitionHthml = `<li  class="headerMeaning"> ${definition?.definition}<ul>`
+//     let exampleHtml = ''
+//     let synonymsHtml = ''
+//     // let antonymsHtml = ''
 
-    if (definition.example != undefined) {
-        exampleHtml += `<li class="sentence">sentence: “${definition?.example}"</li>`
-    }
-    if (definition.synonyms != undefined && definition.synonyms.length > 0) {
-        synonymsHtml += `<li class="Synonyms">Synonyms: “${flatArray(
-          definition?.synonyms,
-        )}”</li>`
-    }
-    definitionHthml += exampleHtml + synonymsHtml + '</ul></li>'
-   return definitionHthml
-}
+//     if (definition.example != undefined) {
+//         exampleHtml += `<li class="sentence">sentence: “${definition?.example}"</li>`
+//     }
+//     if (definition.synonyms != undefined && definition.synonyms.length > 0) {
+//         synonymsHtml += `<li class="Synonyms">Synonyms: “${flatArray(
+//           definition?.synonyms,
+//         )}”</li>`
+//     }
+//     definitionHthml += exampleHtml + synonymsHtml + '</ul></li>'
+//    return definitionHthml
+// }
 
-function flatArray(arr) {
-    return arr.reduce((pv, cv) => {
-      return pv + ', ' + cv
-    })
-}
+// function flatArray(arr) {
+//     return arr.reduce((pv, cv) => {
+//       return pv + ', ' + cv
+//     })
+// }
 
 
 

@@ -7,7 +7,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin: 30px 0;
-    display: none;
+    /* display: none; */
 }
 
 .content {
@@ -15,6 +15,7 @@
 }
 
 .content h2 {
+    text-transform: capitalize;
     width: 158px;
     height: 77px;
     padding-top: 15px;
@@ -38,17 +39,19 @@
     top: 8px;
 }
 
-.volumeIcon {
-    /* position: relative;
-    top: -8px; */
-    cursor: pointer;
-    background: none;
+
+.content button {
     border: none;
     outline: none;
-    margin-left: 110px;
-    margin-top: -14px;
-    display: none;
+    background: none;
+    /* display: none; */
 }
+
+.content  img {
+   position: relative;
+   top: 10px;
+}
+
 
 .content h4 {
     width: 512px;
@@ -71,14 +74,15 @@
     background:  var(--inner--color);
 }
 
-.meaning1 {
-    width: 600px;
+.meaning {
+    width: 480px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
+    display: none;
 }
 
 .sentence {
@@ -106,11 +110,11 @@
 }
 
 
-.synonymsList {
+/* .synonymsList {
     display: flex;
-}
+} */
 
-.pills {
+/* .pills {
     width: 50px;
     height: 24px;
     background: coral;
@@ -122,10 +126,10 @@
     padding-top: 3px;
     color: var(--pills--color);
     padding-left: 3px;
-}
+} */
 
 /* meaning2 */
-.meaning2 {
+/* .meaning2 {
     width: 600px;
     padding-top: 37px;
     font-family: 'Inter';
@@ -134,8 +138,9 @@
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-}
-.sentence2 {
+} */
+
+/* .sentence2 {
     width: 540px;
     padding-top: 7px;
     padding-left: 20px;
@@ -146,10 +151,10 @@
     font-size: 16px;
     line-height: 19px;
     color: #8C98AD;
-}
+} */
 
 /* meaning3 */
-.meaning3 {
+/* .meaning3 {
     width: 600px;
     padding-top: 47px;
     font-family: 'Inter';
@@ -158,9 +163,9 @@
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-}
+} */
 
-.sentence3 {
+/* .sentence3 {
     width: 540px;
     padding-top: 7px;
     padding-left: 20px;
@@ -171,7 +176,7 @@
     font-size: 16px;
     line-height: 19px;
     color: #8C98AD;
-}
+} */
 
 
 
@@ -203,19 +208,37 @@
             left: -30px;
         }
 
+        .content h2 {
+            width: 89px;
+            height: 44px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+        }
+
         .headerMeaning {
             background: none;
             padding: 40px 3px;
         }
+        /* .volumeIcon {
+            margin-left: 50%;
+        } */
 
         .content h4 {
             width: 298px;
             height: 34px;
         }
 
-        .meaning1 {
+        .meaning {
             width: 293px;
             height: 34px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
         }
 
         .sentence {
