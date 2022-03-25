@@ -13,7 +13,8 @@
     --inner--color: #FCFCFC;
     --footer--color: #E5E5E5;
     --input-color: #E9ECF0;
-    --errorpage--color: #000000;
+    --errorpage-dark-color: #000000;
+    --errorpage-light-color: #ffff;
     --pills--color:  #000000;
     --loader--color: #E9ECF0;
     --loader-h2-color: #DBE2F4;
@@ -33,7 +34,8 @@
     --inner--color: #32323377;
     --footer--color: #0D1726;
     --input-color: #91A2CB;
-    --errorpage--color: #91A2CB;
+    --errorpage-dark-color: #91A2CB;
+    --errorpage-light-color: #91A2CB;
     --pills--color:  #fff;
 
 }
