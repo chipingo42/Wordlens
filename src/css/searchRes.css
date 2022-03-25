@@ -6,8 +6,8 @@
     border: 1px solid var(--input-color);
     box-sizing: border-box;
     border-radius: 5px;
-    margin: 30px 0;
-    /* display: none; */
+    margin: 30px auto;
+    display: none;
 }
 
 .content {

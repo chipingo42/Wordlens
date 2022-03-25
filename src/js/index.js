@@ -92,6 +92,8 @@ async function handleSubmit(e) {
     if(getPhoneticAudio !=undefined){
         sound.setAttribute('src', getPhoneticAudio?.audio)
         audiobtn.style.display = "visible"
+        // audiobtn.style.marginLeft = '27%'
+        // audiobtn.style.marginTop = '-17px'
     } else{  
      audiobtn.style.display ="none"
     }
@@ -106,9 +108,30 @@ async function handleSubmit(e) {
     })
     meaningDiv.innerHTML = meaningsString
 
-    // console.log(data)
+    console.log(data)
 }
 
+
+function meaningsHtml(definition) {
+    let others = ' '
+    definition.definitons?.map((item) => (others += otherHtml(item)))
+    let html = `<div class="content">
+                    <div class="originText">
+                        <h4>${definition?.definition}}</h4>
+                        
+                    </div>
+                </div>`
+
+    html = html.trim() 
+    return html    
+}
+
+// function otherHtml(definition) {
+//     definitionHtml = `<li  class="meaning"> ${definition?.definition}<ul>`
+
+//     definitionHtml +=  '</ul></li>'
+//   return definitionHtml
+// } 
 // function meaningsHtml(meaning) {
 //    meaning.definitions?.map((item) => {
 //     others += otherHtml(item)
