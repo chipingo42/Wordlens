@@ -188,9 +188,7 @@
 
     @media screen and (max-width: 500px) {
         #skeleton {
-            /* position: absolute; */
             margin-left: 60px;
-            /* display: none; */
         }
 
         #skeleton #loader {

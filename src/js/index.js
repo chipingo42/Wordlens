@@ -115,10 +115,11 @@ function meaningsHtml(meaning) {
     let others = ' '
     meaning.definitons?.map((item) => (others += otherHtml(item)))
     let html = `<div class="originText">
-                  <header>${meaning.partOfSpeech}</header>
-                  <ul class="inn">
-                  </ul>
-                </div>`
+                     <header>${meaning.partOfSpeech}</header>
+                     <ul class="inn">
+                      ${others}
+                      </ul>
+                     </div>`
 
     html = html.trim()
     return html
