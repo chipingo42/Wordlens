@@ -39,6 +39,10 @@
     top: 8px;
 }
 
+header {
+    text-transform: capitalize;
+}
+
 
 .content button {
     border: none;
@@ -82,7 +86,10 @@
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-    display: none;
+    /* display: none; */
+}
+li {
+    list-style: none;
 }
 
 .sentence {
@@ -95,6 +102,10 @@
     font-size: 16px;
     line-height: 19px;
     color: #8C98AD;
+}
+
+.inn {
+    color: red;
 }
 
 .Synonyms {

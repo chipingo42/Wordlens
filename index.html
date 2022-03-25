@@ -50,6 +50,7 @@
                     </form>
 
 
+
                     <!-- loading page -->
                     <div id="skeleton">
                         <div id="loader"></div>
@@ -69,54 +70,47 @@
                                 <div class="se2"></div>
                                 <div class="me3"></div>
                             </div>
-                            
                         </div>
                     </div>
 
                     <!-- Result Hello -->
-                    <div id="result">
-                        <!-- Errorpage -->
-                        <div class="errorPage" id="error">
-                            <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
-                                for the word you were looking for.
-                            </p>
-                            <h1 class="eroorHeader">404</h1> 
-                            <h5>no be juju be that!</h5>
-                            <button><a href="./index.html">Take me home</a></button>
-                        </div>
-                        
+                    <div id="result">                        
                         <div class="result">
                             <div class="content">
-                                <h2 id="word">Hello</h2>
+                                <header>
+                                    <h2 id="word">Hello</h2>
+                                </header>
                                 <span id="phoneticsName">/həˈləʊ/</span>
                                 <audio id="sound"></audio>
                                 <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
                                 <div class="originText">
                                     <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
                                 </div>
-
-                                <ul class="headerMeaning">
-                                    <div class="meaning">1. (noun) an utterance of ‘hello’; a greeting.</div>
-                                    <div class="sentence"></div>
-                                    <div class="Synonyms"></div>
-                                    <div class="synonymsList"></div>
-                                    <!-- <div class="meaning2" id="meaning2">
-                                        <p>2. (noun) an utterance of ‘hello’; a greeting.</p>
+                                <!-- meanings -->
+                                <div class="headerMeaning">
+                                    <div class="meanings">
+                                        <ul>
+                                            <li class="meaning">dd</li>
+                                            <li class="sentence">dd</li>
+                                            <li class="Synonyms">dd</li>
+                                            <!-- <li class="atnonyms">dd</li> -->
+                                        </ul>
                                     </div>
-                                    <div class="sentence2">
-                                        sentence: “she was getting polite nods and hellos from people"
-                                    </div>
-                                    <div class="meaning3" id="meaning3">
-                                        <p>3. (noun) an utterance of ‘hello’; a greeting.</p>
-                                    </div>
-                                    <div class="sentence3">
-                                       sentence: “I pressed the phone button and helloed"
-                                    </div>  -->
-                                </ul>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
+
+                    <!-- Errorpage -->
+                    <div class="errorPage" id="error">
+                        <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
+                            for the word you were looking for.
+                        </p>
+                        <h1 class="eroorHeader">404</h1> 
+                        <h5>no be juju be that!</h5>
+                        <button><a href="./index.html">Take me home</a></button>
+                    </div>
+                    
                 </div>
             </div>
         </div>

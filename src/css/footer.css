@@ -3,6 +3,7 @@
     height: 500px;
     border-top: 1px solid var(--order--color);
     background: var(--footer--color);
+    /* margin-top: 370px; */
 }
 
 .footer-content {

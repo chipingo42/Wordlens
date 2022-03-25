@@ -1,7 +1,8 @@
 .errorPage {
-    position: absolute;
-    top: 40px;
-    left: 150px;
+    margin-left: 170px;
+    width: 892px;
+    height: 400px;
+    margin-top: 11px;
     display: none;
 }
 .Oops {
@@ -11,14 +12,13 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-
     color: #000000;
-    /* display: none; */
 }
 
 .eroorHeader {
     width: 328px;
     padding-left: 90px;
+    margin-top: -20px;
     height: 198px;
     font-family: 'Inter';
     font-style: normal;
@@ -33,7 +33,7 @@
     width: 307px;
     position: relative;
     left: 90px;
-    margin-top: -70px;
+    margin-top: -40px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
@@ -43,7 +43,7 @@
 
 .errorPage button {
    position: relative;
-   top: -90px;
+   top: 20px;
    left: 130px;
     width: 205px;
     height: 54px;
