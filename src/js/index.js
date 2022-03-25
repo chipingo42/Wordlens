@@ -112,12 +112,12 @@ async function handleSubmit(e) {
 }
 
 
-function meaningsHtml(definition) {
+function meaningsHtml(meaning) {
     let others = ' '
-    definition.definitons?.map((item) => (others += otherHtml(item)))
+    meaning.definitons?.map((item) => (others += otherHtml(item)))
     let html = `<div class="content">
                     <div class="originText">
-                        <h4>${definition?.definition}}</h4>
+                        <h4>${meaning.partOfSpeech}</h4>
                         
                     </div>
                 </div>`
