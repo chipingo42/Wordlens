@@ -71,7 +71,6 @@ async function handleSubmit(e) {
         errorLabel.style.display = 'none'
     }
 
-    // searchResult.style.display = 'flex'
 
     const data = await fetchWord(searchBox.value)
     if (data == false) {
@@ -107,7 +106,7 @@ async function handleSubmit(e) {
     })
     meaningDiv.innerHTML = meaningsString
 
-    console.log(data)
+    // console.log(data)
 }
 
 
@@ -122,37 +121,43 @@ function meaningsHtml(meaning) {
                      </div>`
 
     html = html.trim()
-    return html
-    // console.log(html)        
+    return html        
+    // console.log(html)
 }
 
 
 function otherHtml(definition) {
-    definitionHtml = `<li class="meaning"> ${definition?.definition}<ul>`
+    definitionHtml = `<li>${definiton?.definiton}<ul>`
     let exampleHtml = ''
-    let synonymsHtml = ''
-    // let antonymsHtml = ''
-  
-    if (definition.example != undefined) {
-      exampleHtml += `<li class="sentence">sentence: “${definition?.example}"</li>`
-    }
-    if (definition.synonyms != undefined && definition.synonyms.length > 0) {
-      synonymsHtml += `<li class="Synonyms">Synonyms: “${flatArray(
-        definition?.synonyms,
-      )}”</li>`
-    }
-  
-  
-    definitionHtml += exampleHtml + synonymsHtml  + '</ul></li>'
-    return definitionHtml
-    // console.log(definitionHtml)
 }
 
-function flatArray(arr) {
-    return arr.reduce((pv, cv) => {
-      return pv + ', ' + cv
-    })
-}
+
+// function otherHtml(definition) {
+//     definitionHtml = `<li class="meaning"> ${definition?.definition}<ul>`
+//     let exampleHtml = ''
+//     let synonymsHtml = ''
+//     // let antonymsHtml = ''
+  
+//     if (definition.example != undefined) {
+//       exampleHtml += `<li class="sentence">sentence: “${definition?.example}"</li>`
+//     }
+//     if (definition.synonyms != undefined && definition.synonyms.length > 0) {
+//       synonymsHtml += `<li class="Synonyms">Synonyms: “${flatArray(
+//         definition?.synonyms,
+//       )}”</li>`
+//     }
+  
+  
+//     definitionHtml += exampleHtml + synonymsHtml  + '</ul></li>'
+//     // return definitionHtml
+//     console.log(definitionHtml)
+// }
+
+// function flatArray(arr) {
+//     return arr.reduce((pv, cv) => {
+//       return pv + ', ' + cv
+//     })
+// }
 
 
 

@@ -19,16 +19,12 @@
     --loader--color: #E9ECF0;
     --loader-h2-color: #DBE2F4;
     --loader-inner-color: #F6F7FA;
-    
-    
-    
- 
 }
 
 .darkMode {
     --primary--color: #91A2CB;
     --secondary--color: #0D1726; 
-    --loader--color: #0D1726;
+    --loader--color: #32323377;
     --loader-inner-color: #0D1726;
     --order--color: #91A2CB;
     --inner--color: #32323377;
@@ -37,7 +33,6 @@
     --errorpage-dark-color: #91A2CB;
     --errorpage-light-color: #91A2CB;
     --pills--color:  #fff;
-
 }
 
 *{
