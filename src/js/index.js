@@ -110,6 +110,8 @@ async function handleSubmit(e) {
 }
 
 
+
+
 function meaningsHtml(meaning) {
     let others = ' '
     meaning.definitons?.map((item) => (others += otherHtml(item)))
@@ -126,9 +128,9 @@ function meaningsHtml(meaning) {
 }
 
 
-function otherHtml(definition) {
-    definitionHtml = `<li>${definiton?.definiton}<ul>`
-    let exampleHtml = ''
+
+function othersHtml(definition) {
+  definitionHtml = `<li>${definiton?.definiton}<ul>`
 }
 
 
