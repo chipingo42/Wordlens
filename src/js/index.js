@@ -1,33 +1,25 @@
 const darkMode = document.getElementById('darkIcon');
-
-
-
-darkMode.onclick = function() {
-    document.body.classList.toggle("darkMode")
-    document.body.style.transition = '0.2s'
-};
-
-
-
-
-
-
-
-const searchBox = document.getElementById('Search')
+const searchBox = document.getElementById('Search');
 const searchResult = document.getElementById('result');
 const phoneticText = document.getElementById('phoneticsName');
 const meaningDiv = document.querySelector('.meanings');
 const examples = document.querySelector('.sentence');
-const synonyms = document.querySelector('.pills')
+const synonyms = document.querySelector('.Synonyms');
 const searchBtn = document.getElementById('mySubmitBtn');
-const word = document.getElementById('word')
+const word = document.getElementById('word');
 const audiobtn = document.getElementById('audiobtn');
-const sound = document.getElementById('sound')
-const skeleton = document.getElementById('skeleton')
-const error = document.getElementById('error')
+const audioSound = document.getElementById('sound');
+const skeleton = document.getElementById('skeleton');
+const error = document.getElementById('error');
 const errorLabel = document.getElementById('erroLabel');
 
 console.log(meaningDiv)
+console.log(examples)
+console.log(synonyms)
+
+
+
+
 
 async function fetchWord(word) {
 
@@ -36,7 +28,7 @@ async function fetchWord(word) {
     searchResult.style.display = 'none'
 
     try {
-        let respone = await fetch(
+        let responese = await fetch(
             "https://api.dictionaryapi.dev/api/v2/entries/en/" + word,
         )
 
@@ -51,15 +43,15 @@ async function fetchWord(word) {
             error.style.display = 'none'
             searchResult.style.display = 'block'
             meaningDiv.style.display = 'block'
-            return await respone.json()
+            return await responese.json()
         }
     }catch (error) {}
-}
+};
 
 
 function playAudio() {
-    sound.play()
-}
+    audioSound.play()
+};
 
 async function handleSubmit(e) {
     e.preventDefault()
@@ -69,69 +61,78 @@ async function handleSubmit(e) {
         return
         } else {
         errorLabel.style.display = 'none'
-    }
+    };
 
 
     const data = await fetchWord(searchBox.value)
     if (data == false) {
         return
-    }
+    };
 
 
     let getPhoneticText = data[0]?.phonetics.find((item) => {
         if (item.text?.length > 0) return true
-    })
+    });
 
     let getPhoneticAudio = data[0]?.phonetics.find((item) => {
         if (item.audio?.length > 0) return true
-    })
+    });
     
 
     if(getPhoneticAudio !=undefined){
         sound.setAttribute('src', getPhoneticAudio?.audio)
         audiobtn.style.display = "visible"
-        // audiobtn.style.marginLeft = '27%'
-        // audiobtn.style.marginTop = '-17px'
     } else{  
-     audiobtn.style.display ="none"
-    }
+     audiobtn.style.hove ="none"
+    };
 
-    word.textContent = searchBox.value
-    phoneticText.textContent = getPhoneticText?.text
+    word.textContent = searchBox.value;
+    phoneticText.textContent = getPhoneticText?.text;
 
 
     let meaningsString = ''
     data[0]?.meanings.map((item) => {
         meaningsString += meaningsHtml(item)
     })
-    meaningDiv.innerHTML = meaningsString
+    meaningDiv.innerHTML = meaningsString;
 
     // console.log(data)
-}
-
-
+};
 
 
 function meaningsHtml(meaning) {
     let others = ' '
-    meaning.definitons?.map((item) => (others += otherHtml(item)))
-    let html = `<div class="originText">
-                     <header>${meaning.partOfSpeech}</header>
-                     <ul class="inn">
-                      ${others}
-                      </ul>
-                     </div>`
-
+    meaning.definitions?.map((item) => (others += othersHtml(item)))
+    let html = `<div class="block">
+                   <header>${meaning.partOfSpeech}</header>
+                   <ul class=" list-decimal text-sm md:text-base px-5">
+                   ${others}
+                   </ul>
+                   </div>`
+  
     html = html.trim()
-    return html        
-    // console.log(html)
-}
+    return html
+};
+
+  
 
 
+// function meaningsHtml(meaning) {
+//     let others = '  '
+//     meaning.definitons?.map((item) => (others += otherHtml(item)))
+//     let html = `<div class="originText">
+//                      <header>${meaning.partOfSpeech}</header>
+//                      <ul class="inn">
+//                       ${others}
+//                       </ul>
+//                      </div>`
 
-function othersHtml(definition) {
-  definitionHtml = `<li>${definiton?.definiton}<ul>`
-}
+//     html = html.trim()
+//     return html        
+//     // console.log(html)
+// }
+
+
 
 
 // function otherHtml(definition) {
@@ -161,6 +162,14 @@ function othersHtml(definition) {
 //     })
 // }
 
+
+
+
+
+darkMode.onclick = function() {
+    document.body.classList.toggle("darkMode")
+    document.body.style.transition = '0.2s'
+};
 
 
 

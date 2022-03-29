@@ -1,5 +1,4 @@
 #skeleton {
-    /* position: absolute; */
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -137,8 +136,8 @@
 #skeleton .sy2,
 #skeleton .me2, 
 #skeleton .se2 {
-    /* opacity: 13; */
-    animation:  heading  1s infinite linear;
+    /* opacity: 10; */
+    animation:  heading  1.3s infinite linear;
 
 }
 
@@ -158,10 +157,7 @@
 
 @media screen and (max-width: 768px) {
     #skeleton {
-        /* position: absolute; */
         margin-left: 33px;
-        /* display: none; */
-        
     }
 
     #skeleton #loader {
@@ -211,7 +207,6 @@
             width: 260px;
             position: relative;
             top: -490px;
-            /* background: none; */
         }
 
         #skeleton .m1,
