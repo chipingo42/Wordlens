@@ -1,51 +1,53 @@
 const darkMode = document.getElementById('darkIcon');
+const formSend = document.getElementById('formSend')
 const searchBox = document.getElementById('Search');
-const searchResult = document.getElementById('result');
+// const searchResult = document.getElementById('result');
 const phoneticText = document.getElementById('phoneticsName');
-const meaningDiv = document.querySelector('.meanings');
-const examples = document.querySelector('.sentence');
-const synonyms = document.querySelector('.Synonyms');
-const searchBtn = document.getElementById('mySubmitBtn');
+// const meaningDiv = document.querySelector('.meanings');
+// const examples = document.querySelector('.sentence');
+// const synonyms = document.querySelector('.Synonyms');
+// const searchBtn = document.getElementById('mySubmitBtn');
 const word = document.getElementById('word');
-const audiobtn = document.getElementById('audiobtn');
-const audioSound = document.getElementById('sound');
+// const audiobtn = document.getElementById('audiobtn');
+// const audioSound = document.getElementById('sound');
 const skeleton = document.getElementById('skeleton');
 const error = document.getElementById('error');
 const errorLabel = document.getElementById('erroLabel');
 
-console.log(meaningDiv)
-console.log(examples)
-console.log(synonyms)
+// console.log(formSend)
 
 
 
 
 
-async function fetchWord(word) {
+function fetchWord(word) {
 
-    skeleton.style.display = 'block'
-    error.style.display = 'none'
-    searchResult.style.display = 'none'
+    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data)
+        
+    })
 
-    try {
-        let responese = await fetch(
-            "https://api.dictionaryapi.dev/api/v2/entries/en/" + word,
-        )
+    // try {
+    //     let responese = await fetch(
+    //         "https://api.dictionaryapi.dev/api/v2/entries/en/" + word,
+    //     )
 
-        if (respone.ok == false) {
-            skeleton.style.display = 'none'
-            error.style.display = 'block'
-            searchResult.style.display = 'none'
-            meaningDiv.style.display = 'none'
-            return false
-        } else {
-            skeleton.style.display = 'none'
-            error.style.display = 'none'
-            searchResult.style.display = 'block'
-            meaningDiv.style.display = 'block'
-            return await responese.json()
-        }
-    }catch (error) {}
+    //     if (respone.ok == false) {
+    //         // skeleton.style.display = 'none'
+    //         // error.style.display = 'block'
+    //         // searchResult.style.display = 'none'
+    //         // meaningDiv.style.display = 'none'
+    //         return false
+    //     } else {
+    //         // skeleton.style.display = 'none'
+    //         // error.style.display = 'none'
+    //         // searchResult.style.display = 'block'
+    //         // meaningDiv.style.display = 'block'
+    //         return await responese.json()
+    //     }
+    // }catch (error) {}
 };
 
 
@@ -53,66 +55,109 @@ function playAudio() {
     audioSound.play()
 };
 
-async function handleSubmit(e) {
-    e.preventDefault()
+// Event Listener
+loadListener();
 
-    if (searchBox.value.length <= 1) {
-        errorLabel.style.display = 'flex'
-        return
-        } else {
-        errorLabel.style.display = 'none'
-    };
+function loadListener() {
+    formSend.addEventListener('submit', (e) => {
+       e.preventDefault();
 
-
-    const data = await fetchWord(searchBox.value)
-    if (data == false) {
-        return
-    };
+       if (searchBox.value.length <= 1) {
+            errorLabel.style.display = 'flex'
+            return
+            } else {
+            errorLabel.style.display = 'none'
+        };
 
 
-    let getPhoneticText = data[0]?.phonetics.find((item) => {
-        if (item.text?.length > 0) return true
-    });
+        const data = fetchWord(searchBox.value)
+        if (data == false) {
+            return
+        }
 
-    let getPhoneticAudio = data[0]?.phonetics.find((item) => {
-        if (item.audio?.length > 0) return true
-    });
+
+        
+        // let getPhoneticText = data[0]?.phonetics.find((item) => {
+        //     if (item.text?.length > 0) return true
+        // });
+
+        // let getPhoneticAudio = data[0]?.phonetics.find((item) => {
+        //     if (item.audio?.length > 0) return true
+        // });
+        
+
+        // if(getPhoneticAudio !=undefined){
+        //     sound.setAttribute('src', getPhoneticAudio?.audio)
+        //     audiobtn.style.display = "visible"
+        // } else{  
+        // audiobtn.style.hove ="none"
+        // };
+
+        // phoneticText.textContent = getPhoneticText?.text;
+        word.textContent = searchBox.value;
+    })
+}
+
+// async function handleSubmit(e) {
+//     e.preventDefault()
+
+//     if (searchBox.value.length <= 1) {
+//         errorLabel.style.display = 'flex'
+//         return
+//         } else {
+//         errorLabel.style.display = 'none'
+//     };
+
+
+//     const data = await fetchWord(searchBox.value)
+//     if (data == false) {
+//         return
+//     };
+
+
+//     let getPhoneticText = data[0]?.phonetics.find((item) => {
+//         if (item.text?.length > 0) return true
+//     });
+
+//     let getPhoneticAudio = data[0]?.phonetics.find((item) => {
+//         if (item.audio?.length > 0) return true
+//     });
     
 
-    if(getPhoneticAudio !=undefined){
-        sound.setAttribute('src', getPhoneticAudio?.audio)
-        audiobtn.style.display = "visible"
-    } else{  
-     audiobtn.style.hove ="none"
-    };
+//     if(getPhoneticAudio !=undefined){
+//         sound.setAttribute('src', getPhoneticAudio?.audio)
+//         audiobtn.style.display = "visible"
+//     } else{  
+//      audiobtn.style.hove ="none"
+//     };
 
-    word.textContent = searchBox.value;
-    phoneticText.textContent = getPhoneticText?.text;
-
-
-    let meaningsString = ''
-    data[0]?.meanings.map((item) => {
-        meaningsString += meaningsHtml(item)
-    })
-    meaningDiv.innerHTML = meaningsString;
-
-    // console.log(data)
-};
+//     word.textContent = searchBox.value;
+//     phoneticText.textContent = getPhoneticText?.text;
 
 
-function meaningsHtml(meaning) {
-    let others = ' '
-    meaning.definitions?.map((item) => (others += othersHtml(item)))
-    let html = `<div class="block">
-                   <header>${meaning.partOfSpeech}</header>
-                   <ul class=" list-decimal text-sm md:text-base px-5">
-                   ${others}
-                   </ul>
-                   </div>`
+//     let meaningsString = ''
+//     data[0]?.meanings.map((item) => {
+//         meaningsString += meaningsHtml(item)
+//     })
+//     meaningDiv.innerHTML = meaningsString;
+
+//     // console.log(data)
+// };
+
+
+// function meaningsHtml(meaning) {
+//     let others = ' '
+//     meaning.definitions?.map((item) => (others += othersHtml(item)))
+//     let html = `<div class="block">
+//                    <header>${meaning.partOfSpeech}</header>
+//                    <ul class=" list-decimal text-sm md:text-base px-5">
+//                    ${others}
+//                    </ul>
+//                    </div>`
   
-    html = html.trim()
-    return html
-};
+//     html = html.trim()
+//     return html
+// };
 
   
 

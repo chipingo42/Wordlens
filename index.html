@@ -23,8 +23,8 @@
                 <button aria-label="toggle theme" class="darkMood" id="toggle" >
                     <i class="fa-solid fa-sun" id="darkIcon"></i>
 
-                    <!-- <i class="fa-solid fa-seal"></i> -->
                     <i class="fa-solid fa-seal"></i>
+                    <!-- <i class="fa-solid fa-seal"></i> -->
                     
                 </button>
             </div>
@@ -39,13 +39,12 @@
                         <span>for any word.</span>
                     </div>
 
-                    <form onsubmit="return handleSubmit(event)">
+                    <form id="formSend">
                         <div class="form-group">
                             <span><img class="searchIcon" src="./src/public/svg/search.svg" alt=""></span>
                             <input id="Search" class="search" type="text" autocomplete="off"placeholder="What would you like to search for?" >
+                            <button aria-label="search button" id="mySubmitBtn" class="myButton">Search</button>
                         </div>  
-                        <button aria-label="search button" id="mySubmitBtn" class="myButton">Search</button>
-
                         <!-- ErrorLabel -->
                         <p class="errorLabel" id="erroLabel">please type a word</p>
                     </form>
@@ -53,7 +52,7 @@
 
 
                     <!-- loading page -->
-                    <div id="skeleton">
+                    <!-- <div id="skeleton">
                         <div id="loader"></div>
                         <div class="content">
                             <h2></h2>
@@ -72,87 +71,91 @@
                                 <div class="me3"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Result Hello -->
-                    <div id="result">                        
-                        <div class="result">
-                            <div class="content">
-                                <header>
-                                    <h2 id="word">Hello</h2>
-                                </header>
-                                <span id="phoneticsName">/həˈləʊ/</span>
-                                <audio id="sound"></audio>
-                                <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
-                                <div class="originText">
-                                    <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
-                                </div>
-                                <!-- meanings -->
-                                <div class="headerMeaning">
-                                    <div class="meanings">
-                                        <ul>
-                                            <li class="meaning">dd</li>
-                                            <li class="sentence">dd</li>
-                                            <li class="Synonyms">dd</li>
-                                            <!-- <li class="atnonyms">dd</li> -->
-                                        </ul>
-                                    </div>
+                    <!-- <div id="result">                        
+                    <div class="result">
+                        <div class="content">
+                            <header>
+                                <h2 id="word">Hello</h2>
+                            </header>
+                            <span id="phoneticsName">/həˈləʊ/</span>
+                            <audio id="sound"></audio>
+                            <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
+                            <div class="originText">
+                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                            </div> 
+                            meanings
+                            <div class="headerMeaning">
+                                <div class="meanings">
+                                    <ul>
+                                        <li class="meaning">(exclamation)
+                                            used as a greeting or to begin a phone conversation.</li>
+                                        <li class="sentence">sentence: “hello there, Katie!"</li>
+                                        <li class="Synonyms">Synonyms: “”</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    
 
                     <!-- Errorpage -->
-                    <div class="errorPage" id="error">
+                    <!-- <div class="errorPage" id="error">
                         <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
                             for the word you were looking for.
                         </p>
                         <h1 class="eroorHeader">404</h1> 
                         <h5>no be juju be that!</h5>
                         <button><a href="./index.html">Take me home</a></button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <!-- <section>
         <div id="footer">
            <div class="container">
                <div class="footer-content">
-                   <div class="svgs">
-                        <img class="footer-top-right" src="./src/public/svg/footer-top-left.svg" alt="">
-                        <img class="footer-top-left" src="./src/public/svg/footer-bottom-left.svg" alt="">
-                        <div class="footer-menu">
-                            <h2>Wordlens</h2>
-                            <p>The API used to serve this data was provided by dictionaryapi.dev, click on the link below to read more</p>
-                            <button type="submit">Visit API documentation</button>
+                    <div class="footer-primary">
+                        <div class="svgs">
+                            <img class="footer-top-right" src="./src/public/svg/footer-top-left.svg" alt="">
+                            <img class="footer-top-left" src="./src/public/svg/footer-bottom-left.svg" alt="">
+                            <div class="footer-center">
+                                <header>
+                                    <h2>Wordlens</h2>
+                                </header>
+                                <p>The API used to serve this data was provided by dictionaryapi.dev, click on the link below to read more</p>
+                                <button type="submit">Visit API documentation</button>
+                            </div>
                         </div>
-                   </div>
-                   <div class="svgs">
-                        <img class="footer-bottom-left" src="./src/public/svg/footer-top-right.svg" alt="">
-                        <img class="footer-bottom-right" src="./src/public/svg/footer-top-left.svg" alt=""> 
-                   </div>
-               </div>
-               <div class="footer-down">
-                   <div class="footer-logo">Wordlens</div>
-                   <div class="footer-links" >
-                       <a href="#"><img src="./src/public/svg/linkdin.svg" alt="facebook"></a>
-                        <a href=""><img src="./src/public/svg/instagram.svg" alt="instagram"></a>
-                        <a href=""><img src="./src/public/svg/twitter.svg" alt="twitter"></a>
-                        <a href=""><img src="./src/public/svg/linkdin.svg" alt="linkdin"></a>
-                   </div>
-                   <div class="footer-privacy">
-                        <a href="#" class="term">Terms of use.</a>
-                        <a href="#" class="policy"> Privacy Policy</a>
-                   </div>
+                        <div class="svgs">
+                            <img class="footer-bottom-left" src="./src/public/svg/footer-top-right.svg" alt="">
+                            <img class="footer-bottom-right" src="./src/public/svg/footer-top-left.svg" alt=""> 
+                        </div>
+                    </div>
+                    <div class="footer-down">
+                        <div class="footer-logo">Wordlens</div>
+                        <div class="footer-links" >
+                            <a href="#"><img src="./src/public/svg/linkdin.svg" alt="facebook"></a>
+                            <a href=""><img src="./src/public/svg/instagram.svg" alt="instagram"></a>
+                            <a href=""><img src="./src/public/svg/twitter.svg" alt="twitter"></a>
+                            <a href=""><img src="./src/public/svg/linkdin.svg" alt="linkdin"></a>
+                        </div>
+                        <div class="footer-privacy">
+                            <a href="#" class="term">Terms of use.</a>
+                            <a href="#" class="policy"> Privacy Policy</a>
+                        </div>
+                    </div>
                </div>
                <div class="footer-copy">
                     copyright &copy; 2022 WorldLens. All rights reserved
                </div>
            </div>
         </div>
-    </section>
+    </section> -->
 
 
     <script src="src/js/index.js"></script>

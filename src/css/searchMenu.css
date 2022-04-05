@@ -6,7 +6,6 @@
 
 .search_content {
     padding-top: 120px;
-    /* margin-left: 110px; */
     margin: 0  110px;
 }
 
@@ -19,10 +18,13 @@
 }
 
 
-@media screen and (max-width:  768px) {
+@media screen and (max-width:  827px) {
     .search_content {
         padding-top: 190px;
         margin-left: 50px;
+    }
+    .search_header {
+      width: 100%;
     }
 
     @media screen and (max-width: 500px) {
@@ -30,8 +32,8 @@
             margin-left: 22px;
         }
         .search_header {
-            font-size: 44px;
-            width: 300px;
+            font-size: 55px;
+            width: 340px;
             position: relative;
             top: -80px;
         }

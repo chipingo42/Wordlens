@@ -1,13 +1,13 @@
 #result {
     position: relative;
     top: -20px;
-    width: 892px;
+    width: 100%;
     height: 100%;
     border: 1px solid var(--input-color);
     box-sizing: border-box;
     border-radius: 5px;
-    margin: 30px 0;
-    display: none;
+    margin: 70px 0;
+    /* display: none; */
 }
 
 .content {
@@ -71,7 +71,7 @@ header {
 
 /* headerMeaning */
 .headerMeaning {
-    width: 730px;
+    width: 90%;
     height: 100%;
     margin:  20px 0px 60px 0px;
     padding: 40px 38px;
@@ -79,7 +79,7 @@ header {
 }
 
 .meaning {
-    width: 480px;
+    width: 100%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -93,7 +93,7 @@ li {
 }
 
 .sentence {
-    width: 240px;
+    width: 440px;
     padding-left: 20px;
     padding-top: 5px;
     font-family: 'Inter';
@@ -104,12 +104,9 @@ li {
     color: #8C98AD;
 }
 
-.inn {
-    color: red;
-}
 
 .Synonyms {
-    width: 101px;
+    width: 201px;
     padding-top: 5px;
     padding-left: 20px;
     font-family: 'Inter';
@@ -191,22 +188,19 @@ li {
 
 
 
+ 
+@media screen and (max-width: 823px) {
 
-@media screen and (max-width: 768px) {
-    #result {
-        width: 650px;
-    }
-
-    .content {
+    /* .content {
         margin: 0 30px;
-    }
+    } */
 
     .headerMeaning {
-        width: 580px;
+        width: 100%;
     } 
 
     @media screen and (max-width: 500px) {
-        #result {
+        /* #result {
            border: none;
            position: relative;
            top: -70px;
@@ -233,9 +227,6 @@ li {
             background: none;
             padding: 40px 3px;
         }
-        /* .volumeIcon {
-            margin-left: 50%;
-        } */
 
         .content h4 {
             width: 298px;
@@ -275,7 +266,7 @@ li {
         .sentence2,
         .sentence3 {
             width: 293px;
-        }
+        } */
     
     } 
-}  
+}   
