@@ -56,19 +56,19 @@
     }
     
     .search {
-        width: 330px;
+        width: 320px;
         padding-right: 0px;
         padding-left: 69px;
     }
 
     .search::placeholder {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .myButton {
         position: absolute;
         top: 150px;
         margin-left: 0px;
-        width: 330px;
+        width: 320px;
     }
 }

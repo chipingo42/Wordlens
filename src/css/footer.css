@@ -183,7 +183,7 @@
 
         .footer-center {
             position: sticky;
-            margin-left: -10px;
+            margin-left: -27px;
         }
 
         .footer-center p {
@@ -194,7 +194,7 @@
         .footer-center h2 {
             position: absolute;
             top: -30px;
-            margin-left: 90px;
+            margin-left: 50px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
@@ -228,47 +228,5 @@
             font-size: 14px;
             line-height: 115.6%;
         }
-     
-        /* #footer {
-            height: 330px;
-            margin-top: 23px;
-        }
-        .footer-content {
-            position: relative;
-            right: 160px;
-        }
-        
-        .footer-logo {
-            position: relative;
-            left: 90px;
-            font-size: 30px;
-            width: 147px;
-            
-        }
-
-        .footer-menu p  {
-           width: 303px;
-           height: 48px;
-        }
-
-        .footer-menu button  {
-            position: relative;
-            bottom: 110px;
-        }
-
-        .footer-links {
-            display: flex;
-            position: relative;
-            right: 32px;
-            bottom: 140px;
-            height: 20px;
-        }
-
-        .footer-copy {
-            position: relative;
-            top: 150px;
-            left: -298px;
-            width: 400px;
-        } */
     }
 } 
