@@ -3,6 +3,7 @@
     height: 500px;
     border-top: 1px solid var(--order--color);
     background: var(--footer--color);
+    position: relative;
 }
 
 .footer-primary {
@@ -97,18 +98,9 @@
 }
 .footer-links img {
     cursor: pointer;
-    /* margin: 0 7px; */
+    margin: 0 7px;
 }
-.footer-privacy {
-    /* width: 228px;
-    height: 16px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 115.6%; */
-    
-}
+
 .term {
     position: relative;
     right: 30px;
@@ -120,7 +112,6 @@
 }
 /* footer copy */
 .footer-copy {
-    /* width: 338px; */
     height: 16px;
     font-family: Inter;
     font-style: normal;
@@ -180,49 +171,64 @@
     }
 
 
-    /* .footer-logo {
-
-    } */
-
-    /* .footer-menu p  {
-        position: relative;
-       top: -90px;
-        right: 130px;
-    } */
-
-    /* .footer-menu button  {
-        position: relative;
-        left: -100px;
-        top: -70px;
-        
-    } */
-
-    /* .footer-logo {
-        position: relative;
-        bottom: 300px;
-        left: 280px;
-        width: 120px;
-        
-    } */
-
-    /* .footer-down {
-        position: relative;
-        top: 170px;
-    } */
-
-    /* .footer-links {
-        position: relative;
-        top: -99px; 
-        right: 160px;
-    } */
-
-    /* .footer-copy {
-        position: relative;
-        top: 140px;
-        left: -90px;
-    } */
-
     @media screen and (max-width: 500px) {
+        #footer {
+            height: 330px;
+            width: 100%;
+        }
+        .footer-privacy,
+        .footer-logo {
+            display: none;
+        }
+
+        .footer-center {
+            position: sticky;
+            margin-left: -10px;
+        }
+
+        .footer-center p {
+            width: 353px;
+           padding-top: 30px;
+        }
+
+        .footer-center h2 {
+            position: absolute;
+            top: -30px;
+            margin-left: 90px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 16px;
+            padding-top: 6px;
+            color: #000;
+            border-top: 5px solid var(--primary--color);
+            width: 184px;
+        }
+
+
+        .footer-center button {
+            margin-top: 70px;
+            margin-left: 60px;
+        }
+        .footer-links {
+            position: absolute;
+            left: 120px;
+            margin-top: 35px;
+        }
+
+        .footer-copy {
+            width: 453px;
+            position: relative;
+            top: 47px;
+            padding-left: 80px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 115.6%;
+        }
+     
         /* #footer {
             height: 330px;
             margin-top: 23px;

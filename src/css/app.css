@@ -49,7 +49,7 @@ body {
     font-style: normal;
     background: var(--secondary--color);
     color: var(--primary--color);
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }

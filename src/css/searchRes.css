@@ -58,7 +58,7 @@ header {
 
 
 .content h4 {
-    width: 512px;
+    width: 70%;
     margin-top: 10px;
     font-family: 'Inter';
     font-style: normal;
@@ -118,99 +118,24 @@ li {
 }
 
 
-/* .synonymsList {
-    display: flex;
-} */
-
-/* .pills {
-    width: 50px;
-    height: 24px;
-    background: coral;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    margin-left: 20px;
-    margin-top: 5px;
-    padding-top: 3px;
-    color: var(--pills--color);
-    padding-left: 3px;
-} */
-
-/* meaning2 */
-/* .meaning2 {
-    width: 600px;
-    padding-top: 37px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--primary--color);
-} */
-
-/* .sentence2 {
-    width: 540px;
-    padding-top: 7px;
-    padding-left: 20px;
-    padding-top: 5px;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #8C98AD;
-} */
-
-/* meaning3 */
-/* .meaning3 {
-    width: 600px;
-    padding-top: 47px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--primary--color);
-} */
-
-/* .sentence3 {
-    width: 540px;
-    padding-top: 7px;
-    padding-left: 20px;
-    padding-top: 5px;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #8C98AD;
-} */
-
-
-
  
 @media screen and (max-width: 823px) {
-
-    /* .content {
-        margin: 0 30px;
-    } */
-
     .headerMeaning {
         width: 100%;
     } 
 
     @media screen and (max-width: 500px) {
-        /* #result {
+        #result {
            border: none;
            position: relative;
-           top: -70px;
-           width: 289px;
+           top: -170px;
+           width: 330px;
 
         } 
 
         .content {
             position: relative;
-            left: -30px;
+            left: -47px;
         }
 
         .content h2 {
@@ -223,9 +148,13 @@ li {
             line-height: 44px;
         }
 
+        .content span, .content button {
+            margin: 12px 0;
+        }
+
         .headerMeaning {
             background: none;
-            padding: 40px 3px;
+            padding: 0px 3px;
         }
 
         .content h4 {
@@ -234,39 +163,14 @@ li {
         }
 
         .meaning {
-            width: 293px;
+            width: 298px;
             height: 34px;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 17px;
+            margin: 3px 0;
         }
-
-        .sentence {
-            padding-top: 10px;
-        }
-
-        .Synonyms {
-            margin-top: 20px;
-        }
-
-        .synonymsList {
-            width: 230px;
-            overflow-x: scroll;
-            white-space: nowrap;
-            margin-left: 20px;
-            height: 39px;
-        }
-
-        .meaning2,
-        .meaning3 {
-            width: 293px;
-        }
-        .sentence2,
-        .sentence3 {
-            width: 293px;
-        } */
-    
     } 
 }   

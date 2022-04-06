@@ -18,7 +18,7 @@
 }
 
 
-@media screen and (max-width:  827px) {
+@media screen and (max-width:  768px) {
     .search_content {
         padding-top: 190px;
         margin-left: 50px;
@@ -32,7 +32,7 @@
             margin-left: 22px;
         }
         .search_header {
-            font-size: 55px;
+            font-size: 48px;
             width: 340px;
             position: relative;
             top: -80px;
