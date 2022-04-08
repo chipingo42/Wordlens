@@ -36,30 +36,30 @@ function playAudio() {
 };
 
 // Event Listener
-loadListener();
+// loadListener();
 
-function loadListener() {
-    formSend.addEventListener('submit', (e) => {
-       e.preventDefault();
+// function loadListener() {
+//     formSend.addEventListener('submit', (e) => {
+//        e.preventDefault();
 
-       if (searchBox.value.length <= 1) {
-            errorLabel.style.display = 'flex'
-            return
-            } else {
-            errorLabel.style.display = 'none'
-        };
+//        if (searchBox.value.length <= 1) {
+//             errorLabel.style.display = 'flex'
+//             return
+//             } else {
+//             errorLabel.style.display = 'none'
+//         };
 
 
-        const data = fetchWord(searchBox.value)
-        if (data == false) {
-            return
-        }
+//         const data = fetchWord(searchBox.value)
+//         if (data == false) {
+//             return
+//         }
 
-        console.log(data)
-        word.textContent = searchBox.value;
+//         console.log(data)
+//         word.textContent = searchBox.value;
 
-    })
-}
+//     })
+// }
 
 
 
