@@ -1,65 +1,99 @@
 const darkMode = document.getElementById('darkIcon');
-const formSend = document.getElementById('formSend')
-const searchBox = document.getElementById('Search');
-// const searchResult = document.getElementById('result');
-const phoneticText = document.getElementById('phoneticsName');
-// const meaningDiv = document.querySelector('.meanings');
-// const examples = document.querySelector('.sentence');
-// const synonyms = document.querySelector('.Synonyms');
-// const searchBtn = document.getElementById('mySubmitBtn');
+const form = document.getElementById('formSend');
+const inputForm = document.getElementById('Search');
 const word = document.getElementById('word');
-// const audiobtn = document.getElementById('audiobtn');
-// const audioSound = document.getElementById('sound');
-const skeleton = document.getElementById('skeleton');
-const error = document.getElementById('error');
-const errorLabel = document.getElementById('erroLabel');
+const phoneticText = document.getElementById('phoneticsName');
 
-// console.log(formSend)
+const resultDiv = document.querySelector('.meanings');
 
+
+
+// Event Listners
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+
+    let  data = fetchWord(inputForm.value)
+    if (data === false) {
+        return true
+    }
+
+    // let getPhoneticText = data[0]?.phonetics.find((item) => {
+    //     if (item.text?.length > 0) return true
+    // })
+    
+    
+    word.textContent = inputForm.value;
+    // phoneticText.textContent = getPhoneticText?.text
+
+})
 
 
 
 
 function fetchWord(word) {
-
-    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-        
+    fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word)
+    .then((res) => {
+        return res.json() // converted to object
     })
-};
+    .then((resultDta) => {
+        data(resultDta)
+    })
+}
+
+function data(resultDta) {
+    console.log(resultDta)
+
+    let tableData = '';
+
+    resultDta[0]?.meanings.map(function(values) {
+        tableData = meaningHtml(values)
+    })
+    resultDiv.innerHTML = tableData;
+}
 
 
-function playAudio() {
-    audioSound.play()
-};
+function meaningHtml(meaning) {
+   let everyThings = ' ';
 
-// Event Listener
-// loadListener();
+   meaning.definitions?.map((values) => (everyThings += othersHtml(values)))
 
-// function loadListener() {
-//     formSend.addEventListener('submit', (e) => {
-//        e.preventDefault();
-
-//        if (searchBox.value.length <= 1) {
-//             errorLabel.style.display = 'flex'
-//             return
-//             } else {
-//             errorLabel.style.display = 'none'
-//         };
+    let html = `
+        <div class="originText">
+                <h4>${meaning.partOfSpeech}</h4>
+                <ul>${everyThings}</ul>
+        </div>`;
+    html = html.trim();
+    return html    
+}
 
 
-//         const data = fetchWord(searchBox.value)
-//         if (data == false) {
-//             return
-//         }
+function othersHtml(definition) {
+    definitionHTML =  `<ul>
+                            <li class="meaning">${definition?.definition} </li>
+    </ul>`
+    exampleHTML = '';
+    synonymsHTML = '';
 
-//         console.log(data)
-//         word.textContent = searchBox.value;
+    if (definition.example != undefined) {
+        exampleHTML +=  `<ul>
+                   <li class="sentence">sentence: “${definition?.example}"</li>
+        </ul>`;
+    }
 
-//     })
-// }
+    if (definition.synonyms != undefined && definition.synonyms.length > 0) {
+        synonymsHTML += `<li class="font-medium">Synonyms: “${flatArray(
+          definition?.synonyms,
+        )}”</li>`
+    }
+    
+
+    definitionHTML +=  exampleHTML +  synonymsHTML +'</ul></li>'
+    return definitionHTML;
+}
+
+
+
 
 
 
@@ -71,61 +105,4 @@ darkMode.onclick = function() {
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const baseUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
-
-// console.log(error)
-
-
-// searchBtn.addEventListener('click', (e) => {
-//     e.preventDefault()
-
-//     if (searchBox.value.length <= 1) {
-//         errorLabel.style.display = 'flex'
-//         return
-//         } else {
-//         errorLabel.style.display = 'none'
-//     }
-
-//     searchResult.style.display = 'flex'
-
-//     let inpWord = document.getElementById('Search').value
-
-//     fetch(`${baseUrl}${inpWord}`)
-//     .then((res) => res.json())
-//     .then((data) => {
-//         console.log(data)
-//         // result = data
-
-
-      
-
-//         // word.innerText = inpWord
-//         // phoneticText.innerHTML = `${data[0]?.phonetics[1 || 2].text }`
-//         // meaning1.innerHTML = ` 1. ${data[0]?.meanings[0].definitions[0].definition}`
-//         // meaning2.innerHTML = `2. ${data[0]?.meanings[0].definitions[0].definition}`
-//         // meaning3.innerHTML = `3. ${data[0]?.meanings[0].definitions[0].definition || ""}`
-//         // examples.innerHTML = `${data[0].meanings[0].definitions[0].example || ""}`
-
-//         // meaning4.innerHTML = `4. ${data[0].meanings[0].definitions[3].definition || ""}`
-//         // meaning5.innerHTML = `5. ${data[0].meanings[0].definitions[4].definition || ""}`
-//         // meaning6.innerHTML = `6. ${data[0].meanings[0].definitions[5].definition || ""}`
-//         // meaning7.innerHTML = `7. ${data[0].meanings[0].definitions[6].definition || ""}`
-//         // meaning8.innerHTML = `8. ${data[0].meanings[0].definitions[7].definition || ""}`
-
-//     })
-//     // console.log(e.target.value)
-// })
 
