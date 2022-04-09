@@ -99,12 +99,6 @@ function othersHtml(definition) {
 
 
 
-
-
-
-
-
-
 darkMode.onclick = function() {
     document.body.classList.toggle("darkMode")
     document.body.style.transition = '0.2s'
