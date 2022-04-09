@@ -86,7 +86,7 @@ header {
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-    margin: 10px 0;
+    margin: 17px 0;
     /* display: none; */
 }
 li {
@@ -96,7 +96,6 @@ li {
 .sentence {
     width: 440px;
     padding-left: 20px;
-    padding-top: 5px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
@@ -108,7 +107,6 @@ li {
 
 .Synonyms {
     width: 201px;
-    padding-top: 5px;
     padding-left: 20px;
     font-family: 'Inter';
     font-style: normal;
