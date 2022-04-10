@@ -8,6 +8,16 @@ const resultDiv = document.querySelector('.meanings');
 
 
 
+function fetchWord(word) {
+    fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word)
+    .then((res) => {
+        return res.json() // converted to object
+    })
+    .then((resultDta) => {
+        data(resultDta) // Action data
+    })
+}
+
 // Event Listners
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -26,41 +36,26 @@ form.addEventListener('submit', (e) => {
     word.textContent = inputForm.value;
     // phoneticText.textContent = getPhoneticText?.text
 
-})
+});
 
-
-
-
-function fetchWord(word) {
-    fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word)
-    .then((res) => {
-        return res.json() // converted to object
-    })
-    .then((resultDta) => {
-        data(resultDta)
-    })
-}
 
 function data(resultDta) {
     console.log(resultDta)
 
     let tableData = '';
-
-    resultDta[0]?.meanings.map(function(values) {
-        tableData = meaningHtml(values)
-    })
+    resultDta[0]?.meanings.map((values) =>  (tableData += meaningHtml(values)))
     resultDiv.innerHTML = tableData;
 }
 
 
+
+
 function meaningHtml(meaning) {
    let everyThings = ' ';
-
-   meaning.definitions?.map((values) => (everyThings += othersHtml(values)))
-
+   meaning.definitions?.map((values) => (everyThings  += othersHtml(values)))
     let html = `
         <div class="originText">
-                <h4>${meaning.partOfSpeech}</h4>
+                <h4 class="noun">${meaning.partOfSpeech}</h4>
                 <ul>${everyThings}</ul>
         </div>`;
     html = html.trim();
@@ -72,8 +67,11 @@ function othersHtml(definition) {
     definitionHTML =  `<ul>
                             <li class="meaning">${definition?.definition} </li>
     </ul>`
+
     exampleHTML = '';
     synonymsHTML = '';
+
+
 
     if (definition.example != undefined) {
         exampleHTML +=  `<ul>
@@ -88,14 +86,15 @@ function othersHtml(definition) {
     }
     
 
-    definitionHTML +=  exampleHTML +  synonymsHTML +'</ul></li>'
+    definitionHTML +=  exampleHTML +  synonymsHTML +  '</ul></li>'
     return definitionHTML;
+};
+
+function flatArray(arr) {
+    return arr.reduce((pv, cv) => {
+      return pv + ', ' + cv
+    })
 }
-
-
-
-
-
 
 
 
