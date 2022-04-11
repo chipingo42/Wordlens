@@ -7,12 +7,10 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin: 70px 0;
-    /* display: none; */
 }
 
 .content {
     margin: 0 60px;
-    /* display: none; */
 }
 
 .noun {
@@ -44,21 +42,17 @@
     top: 8px;
 }
 
-header {
-    text-transform: capitalize;
-}
-
 
 .content button {
     border: none;
     outline: none;
     background: none;
-    /* display: none; */
 }
 
 .content  img {
    position: relative;
    top: 10px;
+   display: flex;
 }
 
 
@@ -81,7 +75,6 @@ header {
     margin:  20px 0px 60px 0px;
     padding: 40px 38px;
     background:  var(--inner--color);
-    /* display: none; */
 }
 
 .meaning {
@@ -93,7 +86,6 @@ header {
     line-height: 19px;
     color: var(--primary--color);
     margin: 17px 0;
-    /* display: none; */
 }
 li {
     list-style: none;
@@ -156,6 +148,8 @@ li {
         .content span, .content button {
             margin: 12px 0;
         }
+
+       
 
         .headerMeaning {
             background: none;
