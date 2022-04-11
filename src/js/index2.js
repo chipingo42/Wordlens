@@ -74,7 +74,7 @@ function actionData(resultDta) {
     if(getPhoneticAudio !=undefined){
         soundAudio.setAttribute('src', getPhoneticAudio?.audio)
         audioBtn.style.display ="show"
-      }
+    }
       else{
         audioBtn.style.display ="none"
     }

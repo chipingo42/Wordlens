@@ -10,12 +10,6 @@ const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
 
 
-
-
-
-
-
-
 async function fetchWord(word) {
     try {
         let response = await fetch(
@@ -50,22 +44,22 @@ async function handle(e) {
     if (data === false) {
         return true
     }
-    console.log(data)
+    // console.log(data)
 
-    let getPhoneticText =  data[0]?.phonetics.find((item) => {
-        if (item.text?.length > 0) return true;
+    let getPhoneticText =  data[0]?.phonetics.find((values) => {
+        if (values.text?.length > 0) return true;
     })
 
 
-    let getPhoneticAudio = data[0]?.phonetics.find((item) => {
-        if (item.audio?.length > 0) return true;
+    let getPhoneticAudio = data[0]?.phonetics.find((values) => {
+        if (values.audio?.length > 0) return true;
     })
 
 
     if(getPhoneticAudio !=undefined){
         soundAudio.setAttribute('src', getPhoneticAudio?.audio)
         audioBtn.style.display ="show"
-      }
+    }
       else{
         audioBtn.style.display ="none"
     }
@@ -79,6 +73,7 @@ async function handle(e) {
     })
     resultDiv.innerHTML = tableData;
 }
+
 
 function playAudio() {
     soundAudio.play()

@@ -21,7 +21,7 @@
     --loader-inner-color: #F6F7FA;
 }
 
-.darkMode {
+.dark {
     --primary--color: #91A2CB;
     --secondary--color: #0D1726; 
     --loader--color: #32323377;

@@ -132,7 +132,7 @@ li {
 
         .content {
             position: relative;
-            left: -47px;
+            left: -55px;
         }
 
         .content h2 {
@@ -148,8 +148,6 @@ li {
         .content span, .content button {
             margin: 12px 0;
         }
-
-       
 
         .headerMeaning {
             background: none;

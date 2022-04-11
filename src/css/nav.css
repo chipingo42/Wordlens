@@ -41,6 +41,7 @@
    color: var(--primary--color);
    cursor: pointer;
    font-size: 40px;
+   transform: rotate(-25deg);
   
 }
 
