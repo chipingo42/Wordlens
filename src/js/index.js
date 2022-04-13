@@ -20,10 +20,12 @@ async function fetchWord(word) {
         )
         if (response.ok == false) {
             error.style.display = 'block'
+            // skeleton.style.display = 'none'
             meangDiv.style.display = 'none'
             return false
         } else {
             error.style.display = 'none'
+            // skeleton.style.display = 'none'
             meangDiv.style.display = 'block'
             return await response.json()
         } 
@@ -47,7 +49,7 @@ async function handle(e) {
     if (data === false) {
         return true
     }
-    // console.log(data)
+    console.log(data)
 
     let getPhoneticText =  data[0]?.phonetics.find((values) => {
         if (values.text?.length > 0) return true;
@@ -81,7 +83,6 @@ async function handle(e) {
 function playAudio() {
     soundAudio.play()
 }
-
 
 
 function meaningHtml(meaning) {

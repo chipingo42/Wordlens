@@ -16,7 +16,6 @@ const errorLabel = document.querySelector('.errorLabel');
 
 
 function fetchWord(word) {
-
     fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word)
     .then((res) => {
         return res.json() // converted to object
