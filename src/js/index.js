@@ -8,9 +8,12 @@ const meangDiv = document.getElementById('result')
 const audioBtn = document.getElementById('audiobtn');
 const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
+// const skeleton = document.getElementById('skeleton')
 
 
 async function fetchWord(word) {
+    // skeleton.style.display = 'block'
+    // meangDiv.style.display = 'none'
     try {
         let response = await fetch(
             'https://api.dictionaryapi.dev/api/v2/entries/en/' + word,
