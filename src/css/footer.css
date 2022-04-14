@@ -109,6 +109,10 @@
     right: 30px;
 }
 
+.footer-privacy {
+    margin-right: 38px;
+}
+
 .footer-privacy a {
     color: var(--primary--color);
     text-decoration: none;

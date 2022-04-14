@@ -1,9 +1,10 @@
 const darkBtn = document.querySelector('.fa-solid');
-const bodyEl = document.querySelector('body');
+const bodyElement = document.querySelector('body');
+
 
 const darkMode = () => {
-    bodyEl.classList.toggle('dark');
-}
+    bodyElement.classList.toggle('dark');
+};
 
 darkBtn.addEventListener('click',  () => {
     setDarkMode = localStorage.getItem('dark')
@@ -16,14 +17,14 @@ darkBtn.addEventListener('click',  () => {
         darkMode();
         // Set the value of the item to 'null' when dark mode is off
         setDarkMode = localStorage.setItem('dark', null)
-    }
+    };
 });
 
 // Get the value of the 'dark' item from the local storage
-let setDarkMode = localStorage.getItem('dark')
+let setDarkMode = localStorage.getItem('dark');
 
 
 // check dark mode is on or off on page reload
 if(setDarkMode === 'on') {
     darkMode();
-}
+};
