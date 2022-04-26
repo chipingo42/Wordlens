@@ -64,7 +64,8 @@
 
     .searchIcon {
         position: relative;
-        top: 85px;
+        top: 80px;
+        width: 23px;
     }
 
     .search::placeholder {

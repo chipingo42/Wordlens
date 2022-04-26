@@ -26,7 +26,6 @@
     font-size: 164px;
     line-height: 198px;
     color: var(--errorpage-dark-color);
-
 }
 
 .errorPage h5 {
@@ -79,6 +78,7 @@ a {
 @media screen and (max-width: 768px) {
     .errorPage {
         margin-left: 33px;
+        margin-top: -50px;
     }
     
     .eroorHeader {
