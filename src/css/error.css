@@ -42,14 +42,14 @@
 }
 
 .errorPage button {
-   position: relative;
-   top: 20px;
-   left: 130px;
-    width: 205px;
-    height: 54px;
+    padding: 15px 57px;
+    margin-left: 120px;
+    margin-top: 20px;
     background: var(--secondary--color);
     border: 2px solid var(--errorpage-dark-color);
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    cursor: pointer;
+    display: inline-block;
 }
 
 a {
@@ -128,9 +128,8 @@ a {
         }
 
         .errorPage button {
-            margin-top: -68px;
-            position: relative;
-            left: 50px;
+           margin-left: 40px;
+           margin-top: -30px;
         }
 
         .errorLabel {

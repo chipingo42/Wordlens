@@ -10,7 +10,6 @@ const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
 // const skeleton = document.getElementById('skeleton')
 
-
 async function fetchWord(word) {
     // skeleton.style.display = 'block'
   
@@ -86,14 +85,13 @@ function playAudio() {
 
 function meaningHtml(meaning) {
    let everyThings = '';
-
    meaning.definitions?.map((values) => (everyThings += othersHtml(values)))
 
     let html = `
         <div class="originText">
             <h4 class="transform-text">${meaning.partOfSpeech}</h4>
             <ul>
-              ${everyThings}
+            ${everyThings}
             </ul>
         </div>`
     html = html.trim();
@@ -101,22 +99,12 @@ function meaningHtml(meaning) {
 }
 
 
+// let arrIndex = [];
+// for(let i = 0; i <= 10; i++) arrIndex.push(i);
+// console.log(arrIndex)
 
 function othersHtml(definition) {
-    // let arrIndex = [];
-    // for(let i = 0; i <= arrIndex.length; i++) arrIndex.push(i);
-
-    // console.log(arrIndex)
-
-    // arrIndex.map(item => {
-
-    //     console.log(item)
-        
-    // })
-
     definitionHTML =  `<li class="meaning">${definition?.definition}<ul>`
-
-    
     let exampleHTML = '';
 
     if (definition.example != undefined) {

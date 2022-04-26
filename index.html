@@ -68,20 +68,22 @@
                                 <div class="me3"></div>
                             </div>
                         </div>
-                    </div>
+                    </div><!---end of loading div-->
 
                     <!-- Result Hello -->
                     <div id="result">                        
                         <div class="content">
+                            <!-- header -->
                             <header>
                                 <h2 id="word">Hello</h2>
                             </header>
+                            <!-- phonetics -->
                             <div class="audoiHeader">
                                 <span id="phoneticsName">/həˈləʊ/</span>
                                 <audio id="sound"></audio>
                                 <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
                             </div>
-                            
+                            <!-- origin -->
                             <div class="originText">
                                 <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
                             </div> 
@@ -106,13 +108,14 @@
                    
                     <!-- Errorpage -->
                     <div class="errorPage" id="error">
-                        <p class="Oops">Oops, Sorry pal, we couldn't find definitions 
-                            for the word you were looking for.
-                        </p>
+                        <p class="Oops">Oops, Sorry pal, we couldn't find definitions for the word you were looking for.</p>
                         <h1 class="eroorHeader">404</h1> 
                         <h5>no be juju be that!</h5>
-                        <button><a href="./index.html">Take me home</a></button>
-                    </div>
+                        <a href="./index.html">
+                            <button>Take me home</a></button>
+                        </a>
+                        
+                    </div><!-- end of error page -->
                 </div>
             </div>
         </div>
