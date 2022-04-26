@@ -44,6 +44,8 @@
     height: 53px;
     background: #000000;
     border: none;
+    cursor: pointer;
+    display: inline-block;
     outline: none;
     border-radius: 5px; 
 }
