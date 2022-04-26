@@ -117,6 +117,7 @@
     color: var(--primary--color);
     text-decoration: none;
 }
+
 /* footer copy */
 .footer-copy {
     height: 16px;
@@ -130,8 +131,6 @@
     margin-left: -80px;
     margin-top: 26px;
 }
-
-
 
 @media screen and (max-width: 994px) {
     #footer {
@@ -180,6 +179,7 @@
 
     @media screen and (max-width: 500px) {
         #footer {
+            margin-top: -190px;
             height: 330px;
             width: 100%;
         }

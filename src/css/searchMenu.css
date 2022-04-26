@@ -1,6 +1,5 @@
 #SearchWords {
     height: 100%;
-    /* background: red; */
 }
 
 
@@ -30,7 +29,9 @@
     @media screen and (max-width: 500px) {
         .search_content {
             margin-left: 22px;
+            height: 40%;
         }
+
         .search_header {
             font-size: 48px;
             width: 340px;
