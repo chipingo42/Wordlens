@@ -13,7 +13,7 @@ const errorLabel = document.querySelector('.errorLabel');
 
 async function fetchWord(word) {
     // skeleton.style.display = 'block'
-    // meangDiv.style.display = 'none'
+  
     try {
         let response = await fetch(
             'https://api.dictionaryapi.dev/api/v2/entries/en/' + word,
@@ -49,7 +49,8 @@ async function handle(e) {
     if (data === false) {
         return true
     }
-    console.log(data)
+
+    console.log(data);
 
     let getPhoneticText =  data[0]?.phonetics.find((values) => {
         if (values.text?.length > 0) return true;
@@ -73,9 +74,7 @@ async function handle(e) {
     word.textContent = inputForm.value;
 
     let tableData = '';
-    data[0]?.meanings.map(function(values) {
-        tableData += meaningHtml(values)
-    })
+    data[0]?.meanings.map((values) => tableData += meaningHtml(values))
     resultDiv.innerHTML = tableData;
 }
 
@@ -92,37 +91,39 @@ function meaningHtml(meaning) {
 
     let html = `
         <div class="originText">
-                <h4>${meaning.partOfSpeech}</h4>
-                <ul>${everyThings}</ul>
-        </div>`;
+            <h4 class="transform-text">${meaning.partOfSpeech}</h4>
+            <ul>
+              ${everyThings}
+            </ul>
+        </div>`
     html = html.trim();
     return html    
 }
 
 
+
 function othersHtml(definition) {
-    definitionHTML =  `<ul>
-                            <li class="meaning">${definition?.definition} </li>
-    </ul>`
-    exampleHTML = '';
-    synonymsHTML = '';
+    // let arrIndex = [];
+    // for(let i = 0; i <= arrIndex.length; i++) arrIndex.push(i);
+
+    // console.log(arrIndex)
+
+    // arrIndex.map(item => {
+
+    //     console.log(item)
+        
+    // })
+
+    definitionHTML =  `<li class="meaning">${definition?.definition}<ul>`
+
+    
+    let exampleHTML = '';
 
     if (definition.example != undefined) {
-        exampleHTML +=  `<ul>
-                   <li class="sentence">sentence: “${definition?.example}"</li>
-        </ul>`;
-    }
-
-    if (definition.synonyms != undefined && definition.synonyms.length > 0) {
-        synonymsHTML += `<li class="font-medium">Synonyms: “${flatArray(
-          definition?.synonyms,
-        )}”</li>`
-    }
+        exampleHTML +=  `<li class="sentence">sentence: “${definition?.example}"</li>`
+                   
+    };
     
-
-    definitionHTML +=  exampleHTML +  synonymsHTML +'</ul></li>'
+    definitionHTML +=  exampleHTML + '</ul></li>'
     return definitionHTML;
 }
-
-
-
