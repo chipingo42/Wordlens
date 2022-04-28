@@ -87,7 +87,25 @@
     line-height: 19px;
     color: var(--primary--color);
     margin: 17px 0;
+    padding-left: 5px;
 }
+
+/* list and index */
+.list1 {
+    display: inline-flex;
+}
+
+.list1 .index {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary--color);
+    padding-top: 17px;
+    height: 40px;
+}
+
 li {
     list-style: none;
 }
