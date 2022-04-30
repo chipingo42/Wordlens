@@ -1,5 +1,6 @@
 #formSend {
     position: relative;
+    /* margin-top: 412px; */
 }
 
 .search {
@@ -24,7 +25,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    color: #8C98AD;
+    color: var(--placeholder-color);
 }
 
 .searchIcon {
@@ -50,14 +51,25 @@
     border-radius: 5px; 
 }
 
+@media screen and (max-width: 768px) {
+    .myButton  {
+        position: relative;
+        width: 100%;
+        left: 130px;
+       top: 20px;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
     #formSend {
         position: relative;
-        top: -200px;
+        top: -170px;
     }
-    
+
     .search {
+        position: absolute;
+        left: 0;
         width: 300px;
         padding-right: 0px;
         padding-left: 69px;
@@ -66,7 +78,7 @@
 
     .searchIcon {
         position: relative;
-        top: 80px;
+        top: 56px;
         width: 23px;
     }
 
@@ -76,9 +88,20 @@
 
     .myButton {
         position: absolute;
-        top: 135px;
-        margin-left: 0px;
-        width: 300px;
-        height: 50px;
+        top: 100px;
+        width:300px;
+    }
+}
+
+
+@media screen and (max-width: 183px) {
+    .searchIcon {
+        position: relative;
+        top: 80px;
+    }
+
+    .myButton {
+        position: absolute;
+        top: 129px;
     }
 }

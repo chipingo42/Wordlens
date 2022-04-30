@@ -4,7 +4,7 @@
 
 
 .search_content {
-    padding-top: 120px;
+    padding-top: 127px;
     margin: 0  110px;
 }
 
@@ -14,6 +14,7 @@
     font-weight: 600;
     font-size: 96px;
     line-height: 116px;
+    color: var(--primary--color);
 }
 
 

@@ -1,12 +1,11 @@
 #result {
-    position: relative;
-    top: -20px;
     width: 100%;
     height: 100%;
     border: 1px solid var(--input-color);
     box-sizing: border-box;
     border-radius: 5px;
-    margin: 70px 0;
+    margin: 176px;
+    margin-left: 0;
 }
 
 .content {
@@ -55,7 +54,6 @@
    display: flex;
 }
 
-
 .content h4 {
     width: 70%;
     margin-top: 10px;
@@ -67,16 +65,20 @@
     color: var(--primary--color)
 }
 
-
 /* headerMeaning */
 .headerMeaning {
     width: 90%;
     height: 100%;
-    margin:  20px 0px 60px 0px;
-    padding: 40px 38px;
+    margin: 55px 0;
+    padding: 34px 38px;
     background:  var(--inner--color);
 }
 
+
+
+.meangingList {
+    margin: 30px 0;
+}
 
 .meaning {
     width: 100%;
@@ -86,45 +88,28 @@
     font-size: 16px;
     line-height: 19px;
     color: var(--primary--color);
-    margin: 17px 0;
-    padding-left: 5px;
-}
-
-/* list and index */
-.list1 {
-    display: inline-flex;
-}
-
-.list1 .index {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--primary--color);
-    padding-top: 17px;
-    height: 40px;
-}
-
-li {
+    padding: 10px 5px;
     list-style: none;
 }
 
 .sentence {
     width: 80%;
     padding-left: 20px;
+    padding-top: 6px;
     font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #8C98AD;
+    list-style: none;
 }
 
 
 .Synonyms {
     width: 201px;
     padding-left: 20px;
+    padding-top: 6px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -163,13 +148,8 @@ li {
             line-height: 44px;
         }
 
-        .content h4 {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            width: 100%;
+        .audoiHeader {
+            margin-top: 6px;
         }
 
         .headerMeaning {
@@ -180,7 +160,7 @@ li {
 
         .meanings {
             margin-left: -30px;
-            margin-top: -40px;
+            margin-top: -80px;
         }
 
         .meaning {

@@ -92,7 +92,7 @@ a {
     }
     .errorLabel {
         position: relative;
-        top: 2px;
+        top: 20px;
     }
 
     @media screen and (max-width: 500px) {
@@ -139,7 +139,7 @@ a {
 
         .errorLabel {
             position: relative;
-            top: 67px;
+            top: 128px;
         }
     
     }

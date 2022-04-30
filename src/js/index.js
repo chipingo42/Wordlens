@@ -16,12 +16,11 @@ const errorLabel = document.querySelector('.errorLabel');
 
 async function fetchWord(word) {
     // skeleton.style.display = 'block'
-  
     try {
         let response = await fetch(
             'https://api.dictionaryapi.dev/api/v2/entries/en/' + word,
         )
-        if (response.ok == false) {
+        if (response.ok === false) {
             error.style.display = 'block'
             // skeleton.style.display = 'none'
             meangDiv.style.display = 'none'
@@ -53,7 +52,7 @@ async function handle(e) {
         return true
     }
 
-    console.log(data);
+    // console.log(data);
 
     let getPhoneticText =  data[0]?.phonetics.find((values) => {
         if (values.text?.length > 0) return true;
@@ -89,7 +88,7 @@ function playAudio() {
 
 function meaningHtml(meaning) {
    let everyThings = '';
-   meaning.definitions?.map((values) => (everyThings += othersHtml(values)))
+   meaning.definitions?.map((values, index) => (everyThings += othersHtml(values, index)))
 
     let html = `
         <div class="originText">
@@ -102,17 +101,9 @@ function meaningHtml(meaning) {
     return html    
 }
 
+function othersHtml(definition, index) {
 
-
-
-// arrIndex.map(item => {
-//     return item
-// })
-
-function othersHtml(definition) {
-
-    let index = [];
-    definitionHTML =  `<li class="meaning">${index += 1}. ${definition?.definition}<ul>`
+    definitionHTML =  `<li class="meaning">${index + 1}. ${definition?.definition}<ul>`
     let exampleHTML = '';
 
     if (definition.example != undefined) {

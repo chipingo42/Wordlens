@@ -73,35 +73,34 @@
                     <!-- Result Hello -->
                     <div id="result">                        
                         <div class="content">
-                            <!-- header -->
                             <header>
                                 <h2 id="word">Hello</h2>
                             </header>
-                            <!-- phonetics -->
                             <div class="audoiHeader">
                                 <span id="phoneticsName">/həˈləʊ/</span>
                                 <audio id="sound"></audio>
                                 <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
                             </div>
-                            <!-- origin -->
                             <div class="originText">
-                                <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4>
+                                <!-- <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4> -->
                             </div> 
+
                             <!-- meanings -->
                             <div class="headerMeaning">
                                 <div class="meanings">
-                                    <ul class="list">
-                                        <li class="meaning">1. (exclamation)used as a greeting or to begin a phone conversation.</li>
-                                        <li class="sentence">sentence: “hello there, Katie!"</li>
-                                        <li class="Synonyms">Synonyms: “”</li>  
-
-                                        <li class="meaning">2. (noun) an utterance of ‘hello’; a greeting.</li>
-                                        <li class="sentence">sentence: “she was getting polite nods and hellos from people"</li>
-                                        
-                                        <li class="meaning">3. (verb) say or shout ‘hello’.</li>
-                                        <li class="sentence">sentence: “I pressed the phone button and helloed"</li> 
-                                        
-                                    </ul>
+                                    <div class="meangingList">
+                                        <p lass="meaning">1. (exclamation)used as a greeting or to begin a phone conversation.</p>
+                                        <p class="sentence">sentence: “hello there, Katie!"</p>
+                                        <p class="Synonyms">Synonyms: “”</p>
+                                    </div>
+                                    <div class="meangingList">
+                                        <p lass="meaning">2. (noun) an utterance of ‘hello’; a greeting.</p>
+                                        <p class="sentence">sentence: “she was getting polite nods and hellos from people"</p>
+                                    </div>
+                                    <div class="meangingList">
+                                        <p lass="meaning">3. (verb) say or shout ‘hello’.</p>
+                                        <p class="sentence">sentence: “I pressed the phone button and helloed"</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -122,45 +121,68 @@
         </div>
     </section>
 
+
     <section>
         <div id="footer">
-           <div class="container">
-               <div class="footer-content">
-                    <div class="footer-primary">
-                        <div class="svgs">
-                            <img class="footer-top-right" src="./src/public/svg/footer-top-left.svg" alt="">
-                            <img class="footer-top-left" src="./src/public/svg/footer-bottom-left.svg" alt="">
-                            <div class="footer-center">
-                                <header>
-                                    <h2>Wordlens</h2>
-                                </header>
-                                <p>The API used to serve this data was provided by dictionaryapi.dev, click on the link below to read more</p>
-                                <button type="submit">Visit API documentation</button>
+            <div class="container">
+                <div class="footer-content">
+                    <!-- right spirals -->
+                    <div class="spirals_Icons">
+                        <div class="first-Spiral-Icon">
+                            <img src="./src/public/svg/first-Spiral-Icon.svg" alt="">
+                        </div>
+                        <!-- center-footer-header -->
+                        <div class="footer-center-main">
+                            <h1>WordLens</h1>
+                            <p>The API used to serve this data was provided by dictionaryapi.dev, click on the link below to read more</p>
+                            <a href="#">
+                                <button class="footer-Btn">Visit API documentation</button>
+                            </a>
+                        </div>
+                        <!-- left spiral -->
+                        <div class="first-Spiral-Icon second-spiral-icon">
+                            <img src="./src/public/svg/second-Spiral-Icon.svg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- down spiral icons -->
+                    <div class="down-spiral-icons">
+                        <div class="first-down-spiral">
+                            <img src="./src/public/svg/first-down-spiral.svg" alt="">
+                        </div>
+                        <div class="first-down-spiral spiral-down-second">
+                            <img src="./src/public/svg/spiral-down-second.svg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- last footer -->
+                    <div class="last-footer">
+                        <div class="footer-header">
+                            <h1>WordLens</h1>
+                        </div>
+                        <div class="footer-header">
+                        <div class="social-link-icon">
+                            <img src="./src/public/svg/facebook.svg" alt="">
+                            <img src="./src/public/svg/instagram.svg" alt="">
+                            <img src="./src/public/svg/twitter.svg" alt="">
+                            <img src="./src/public/svg/linkdin.svg" alt="">
+                        </div>
+                        </div>
+                        <div class="footer-header">
+                            <div class="privacy-list">
+                                <a href="#" class="term">Terms of use.</a>
+                                <a href="#">Privacy policy</a>
                             </div>
                         </div>
-                        <div class="svgs">
-                            <img class="footer-bottom-left" src="./src/public/svg/footer-top-right.svg" alt="">
-                            <img class="footer-bottom-right" src="./src/public/svg/footer-top-left.svg" alt=""> 
-                        </div>
                     </div>
-                    <div class="footer-down">
-                        <div class="footer-logo">Wordlens</div>
-                        <div class="footer-links" >
-                            <a href="#"><img src="./src/public/svg/facebook.svg" alt="facebook"></a>
-                            <a href=""><img src="./src/public/svg/instagram.svg" alt="instagram"></a>
-                            <a href=""><img src="./src/public/svg/twitter.svg" alt="twitter"></a>
-                            <a href=""><img src="./src/public/svg/linkdin.svg" alt="linkdin"></a>
-                        </div>
-                        <div class="footer-privacy">
-                            <a href="#" class="term">Terms of use.</a>
-                            <a href="#" class="policy"> Privacy Policy</a>
-                        </div>
-                    </div>
-               </div>
-               <div class="footer-copy">
-                    copyright &copy; 2022 WorldLens. All rights reserved
-               </div>
-           </div>
+
+                    <!-- footer copyright -->
+                    <div class="footer-copy">
+                        Copyright &copy; 2022 Wordlens. All rights reserved.
+                    </div> 
+                </div>
+               
+            </div>
         </div>
     </section>
 
