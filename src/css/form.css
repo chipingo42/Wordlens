@@ -1,6 +1,5 @@
 #formSend {
     position: relative;
-    /* margin-top: 412px; */
 }
 
 .search {
@@ -51,20 +50,27 @@
     border-radius: 5px; 
 }
 
+
+
 @media screen and (max-width: 768px) {
+    #formSend {
+        position: relative;
+        top: -90px;
+    }
     .myButton  {
         position: relative;
         width: 100%;
         left: 130px;
-       top: 20px;
+        top: 20px;
+        height: 65px;
     }
 }
 
 
 @media screen and (max-width: 500px) {
     #formSend {
-        position: relative;
-        top: -170px;
+        margin-left: -88px;
+        margin-top: -20px;
     }
 
     .search {
@@ -90,6 +96,7 @@
         position: absolute;
         top: 100px;
         width:300px;
+        height: 50px;
     }
 }
 

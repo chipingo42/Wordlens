@@ -97,12 +97,7 @@ a {
 
     @media screen and (max-width: 500px) {
         .errorPage {
-            /* margin-left: -20px; */
-            /* background: red; */
-            position: relative;
-            top: -80px;
-            margin: 40px 0;
-          
+            margin-left: -99px;
         }
        
         .Oops {

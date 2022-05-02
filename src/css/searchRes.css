@@ -1,27 +1,29 @@
 #result {
-    width: 100%;
     height: 100%;
+    background: var(--secondary--color);
+    padding: 65px 0;
+}
+
+.result-content {
+    margin: 0 110px;
+}
+
+.result-boderDiv {
     border: 1px solid var(--input-color);
     box-sizing: border-box;
     border-radius: 5px;
-    margin: 176px;
-    margin-left: 0;
+    position: relative;
+    top: -20px;
+    height: 100%;
+    width: 100%;
+   
 }
 
-.content {
-    margin: 0 60px;
-}
-
-.transform-text {
-    text-transform: capitalize;
-}
-
-.content h2 {
+.resultHead {
     text-transform: capitalize;
     width: 158px;
     height: 77px;
-    padding-top: 15px;
-   
+    padding-top: 44px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -30,48 +32,54 @@
     color: var(--primary--color);
 }
 
-.content span {
+.result-marginSides {
+    margin:  0 60px;
+}
+
+.result-phoneticsDIV {
+    padding-top: 51px;
+}
+
+.result-phoneticsDIV  > span {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
     color: #8C98AD;
-    position: relative;
-    top: 8px;
 }
 
-
-.content button {
+.result-phoneticsDIV > button {
     border: none;
     outline: none;
     background: none;
 }
 
-.content  img {
-   position: relative;
-   top: 10px;
-   display: flex;
+.result-phoneticsDIV > img {
+    position: relative;
+    top: 10px;
+    display: flex;
 }
 
-.content h4 {
-    width: 70%;
-    margin-top: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: var(--primary--color)
-}
 
-/* headerMeaning */
-.headerMeaning {
-    width: 90%;
+/* meaningDiv */
+.meaningDiv {
+    width: 85%;
     height: 100%;
-    margin: 55px 0;
+    margin: 55px 60px;
     padding: 34px 38px;
     background:  var(--inner--color);
+}
+
+/* transform_text */
+.transform_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary--color);
+    font-size: 24px;
+    padding: 7px 0;
 }
 
 
@@ -119,66 +127,62 @@
 }
 
 
- 
-@media screen and (max-width: 823px) {
-    .headerMeaning {
+
+@media screen and (max-width: 768px) {
+    .meaningDiv {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+    .result-boderDiv {
+        margin-left: -89px;
+        width: 300px;
+        margin-top: -49px;
+        border: none;
+    }
+
+    .resultHead  {
+        padding-top: 20px;
+    }
+
+    .result-marginSides {
+        margin:  0 0px;
+    }
+
+    .result-phoneticsDIV {
+        padding-top: 21px;
+    }
+
+    .meaningDiv {
+        margin: 5px 0px;
+        padding: 4px 38px;
         width: 100%;
-    } 
+        background: none;
+    }
 
-    @media screen and (max-width: 500px) {
-        #result {
-           border: none;
-           position: relative;
-           top: -170px;
-           width: 330px;
-        } 
+   
 
-        .content {
-            position: relative;
-            left: -55px;
-        }
+    .meaning {
+        width: 308px;
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: -37px;
+    }
 
-        .content h2 {
-            width: 89px;
-            height: 44px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            line-height: 44px;
-        }
+    .sentence {
+        width:  100%;
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: -10px;
+    }
 
-        .audoiHeader {
-            margin-top: 6px;
-        }
+    .Synonyms {
+        margin-left: -40px;
+    }
 
-        .headerMeaning {
-            width: 300px;
-            height: 20%;
-            background: none;
-        }
-
-        .meanings {
-            margin-left: -30px;
-            margin-top: -80px;
-        }
-
-        .meaning {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            width: 300px;
-        }
-
-        .sentence {
-            width: 100%;
-            font-family: 'Inter';
-            font-style: italic;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-        }
-    } 
-}   
+    .transform_text {
+        margin-left: -37px;
+    }
+    
+}

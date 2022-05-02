@@ -1,14 +1,16 @@
-#SearchWords {
-    height: 100%;
+#searchMenu {
+    height: 560px;
+    width: 100%;
+    background: var(--secondary--color);
 }
 
 
-.search_content {
-    padding-top: 127px;
+.search-content {
     margin: 0  110px;
 }
 
-.search_header {
+.search-content .searchWord {
+    padding-top: 127px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -18,31 +20,32 @@
 }
 
 
-@media screen and (max-width:  768px) {
-    .search_content {
-        padding-top: 190px;
-        margin-left: 50px;
+@media screen and (max-width: 774px) {
+    .search-content .searchWord {
+        font-size: 60px;
+        width: 400px;
+    }  
+
+    .search-content .searchWord > span {
+       position: relative;
+       top: -40px;
     }
-    .search_header {
-      width: 100%;
+}
+
+
+@media screen and (max-width: 500px) {
+    #searchMenu {
+        height: 430px;
     }
+    .search-content .searchWord {
+        font-size: 48px;
+        width: 500px;
+        margin-left: -90px;
+        margin-top: -40px;
+    }  
 
-    @media screen and (max-width: 500px) {
-        .search_content {
-            margin-left: 22px;
-            height: 40%;
-        }
-
-        .search_header {
-            font-size: 48px;
-            width: 340px;
-            position: relative;
-            top: -80px;
-        }
-
-        .search_header span {
-            position: relative;
-            top: -50px;
-        }
+    .search-content .searchWord > span {
+        position: relative;
+        top: -68px;
     }
 }

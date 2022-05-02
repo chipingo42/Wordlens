@@ -28,7 +28,6 @@
 .darkMood {
     margin-top: 20px;
     background: none;
-    /* display: none; */
     border: none;
     outline: none;
  
@@ -61,7 +60,6 @@
         .fa-solid::before {
             font-size: 25px;
             position: relative;
-            /* top: -44px; */
         }
     }
 }

@@ -27,16 +27,13 @@
         </div>
     </div>
 
-
     <section>
-        <div id="SearchWords" class="wrapper">
+        <div id="searchMenu">
             <div class="container">
-                <div class="search_content">
-                    <div class="search_header">Search <br> 
-                        <span>for any word.</span>
-                    </div>
+                <div class="search-content">
+                    <h1 class="searchWord">Search <br> <span>for any word.</span></h1>
 
-                    <form id="formSend" onsubmit="return  handle(event)"> <!--onsubmit="return  handle(event)"--> 
+                    <form id="formSend" onsubmit="return  handle(event)">
                         <div class="form-group">
                             <span><img class="searchIcon" src="./src/public/svg/search.svg" alt=""></span>
                             <input id="Search" class="search" type="text" placeholder="What would you like to search for?">
@@ -45,67 +42,45 @@
                         <!-- ErrorLabel -->
                         <p class="errorLabel" id="erroLabel">please type a word</p>
                     </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-
-
-                    <!-- loading page -->
-                    <div id="skeleton">
-                        <div id="loader"></div>
-                        <div class="content">
-                            <h2></h2>
-                            <div class="cover">
-                                <span></span>
-                                <img class="img" src="" alt="">
-                            </div>
-                            <h4></h4>
-                            <div class="innerCenter">
-                                <div class="m1"></div>
-                                <div class="se"></div>
-                                <div class="Syno"></div>
-                                <div class="sy2"></div>
-                                <div class="me2"></div>
-                                <div class="se2"></div>
-                                <div class="me3"></div>
-                            </div>
-                        </div>
-                    </div><!---end of loading div-->
-
-                    <!-- Result Hello -->
-                    <div id="result">                        
-                        <div class="content">
-                            <header>
-                                <h2 id="word">Hello</h2>
-                            </header>
-                            <div class="audoiHeader">
+    <section>
+        <div id="result">
+            <div class="container">
+                <div class="result-content">
+                    <div class="result-boderDiv">
+                        <div class="result-marginSides">
+                            <h1 class="resultHead">Hello</h1>
+                            <div class="result-phoneticsDIV">
                                 <span id="phoneticsName">/həˈləʊ/</span>
                                 <audio id="sound"></audio>
                                 <button  id="audiobtn" class="volumeIcon" onclick="playAudio()"><img src="./src/public/svg/radio.svg" alt=""></button>
                             </div>
-                            <div class="originText">
-                                <!-- <h4 >origin: "early 19th century: variant of earlier hollo; related to holla.",</h4> -->
-                            </div> 
+                        </div>
 
-                            <!-- meanings -->
-                            <div class="headerMeaning">
-                                <div class="meanings">
-                                    <div class="meangingList">
-                                        <p lass="meaning">1. (exclamation)used as a greeting or to begin a phone conversation.</p>
-                                        <p class="sentence">sentence: “hello there, Katie!"</p>
-                                        <p class="Synonyms">Synonyms: “”</p>
-                                    </div>
-                                    <div class="meangingList">
-                                        <p lass="meaning">2. (noun) an utterance of ‘hello’; a greeting.</p>
-                                        <p class="sentence">sentence: “she was getting polite nods and hellos from people"</p>
-                                    </div>
-                                    <div class="meangingList">
-                                        <p lass="meaning">3. (verb) say or shout ‘hello’.</p>
-                                        <p class="sentence">sentence: “I pressed the phone button and helloed"</p>
-                                    </div>
+                        <div class="meaningDiv">
+                            <div class="meanings">
+                                <div class="meangingList">
+                                    <p class="meaning">1. (exclamation)used as a greeting or to begin a phone conversation.</p>
+                                    <p class="sentence">sentence: “hello there, Katie!"</p>
+                                    <p class="Synonyms">Synonyms: “”</p>
+                                </div>
+                                <div class="meangingList">
+                                    <p class="meaning">2. (noun) an utterance of ‘hello’; a greeting.</p>
+                                    <p class="sentence">sentence: “she was getting polite nods and hellos from people"</p>
+                                </div>
+                                <div class="meangingList">
+                                    <p class="meaning">3. (verb) say or shout ‘hello’.</p>
+                                    <p class="sentence">sentence: “I pressed the phone button and helloed"</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
+
                     <!-- Errorpage -->
                     <div class="errorPage" id="error">
                         <p class="Oops">Oops, Sorry pal, we couldn't find definitions for the word you were looking for.</p>
@@ -114,7 +89,6 @@
                         <a href="./index.html">
                             <button>Take me home</a></button>
                         </a>
-                        
                     </div><!-- end of error page -->
                 </div>
             </div>
@@ -122,10 +96,11 @@
     </section>
 
 
+
     <section>
         <div id="footer">
             <div class="container">
-                <div class="footer-content">
+                <!-- <div class="footer-content"> -->
                     <!-- right spirals -->
                     <div class="spirals_Icons">
                         <div class="first-Spiral-Icon">
@@ -155,18 +130,17 @@
                         </div>
                     </div>
 
+                    <div class="social-link-icon">
+                        <img src="./src/public/svg/facebook.svg" alt="">
+                        <img src="./src/public/svg/instagram.svg" alt="">
+                        <img src="./src/public/svg/twitter.svg" alt="">
+                        <img src="./src/public/svg/linkdin.svg" alt="">
+                    </div>
+
                     <!-- last footer -->
                     <div class="last-footer">
                         <div class="footer-header">
                             <h1>WordLens</h1>
-                        </div>
-                        <div class="footer-header">
-                        <div class="social-link-icon">
-                            <img src="./src/public/svg/facebook.svg" alt="">
-                            <img src="./src/public/svg/instagram.svg" alt="">
-                            <img src="./src/public/svg/twitter.svg" alt="">
-                            <img src="./src/public/svg/linkdin.svg" alt="">
-                        </div>
                         </div>
                         <div class="footer-header">
                             <div class="privacy-list">
@@ -175,6 +149,7 @@
                             </div>
                         </div>
                     </div>
+
 
                     <!-- footer copyright -->
                     <div class="footer-copy">
@@ -186,6 +161,8 @@
         </div>
     </section>
 
+
+   
 
    
     <script src="src/js/darkmode.js"></script>

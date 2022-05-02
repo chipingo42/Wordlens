@@ -39,7 +39,7 @@ function fetchWord(word) {
 };
 
 // Event Listners
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e)  => {
     e.preventDefault()
 
     if(inputForm.value.length <= 1) {
@@ -49,8 +49,7 @@ form.addEventListener('submit', (e) => {
         errorLabel.style.display = 'none'
     }
 
-
-    let  data = fetchWord(inputForm.value);
+    let  data = await fetchWord(inputForm.value);
     if (data === false) {
         return true
     };

@@ -1,84 +1,83 @@
-const form = document.getElementById('formSend');
-const inputForm = document.getElementById('Search');
-const word = document.getElementById('word');
+const searchInput = document.getElementById('Search');
+const wordhead = document.querySelector('.resultHead');
 const phoneticText = document.getElementById('phoneticsName');
 const resultDiv = document.querySelector('.meanings');
 const error = document.getElementById('error');
-const meangDiv = document.getElementById('result')
+const boderDiv = document.querySelector('.result-boderDiv')
 const audioBtn = document.getElementById('audiobtn');
 const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
 // const skeleton = document.getElementById('skeleton')
 
-
+console.log(error)
+console.log(boderDiv)
 
 
 
 async function fetchWord(word) {
-    // skeleton.style.display = 'block'
     try {
-        let response = await fetch(
-            'https://api.dictionaryapi.dev/api/v2/entries/en/' + word,
+        let res = await  fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + word,
         )
-        if (response.ok === false) {
+        if (res.ok === false) {
             error.style.display = 'block'
             // skeleton.style.display = 'none'
-            meangDiv.style.display = 'none'
+            boderDiv.style.display = 'none'
             return false
-        } else {
+        }  else {
             error.style.display = 'none'
             // skeleton.style.display = 'none'
-            meangDiv.style.display = 'block'
-            return await response.json()
-        } 
-    }catch (error) {}
-}
+            boderDiv.style.display = 'block'
+            return await res.json()
+        }
+    } catch {error}
+};
 
 
-// Event Listners
 async function handle(e) {
     e.preventDefault()
 
-    if(inputForm.value.length <= 1) {
+    if(searchInput.value.length <= 1) {
         errorLabel.style.display = 'flex'
-       return
+        return
     } else {
         errorLabel.style.display = 'none'
     }
 
 
-    let  data = await fetchWord(inputForm.value)
-    if (data === false) {
+    let data = await fetchWord(searchInput.value);
+
+    if (data == false) {
         return true
-    }
+    } 
 
-    // console.log(data);
+    console.log(data)
 
-    let getPhoneticText =  data[0]?.phonetics.find((values) => {
-        if (values.text?.length > 0) return true;
+
+    let getPhoneticText =  data[0]?.phonetics.find((item) => {
+        if (item.text?.length > 0) return true;
     })
 
-
-    let getPhoneticAudio = data[0]?.phonetics.find((values) => {
-        if (values.audio?.length > 0) return true;
+    
+    let getPhoneticAudio = data[0]?.phonetics.find((item) => {
+        if (item.audio?.length > 0) return true;
     })
-
 
     if(getPhoneticAudio !=undefined){
         soundAudio.setAttribute('src', getPhoneticAudio?.audio)
-        audioBtn.style.display ="show"
+        audioBtn.style.display = "inline-flex"
     }
       else{
-        audioBtn.style.display ="none"
+        audioBtn.style.display = "none"
     }
 
+    wordhead.textContent = searchInput.value;
     phoneticText.textContent = getPhoneticText?.text
-    word.textContent = inputForm.value;
+    
 
     let tableData = '';
-    data[0]?.meanings.map((values) => tableData += meaningHtml(values))
+    data[0]?.meanings.map((values) =>  (tableData += meaningHtml(values)));
     resultDiv.innerHTML = tableData;
-}
+};
 
 
 function playAudio() {
@@ -92,7 +91,7 @@ function meaningHtml(meaning) {
 
     let html = `
         <div class="originText">
-            <h4 class="transform-text">${meaning.partOfSpeech}</h4>
+            <h4 class="transform_text">${meaning.partOfSpeech}</h4>
             <ul>
              ${everyThings}
             </ul>
