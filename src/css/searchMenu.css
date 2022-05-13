@@ -17,35 +17,34 @@
     font-size: 96px;
     line-height: 116px;
     color: var(--primary--color);
+    width: 100%;
 }
 
 
-@media screen and (max-width: 774px) {
+@media screen and (max-width: 830px) {
+    .search-content {
+        margin: 0  70px;
+    }
     .search-content .searchWord {
-        font-size: 60px;
-        width: 400px;
-    }  
-
-    .search-content .searchWord > span {
-       position: relative;
-       top: -40px;
+        width: 680px;
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 100px;
     }
 }
 
 
 @media screen and (max-width: 500px) {
     #searchMenu {
-        height: 430px;
+        height: 380px;
     }
-    .search-content .searchWord {
-        font-size: 48px;
-        width: 500px;
-        margin-left: -90px;
-        margin-top: -40px;
-    }  
+    .search-content {
+        margin: 0  15px;
+    }
 
-    .search-content .searchWord > span {
-        position: relative;
-        top: -68px;
+    .search-content .searchWord {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
     }
 }

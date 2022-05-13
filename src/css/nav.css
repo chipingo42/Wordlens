@@ -54,7 +54,7 @@
 
     @media screen and (max-width: 500px) {
         .navbar {
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         .fa-solid::before {

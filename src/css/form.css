@@ -55,7 +55,12 @@
 @media screen and (max-width: 768px) {
     #formSend {
         position: relative;
-        top: -90px;
+        top: -53px;
+    }
+
+    .search::placeholder {
+        font-size: 13px;
+        width: 300px;
     }
     .myButton  {
         position: relative;
@@ -69,14 +74,13 @@
 
 @media screen and (max-width: 500px) {
     #formSend {
-        margin-left: -88px;
-        margin-top: -20px;
+        margin-top: 23px;
     }
 
     .search {
         position: absolute;
         left: 0;
-        width: 300px;
+        width: 93%;
         padding-right: 0px;
         padding-left: 69px;
         height: 50px;
@@ -95,7 +99,7 @@
     .myButton {
         position: absolute;
         top: 100px;
-        width:300px;
+        width: 93%;
         height: 50px;
     }
 }

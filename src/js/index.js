@@ -9,9 +9,6 @@ const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
 // const skeleton = document.getElementById('skeleton')
 
-console.log(error)
-console.log(boderDiv)
-
 
 
 async function fetchWord(word) {

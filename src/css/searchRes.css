@@ -129,21 +129,35 @@
 
 
 @media screen and (max-width: 768px) {
+    .result-boderDiv {
+        position: relative;
+        left: -30px;
+        width: 110%;
+       
+    }
     .meaningDiv {
         margin-left: 20px;
     }
 }
 
 @media screen and (max-width: 500px)  {
+    #result {
+        padding: 10px 0;
+    }
+    .result-content {
+        margin: 0 15px;
+        padding-left: 40px;
+    }
     .result-boderDiv {
-        margin-left: -89px;
-        width: 300px;
-        margin-top: -49px;
+        margin-top: -30px;
         border: none;
     }
 
     .resultHead  {
-        padding-top: 20px;
+        padding-top: 50px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
     }
 
     .result-marginSides {
@@ -152,10 +166,13 @@
 
     .result-phoneticsDIV {
         padding-top: 21px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
     }
 
     .meaningDiv {
-        margin: 5px 0px;
+        margin: 0px 0px 20px 0;
         padding: 4px 38px;
         width: 100%;
         background: none;
