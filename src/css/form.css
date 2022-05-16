@@ -25,6 +25,7 @@
     font-size: 18px;
     line-height: 22px;
     color: var(--placeholder-color);
+    padding-left: 32px;
 }
 
 .searchIcon {
