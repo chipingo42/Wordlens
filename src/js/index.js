@@ -9,6 +9,9 @@ const soundAudio = document.getElementById('sound');
 const errorLabel = document.querySelector('.errorLabel');
 // const skeleton = document.getElementById('skeleton')
 
+const upDate = new Date;
+
+document.getElementById("lastUpDate").innerHTML = upDate.getFullYear()
 
 
 async function fetchWord(word) {
