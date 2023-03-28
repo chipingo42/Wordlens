@@ -1,4 +1,4 @@
-const darkBtn = document.querySelector('.fa-solid');
+const darkBtn = document.querySelector('.shadowBtn');
 const bodyElement = document.querySelector('body');
 
 
